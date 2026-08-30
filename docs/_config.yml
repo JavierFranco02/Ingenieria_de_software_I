@@ -1,0 +1,9 @@
+title: "[Nombre del Sistema] — Trabajo Práctico Integrador"
+description: "Análisis y diseño de [nombre del sistema], desarrollado para [nombre del usuario/cliente]."
+theme: jekyll-theme-cayman
+
+# Este archivo le indica a GitHub Pages qué tema usar para que el sitio
+# se vea prolijo automáticamente, sin necesidad de escribir HTML/CSS.
+# El grupo puede cambiar "theme" por otro tema soportado por GitHub Pages
+# (por ejemplo: jekyll-theme-minimal, jekyll-theme-slate, jekyll-theme-architect)
+# si prefiere otro estilo visual.

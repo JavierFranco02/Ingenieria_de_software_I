@@ -71,10 +71,10 @@ _Respuesta:_
 
 | Nivel de visión | Descripción |
 |---|---|
-| A. Visión del mundo (worldview) | ___ |
-| B. Visión del dominio | ___ |
-| C. Visión del elemento | ___ |
-| D. Visión detallada | ___ |
+| A. Visión del mundo (worldview) | 3 |
+| B. Visión del dominio | 4 |
+| C. Visión del elemento | 1 |
+| D. Visión detallada | 2 |
 
 1. El sistema particular que se va a construir, dentro del dominio.
 2. Los componentes internos del sistema: software, hardware, datos, etc.
@@ -83,18 +83,19 @@ _Respuesta:_
 
 **11. Explica la diferencia entre vista estructural y vista de comportamiento, y da un ejemplo de notación para cada una.**
 
-_Respuesta:_
+La diferecnia principal es que la vista estructural se centra en los aspectos estaticos, ya que corresponde a la forma en la que están organizados los elementos del sistema y cómo interactual (Por ejemplo, los Diagramas de Clases). Mientras que la vista de comportamiento se centra en los aspectos dinámicos, ya  muestra cómo el sistema responde a diferentes eventos y cómo cambia su estado a lo largo del tiempo (por ejemplo, el Diagrama de actividad)
 
 
 **12. Diagrama de contexto:** elige un sistema simple (por ejemplo, un cajero automático, una app de delivery) y dibujá un diagrama de contexto que muestre el sistema y al menos dos entidades externas con las que interactúa. Adjuntá la imagen acá abajo.
 
-_(Arrastrá la imagen a este archivo desde el editor de GitHub para insertarla)_
+![Diagrama de contexto de app de delivery](Diagrama.jpg)
 
 
 **13. ¿En qué situación elegirías usar simulación en lugar de un modelo estático? Da un ejemplo concreto.**
 
-_Respuesta:_
+Elejiria usar la simulacion cuando el sistema cambia con el tiempo y tiene elementos que ocurren al azar o de forma imprevisible (como filas o tráfico), donde un cálculo fijo no sirve o no es suficiente.
 
+Ejemplo: El sistema de cajas de un supermercado. Un modelo estático solo calcularía un promedio de cuánta gente compra al día. En cambio, una simulación mostraría cómo se forman las filas largas en horas pico cuando llegan muchos clientes juntos y al azar, ayudando a saber cuántas cajas abrir.
 
 ---
 

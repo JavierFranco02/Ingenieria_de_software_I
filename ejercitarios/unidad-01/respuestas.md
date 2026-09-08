@@ -80,15 +80,14 @@ _Respuesta:_
 
 | Rol | Descripción |
 |---|---|
-| Analista | |
-| Arquitecto | |
-| Desarrollador | |
-| Tester / QA | |
+| Analista | Levanta y modela requisitos |
+| Arquitecto | Define la estructura del sistema |
+| Desarrollador | Implementa el software |
+| Tester / QA | Verifica calidad y detecta defectos |
 
 **10. Caso breve:** Un ingeniero de software descubre, cerca de la fecha de entrega, una falla de seguridad que podría exponer datos de usuarios, pero corregirla retrasaría el proyecto una semana. ¿Qué debería hacer y por qué, considerando la ética profesional?
 
-_Respuesta:_
-
+Lo correcto sería retrasar el proyecto una semana, para así corregir la falla de seguridad y evitar la exposición de los datos sensibles, porque la privacidad de los usuarios es la máxima prioridad
 
 ---
 
@@ -96,7 +95,11 @@ _Respuesta:_
 
 **11. Ordena y nombra las cinco fases genéricas del ciclo de vida del software vistas en clase.**
 
-_Respuesta:_
+1. Análisis
+2. Diseño
+3. Implementación
+4. Pruebas
+5. Mantenimiento
 
 
 **12. ¿Por qué se afirma que el mantenimiento suele ser la fase más costosa del ciclo de vida del software? Da un ejemplo hipotético.**

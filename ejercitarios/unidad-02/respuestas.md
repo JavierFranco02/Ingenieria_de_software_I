@@ -15,36 +15,35 @@ _Respuesta:_
 
 
 **3. Piensa en un sistema cotidiano (por ejemplo, una biblioteca, un supermercado o un club deportivo) y completa la tabla con un ejemplo propio para cada propiedad.**
-
+Ejemplo elegido: Supermercado.
 | Propiedad | Ejemplo en el sistema elegido |
 |---|---|
-| Jerarquía | |
-| Límites (fronteras) | |
-| Interrelación de elementos | |
-| Propiedades emergentes | |
+| Jerarquía | Estructura organizacional compuesta por la gerencia general en el nivel superior, jefes de sección (cajas, logística, frescos) en el nivel medio, y cajeros o reponedores en el nivel operativo. |
+| Límites (fronteras) | Las paredes físicas del establecimiento, el horario comercial de atención al público y las puertas de acceso/salida delimitadas por las cajas registradoras y los sistemas de seguridad. |
+| Interrelación de elementos | El sistema de inventario vincula las ventas registradas en las cajas con el almacén, activando automáticamente alertas para que el personal de reposición llene las góndolas vacías. |
+| Propiedades emergentes | La experiencia de compra general o la rentabilidad total, atributos del sistema completo que no existen en ninguna de sus partes aisladas (un carrito, una caja o un pasillo) sino de su interacción conjunta. |
 
 **4. Dentro del mismo sistema, identifica un posible subsistema y justifica por qué lo consideras tal.**
 
 _Respuesta:_
-
+Subsistema de cajas y cobro ya que está formado por las terminales de punto de venta (POS), los escáneres de códigos de barras, las cintas transportadoras, el dinero en efectivo, las lectoras de tarjetas y los cajeros humanos o de autopago, teniendo como propósito específico el formalizar la transacción comercial, registrar la salida de mercancía y procesar el pago del cliente, posee un flujo de trabajo interno cerrado y reglas operativas propias (apertura de caja, arqueo, validación de medios de pago) y a pesar de operar de manera autónoma en su sección, sus salidas impactan directamente en otros subsistemas del supermercado: actualiza en tiempo real el inventario de la tienda y alimenta el flujo financiero de la gerencia general.
 
 ---
 
 ## Tema 2 · Los sistemas y su entorno
 
 **5. Elige un sistema de software que uses habitualmente e identifica: una entrada, una salida y un elemento de su entorno.**
-
 | Elemento | Descripción en el sistema elegido |
 |---|---|
-| Sistema elegido | |
-| Una entrada | |
-| Una salida | |
-| Un elemento del entorno | |
+| Sistema elegido | Spotify |
+| Una entrada | La acción del usuario al buscar y hacer clic en el botón de reproducir sobre una canción o lista de reproducción específica. |
+| Una salida | La transmisión del flujo de datos de audio (streaming) a través de los altavoces o auriculares, acompañada de la interfaz gráfica actualizada que muestra la carátula y el progreso de la pista. |
+| Un elemento del entorno | La conexión a Internet (proveedor de red o red Wi-Fi local), que es externa al sistema pero indispensable para que este pueda recibir las peticiones y descargar los paquetes de audio. |
 
 **6. ¿El sistema que elegiste es abierto o cerrado? Justifica tu respuesta.**
 
 _Respuesta:_
-
+Spotify es un sistema abierto ya que mantiene una comunicación bidireccional permanente con su entorno. Recibe entradas constantes del exterior (comandos de los usuarios, actualizaciones de red, transacciones de pago) y emite salidas hacia este (flujos de audio, reportes de uso a artistas y discográficas), requiere de elementos que están fuera de su control directo para operar, como la infraestructura de Internet de los usuarios, las redes de distribución de contenidos (CDN) y los servidores en la nube de terceros y a diferencia de un sistema cerrado (que opera en un entorno hermético sin influencias externas), Spotify se adapta y modifica en función de las condiciones del entorno, como la velocidad de conexión del usuario o las políticas de las tiendas de aplicaciones móviles.
 
 **7. Explica con tus palabras qué es la retroalimentación (feedback) en un sistema y da un ejemplo.**
 

@@ -1,7 +1,5 @@
 # Respuestas — Ejercitario Unidad 02
 
-> Completen cada pregunta debajo de su enunciado. Pueden borrar este bloque de instrucciones una vez que empiecen.
-
 ---
 
 ## Tema 1 · Propiedades de los sistemas
@@ -50,12 +48,15 @@ _Respuesta:_
 
 **7. Explica con tus palabras qué es la retroalimentación (feedback) en un sistema y da un ejemplo.**
 
-_Respuesta:_
+_Respuesta:_La retroalimentación es la información de salida que vuelve a entrar al sistema para corregirlo. 
+Ejemplo: El termostato mide la temperatura y apaga/enciende el aire.
 
 
 **8. Para el mismo sistema, menciona una restricción externa real que podría afectarlo, indicando si es organizacional, regulatoria o tecnológica.**
 
 _Respuesta:_
+Restricción externa**
+R: Restricción Tecnológica. Ejemplo: Una app debe funcionar con Android 8 porque el cliente no puede comprar celulares nuevos.
 
 
 ---
@@ -65,7 +66,8 @@ _Respuesta:_
 **9. Menciona dos razones por las cuales es útil modelar un sistema antes de construirlo.**
 
 _Respuesta:_
-
+1. Reducir la complejidad: Ver el sistema en partes antes de codificar.
+2. Validar requisitos: Mostrarle al cliente cómo va a funcionar antes de gastar plata.
 
 **10. Ejercicio de relación** (completá con el número que corresponda a cada letra):
 

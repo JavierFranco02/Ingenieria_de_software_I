@@ -101,7 +101,9 @@ _Respuesta:_
 
 **12. ¿Por qué se afirma que el mantenimiento suele ser la fase más costosa del ciclo de vida del software? Da un ejemplo hipotético.**
 
-_Respuesta:_
+Se afirma eso porque requiere mantener el proyecto vivo por mucho tiempo, con actualización constante, corrección de errores, complejidad del código heredado 
+Por ejemplo, con una aplicación de stock, una vez finalizado su producción, requeriría adaptarlo a los cambios legales (como impuestos), o adaptarlo a nuevas tecnologías porque las que se usaban ya se encuentran sin soporte (como base de datos)
+
 
 
 ---
@@ -112,10 +114,10 @@ _Respuesta:_
 
 | Área | ¿Cómo apoya a la Ingeniería de Software? |
 |---|---|
-| Estructuras de datos y algoritmos | |
-| Bases de datos | |
-| Sistemas operativos | |
-| Redes | |
+| Estructuras de datos y algoritmos | Base para diseñar soluciones eficientes |
+| Bases de datos |  Modelado y gestión de la información del sistema |
+| Sistemas operativos | Entiende el entorno donde se ejecuta el software|
+| Redes | Soporta comunicación y sistemas distribuidos |
 
 ---
 
@@ -123,10 +125,10 @@ _Respuesta:_
 
 **13. Elige dos de las siguientes disciplinas — Administración, Psicología, Economía, Derecho, Comunicación — y explica con un ejemplo concreto cómo se relacionan con el trabajo diario de un ingeniero de software.**
 
-_Respuesta:_
+ En la administración, se gestionan los proyectos, la planificación y los recursos. Por ejemplo, cuando participamos en las reuniones de Scrum (como la planeación del sprint), nos toca calcular cuánto nos va a tomar hacer una tarea, organizarnos con los tiempos y decidir qué bugs o funciones resolver primero para entregar todo a tiempo. 
+ En cuanto a la psicologia, ayuda con el diseño centrado en el usuario y la ergonomía. Por ejemplo, al diseñar una aplicación, pensamos en cómo el usuario va a reaccionar a los botones para que no se confunda.
 
 
 **14. Reflexión final:** de todo lo visto en clase (definición, historia, rol del ingeniero, ciclo del software, relación con otras áreas y disciplinas, e impacto de la IA), ¿qué idea te resultó más relevante y por qué?
 
-_Respuesta:_
-
+Me pareció más relevante el impacto de la IA en el desarrollo de software, especialmente como asistente para escribir código y hacer testing, ya que  inteligencia artificial no viene a quitarnos el trabajo, sino a funcionar como un compañero súper potente que nos ahorra tiempo en las tareas más repetitivas. Poder usar herramientas que nos ayudan a programar más rápido, encontrar errores antes o generar pruebas automáticas cambia por completo la forma de trabajar, permite enfocarnos más en la parte creativa, el diseño y la lógica de los sistemas, haciendo que el proceso sea mucho más eficiente y moderno.

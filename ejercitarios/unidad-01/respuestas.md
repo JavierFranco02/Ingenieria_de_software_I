@@ -26,12 +26,16 @@ _Respuesta:_
 **4. Enumera los elementos que conforman un sistema basado en computadora, además del software.**
 
 _Respuesta:_
-
+1.Hardware
+2.Personas
+3.Bases de datos
+4.Documentación
+5.Procedimientos 
 
 **5. Describe brevemente la diferencia entre una visión sistémica y una visión aislada del software en el diseño de sistemas.**
 
 _Respuesta:_
-
+ Una visión sistemática entiende que cada parte del software (personas, procesos, datos) están relacionados y se afectan entre ellos, funcionando como un sistema completo. Por otro lado, la visión aislada se ve al software como un componente independiente, ignorando cómo interactúa con el resto de las partes del sistema.
 
 **6. Elige una herramienta de inteligencia artificial aplicada al desarrollo de software (por ejemplo, un asistente de código o de testing) e indica:**
 - Qué tarea del ingeniero de software apoya o transforma.
@@ -39,9 +43,10 @@ _Respuesta:_
 - Un riesgo o desafío que introduce su uso.
 
 _Respuesta:_
-
-
----
+Herramienta elegida: Asistente de código
+1.Qué tarea del ingeniero de software apoya o transforma: Acelera la codificación, desarrollo de prototipos, y automática la escritura de código repetitivo.
+2.Un beneficio concreto que ofrece: Aumenta la velocidad del desarrollo de software .
+3.Un riesgo o desafío que introduce su uso: Sin una adecuada validación del código que proporciona, puede haber brechas o riesgos de seguridad, o pequeños errores de código debido a las alucinaciones en la refactorización (elimina código importante).
 
 ## Tema 3 · Historia de la ingeniería de software
 

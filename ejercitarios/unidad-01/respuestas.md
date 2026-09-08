@@ -1,8 +1,6 @@
 # Respuestas — Ejercitario Unidad 01
 
-> Completen cada pregunta debajo de su enunciado. Pueden borrar este bloque de instrucciones una vez que empiecen.
 
----
 
 ## Tema 1 · Ingeniería de software: una visión previa
 
@@ -49,17 +47,17 @@ _Respuesta:_
 
 **7. En tu opinión, ¿por qué la "crisis del software" de 1968 marcó un punto de inflexión para la disciplina?**
 
-_Respuesta:_
+_Respuesta:_ La crisis del software de 1968 se dio porque los proyectos eran muy grandes, caros y se entregaban tarde o no funcionaban. Por eso surgió la Ingeniería de Software como disciplina.
 
 **Ejercicio de relación** (completá con la letra que corresponda a cada número):
 
 | Evento / Período | Descripción |
 |---|---|
-| A. Programación artesanal (1950s–60s) | ___ |
-| B. Crisis del software (1968) | ___ |
-| C. Modelo en cascada (1970s–80s) | ___ |
-| D. Métodos iterativos (1990s) | ___ |
-| E. Metodologías ágiles (2001–hoy) | ___ |
+| A. Programación artesanal (1950s–60s) | 3 |
+| B. Crisis del software (1968) | 1|
+| C. Modelo en cascada (1970s–80s) | 5 |
+| D. Métodos iterativos (1990s) | 4|
+| E. Metodologías ágiles (2001–hoy) | 2 |
 
 1. Se acuña el término "ingeniería de software" en una conferencia de la OTAN ante fallas y sobrecostos de proyectos.
 2. Surge el Manifiesto Ágil; se popularizan Scrum, Kanban y XP.
@@ -74,7 +72,9 @@ _Respuesta:_
 **8. Menciona tres competencias que debe tener un ingeniero de software, además del conocimiento técnico.**
 
 _Respuesta:_
-
+1.Aprendizaje continuo.
+2.Resolucion de problemas tecnicos.
+3.Comunicacion y trabajo en equipo.
 
 **9. Describe brevemente qué hace cada uno de los siguientes roles dentro de un equipo de desarrollo:**
 

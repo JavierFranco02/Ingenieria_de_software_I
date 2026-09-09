@@ -6,12 +6,13 @@
 
 **1. En tus propias palabras, define qué es la Ingeniería de Software.**
 
-_Respuesta:_
-
+_Respuesta: La Ingenieria de Software es básicamente una rama de de la ciencia que permite innovar, diseñar y estructurar de manera de cuantificable y confiable 
+el proceso de diseño y desarrollo de un sistema de software, maximizando la producción y eficiencia del proyecto que se desea elaborar.
 
 **2. Explica con un ejemplo la diferencia entre "programar" y "hacer ingeniería de software".**
 
-_Respuesta:_
+_Respuesta:Como mencionamos anteriormente, la Ingenieria de Software se encarga del diseño globalizado de proyectos con un alto grado de complejidad, atendiendo a las pautas, escalas y mantenimiento a corto o a largo plazo que se debe tener en cuenta para concebir este proyecto.
+Por su parte podemos mencionar 
 
 
 **3. Menciona dos razones por las cuales la ingeniería de software es necesaria en el desarrollo de sistemas actuales.**

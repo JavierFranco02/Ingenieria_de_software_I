@@ -13,7 +13,7 @@ el proceso de diseño y desarrollo de un sistema de software, maximizando la pro
 
 _Respuesta:Como mencionamos anteriormente, la Ingenieria de Software se encarga del diseño globalizado de proyectos con un alto grado de complejidad, atendiendo a las pautas, escalas y mantenimiento a corto o a largo plazo que se debe tener en cuenta para concebir este proyecto.
 Por su parte podemos mencionar que el programador se encarga del desarrollo y seguimiento de un código de alta calidad con los protocolos y seguimiento que se le da al proyecto. Entonces podemos decir que la Ingenieria de Software no solo puede diseñar, sino que, también puede programar en cambio el progamar se centra más en desarrollo y no tanto en diseño.
-Por Ejemplo: Un Sistema de Compra Online
+Por Ejemplo: Un Sistema de Compra Online.
 Imagina que una empresa quiere lanzar una app para realizar compras por intenet.
 Lo que hace el Programador:
 Recibe la orden de crear la pantalla donde se muestra el botón de "Pagar".

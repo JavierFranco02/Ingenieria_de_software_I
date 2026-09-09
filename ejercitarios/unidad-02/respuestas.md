@@ -6,12 +6,15 @@
 
 **1. Define en tus propias palabras qué es un sistema y da un ejemplo distinto al utilizado en clase.**
 
-_Respuesta:_
-
+_Respuesta:Un Sistema es un conjunto de elementos ordenados e interrelacionados que actúan entre sí para alcanzar un objetivo.
+Ejemplos Comunes de Sistemas
+Computadora personal (PC o portátil): Integra torre/pantalla, sistema operativo (Windows, macOS) y aplicaciones de uso diario.
+Teléfono inteligente (Smartphone): Combina piezas táctiles y circuitos con un sistema móvil (Android o iOS) y apps.
+Servidores web y de bases de datos: Infraestructuras que almacenan y distribuyen páginas de internet o datos empresariales de forma continua.
 
 **2. Enumera los seis elementos de un sistema basado en computadora.**
 
-_Respuesta:_
+_Respuesta:
 
 
 **3. Piensa en un sistema cotidiano (por ejemplo, una biblioteca, un supermercado o un club deportivo) y completa la tabla con un ejemplo propio para cada propiedad.**

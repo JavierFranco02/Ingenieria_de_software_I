@@ -12,12 +12,24 @@ el proceso de diseño y desarrollo de un sistema de software, maximizando la pro
 **2. Explica con un ejemplo la diferencia entre "programar" y "hacer ingeniería de software".**
 
 _Respuesta:Como mencionamos anteriormente, la Ingenieria de Software se encarga del diseño globalizado de proyectos con un alto grado de complejidad, atendiendo a las pautas, escalas y mantenimiento a corto o a largo plazo que se debe tener en cuenta para concebir este proyecto.
-Por su parte podemos mencionar 
+Por su parte podemos mencionar que el programador se encarga del desarrollo y seguimiento de un código de alta calidad con los protocolos y seguimiento que se le da al proyecto. Entonces podemos decir que la Ingenieria de Software no solo puede diseñar, sino que, también puede programar en cambio el progamar se centra más en desarrollo y no tanto en diseño.
+Por Ejemplo: Un Sistema de Compra Online
+Imagina que una empresa quiere lanzar una app para realizar compras por intenet.
+Lo que hace el Programador:
+Recibe la orden de crear la pantalla donde se muestra el botón de "Pagar".
+Escribe el código en JavaScript o Swift para que, al presionar el botón, se envíe la información de la tarjeta de crédito al servidor.
+Se asegura de que no haya errores tipográficos en esa función específica y de que el botón cambie de color al presionarlo.
+Lo que hace el Ingeniero de Software:
+Diseña la arquitectura global de la aplicación (cómo se comunicarán la base de datos de los restaurantes, la app del cliente y el sistema del repartidor).
+Planifica qué sucede si un millón de usuarios entran al mismo tiempo a la app (escalabilidad y rendimiento).
+Establece protocolos de seguridad cifrados para proteger los datos bancarios de los clientes y define las pruebas automáticas ante fallas del servidor.
 
 
 **3. Menciona dos razones por las cuales la ingeniería de software es necesaria en el desarrollo de sistemas actuales.**
 
-_Respuesta:_
+_Respuesta:Según mi opinión personal:
+Por la Experiencia de Usuario(UX), porque lo ideal seria que tu producto no solo llegue al cliente ,sino también tenga una conexión con los mismos, se pueden lograr con cosas sencillas como lo son colores, diseño de la interfaz y una adaptación ágil a las necesidades del consumidor. 
+Por la Escalabilidad y Rendimiento, es necesario que el sistema funcione 24/7 sin que colapsen los servidores.
 
 
 ---

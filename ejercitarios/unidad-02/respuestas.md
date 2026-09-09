@@ -14,7 +14,7 @@ Servidores web y de bases de datos: Infraestructuras que almacenan y distribuyen
 
 **2. Enumera los seis elementos de un sistema basado en computadora.**
 
-_Respuesta:
+_Respuesta:1)Software 2)Hardware 3)Personas 4)Bases de Datos 5)Documentación 6)Procedimientos
 
 
 **3. Piensa en un sistema cotidiano (por ejemplo, una biblioteca, un supermercado o un club deportivo) y completa la tabla con un ejemplo propio para cada propiedad.**

@@ -107,19 +107,24 @@ Ejemplo: El sistema de cajas de un supermercado. Un modelo estático solo calcul
 
 **14. Explica la diferencia entre Ingeniería de procesos de negocio e Ingeniería de producto, dando un ejemplo de cada una.**
 
-_Respuesta:_
+Ingeniería de procesos de negocio: Se centra en cómo funciona la organización y en mejorar sus procesos internos para que sean más eficientes.
 
+Ejemplo: Rediseñar el flujo de atención al cliente en un banco para reducir tiempos de espera y automatizar trámites.
+Ingeniería de producto: Se enfoca en el diseño y desarrollo de un producto o sistema específico, asegurando que cumpla con los requisitos y necesidades del usuario.
+
+Ejemplo: Diseñar un software de banca en línea que permita a los clientes realizar transferencias y pagos desde su celular.
 
 **15. Ordena numéricamente (1 a 4) los siguientes pasos genéricos del proceso de Ingeniería de Sistemas, según la secuencia vista en clase.**
 
 | N.º | Paso |
 |---|---|
-| | Especificación del sistema |
-| | Definición de necesidades |
-| | Asignación de requisitos entre elementos |
-| | Análisis de factibilidad |
+| 3| Especificación del sistema |
+| 1| Definición de necesidades |
+| 4| Asignación de requisitos entre elementos |
+| 2| Análisis de factibilidad |
 
 **16. Reflexión final:** ¿por qué crees que es importante que un ingeniero de software comprenda el sistema completo (Ingeniería de Sistemas) antes de comenzar a programar? Relaciona tu respuesta con algún ejemplo visto en la Unidad 01 o en esta unidad.
 
-_Respuesta:_
+Es fundamental que un ingeniero de software comprenda el sistema completo antes de comenzar a programar, porque la programación es solo una parte del proceso. Si no se entiende el contexto global, se corre el riesgo de desarrollar soluciones que no respondan a las necesidades reales del usuario o que no se integren bien con otros componentes del sistema.
+Ejemplo: En la Unidad 01 vimos que antes de programar un sistema de gestión escolar, es necesario entender cómo interactúan alumnos, profesores y administrativos. Si el ingeniero solo programa sin comprender el sistema, podría crear una aplicación que registre notas pero no contemple la comunicación con los padres o la generación de reportes, dejando incompleto el producto.
 

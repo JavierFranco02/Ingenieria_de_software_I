@@ -103,8 +103,8 @@ _Respuesta:_
 
 **11. ¿Qué es una especificación formal y en qué tipo de sistemas se justifica su uso? Da un ejemplo hipotético de un sistema donde la usarías.**
 
-_Respuesta:_
-
+_Respuesta:_ Una especificación formal es redactar los requerimientos del sistema usando notaciones y fórmulas matemáticas estrictas en lugar de español o lenguaje común. Su gran ventaja es que elimina cualquier tipo de ambigüedad (cada regla matemática tiene un único significado posible). Sin embargo, escribirla y entenderla requiere formación avanzada, por lo que es un proceso muy costoso y complejo. Por esa razón, solo se justifica en sistemas críticos de seguridad (como en aviación, medicina o medicina nuclear), donde si el software falla, las consecuencias pueden ser fatales o generar pérdidas millonarias.
+Ejemplo hipotético: El software encargado de controlar la dosificación automática de radioterapia en un equipo médico para pacientes con cáncer. En este caso, un error de interpretación en los requerimientos podría dosificar mal al paciente con consecuencias nefastas, así que se justifica al 100% usar matemáticas exactas para especificar cómo debe funcionar.
 
 ---
 
@@ -112,8 +112,11 @@ _Respuesta:_
 
 **12. Explica la diferencia entre un prototipo desechable y un prototipo evolutivo, con un ejemplo de un proyecto donde usarías cada uno.**
 
-_Respuesta:_
-
+_Respuesta:_ La diferencia está en qué se hace con el prototipo una vez que el cliente da su visto bueno:
+El Prototipo Desechable se construye de forma súper rápida (muchas veces solo la parte visual o maquetas de pantallas) para que el cliente entienda qué se va a hacer y aclare dudas. Una vez que se aclaran los requerimientos, el prototipo se descarta y el sistema final se programa de cero con buena calidad.
+Ejemplo de uso: Para el rediseño de la interfaz móvil de un banco. Se crean maquetas clicables para probar con los usuarios si entienden la navegación, y una vez validado el diseño, se desecha la maqueta y se pasa a desarrollar la app real.
+Por otro lado, el Prototipo Evolutivo consiste en construir una primera versión funcional (aunque sea simple). A partir de ahí, se van agregando funciones y mejorándolo gradualmente hasta que se convierte en el producto final entregado al cliente.
+Ejemplo de uso: Un sistema web de gestión de inventario para un negocio local. Se construye una primera versión básica que solo registra entradas y salidas de stock, y con el paso de las semanas se van agregando el módulo de ventas, reportes y facturación hasta completar el sistema.
 
 ---
 
@@ -123,6 +126,8 @@ _Respuesta:_
 
 _Respuesta:_
 
+- Componentes reutilizables: En lugar de programar todo desde cero, se ensambla el prototipo reutilizando bibliotecas, módulos, plantillas o código que ya fue creado previamente para otros proyectos (por ejemplo, usar un módulo de inicio de sesión ya hecho).
+- Generación automática de interfaces: Consiste en usar herramientas de software que leen cómo se tiene organizados los datos y crean de forma automática las pantallas, tablas y formularios de entrada sin necesidad de diseñar ni programar cada botón a mano.
 
 ---
 

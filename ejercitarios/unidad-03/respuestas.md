@@ -105,6 +105,13 @@ _Respuesta:_
 **13. ¿Qué es un patrón de proceso? Da un ejemplo hipotético de un problema recurrente en un proyecto y su solución.**
 
 _Respuesta:_
+Un patrón de proceso describe una solución probada a un problema recurrente en el desarrollo de software. Es una plantilla de actividades.
+
+Tipos y ejemplos:
+
+ •  Patrones de Tareas: Definen el detalle de una tarea. Ej: Patrón de Revisión de Requisitos - Pasos: Planificar revisión, distribuir documentos, reunión formal, reportar defectos.
+ •  Patrones de Fase: Definen flujo de una fase. Ej: Patrón de Fase de Análisis - Secuencia: Comunicar -> Planificar -> Modelar requisitos -> Construir prototipo -> Validar.
+ •  Patrones de Producto: Definen artefactos. Ej: Patrón de Desarrollo Iterativo - Cada iteración produce un incremento ejecutable del producto.
 
 
 ---
@@ -114,15 +121,26 @@ _Respuesta:_
 **14. Explica la diferencia entre herramientas Upper-CASE y Lower-CASE.**
 
 _Respuesta:_
+UPPER-CASE es la herramienta que se usa al inicio del proyecto, 
+en el análisis y el diseño. Sirve para planificar y dibujar qué va a hacer el sistema. Es para el analista. No se programa nada, solo se modela. Ejemplo: cuando haces diagramas UML o el modelo de base de datos en Visual Paradigm o StarUML.
+
+LOWER-CASE es la herramienta que se usa al final, 
+cuando ya se va a programar, probar e implementar. Sirve para construir el sistema. Es para el programador. Ejemplo: VS Code para escribir código, GitHub para guardar versiones, JUnit para probar.
 
 
 **15. Menciona tres herramientas que consideren CASE (de su propia experiencia o investigación) y clasifíquenlas según la categoría a la que pertenecen.**
 
 | Herramienta | Categoría (Upper / Lower / I-CASE) |
-|---|---|
-| | |
-| | |
-| | |
+UPPER - Para Analizar:
+Visual Paradigm, StarUML -> hacen diagramas UML y base de datos.
+
+LOWER - Para Programar:
+VS Code, Eclipse -> para escribir código.
+Git / GitHub -> para guardar versiones.
+JUnit / Selenium -> para probar.
+
+I-CASE - Hace todo:
+Enterprise Architect -> hace análisis y código en uno.
 
 **16. Reflexión final:** de los modelos de proceso vistos en esta unidad, ¿cuál elegirían para un proyecto personal? Justifiquen su elección considerando el tamaño del proyecto, el tiempo disponible y el nivel de certeza sobre los requisitos.
 

@@ -135,12 +135,19 @@ _Respuesta:_
 
 **14. Completen el siguiente cuadro relacionando cada técnica de validación con el tipo de problema que detecta mejor.**
 
-| Técnica de validación | Qué tipo de problema detecta mejor |
-|---|---|
-| Revisiones de requisitos | |
-| Prototipado | |
-| Generación de casos de prueba | |
+Técnicas de Validación de Requisitos:
 
+1. Revisión técnica: El equipo lee el documento de requisitos junto.
+Detecta: requisitos ambiguos, incompletos o contradictorios.
+
+2. Prototipo: Se hace una maqueta rápida del sistema para mostrar al cliente.
+Detecta: malentendidos con el cliente y requisitos que faltan.
+
+3. Casos de prueba: Se crean pruebas a partir de cada requisito.
+Detecta: requisitos que no se pueden probar o que no son realistas.
+
+4. Checklist: Se usa una lista de preguntas para verificar.
+Detecta: requisitos que no se pueden rastrear y falta de estándares.
 ---
 
 ## Tema 10 · Administración de requerimientos
@@ -148,6 +155,8 @@ _Respuesta:_
 **15. Explica con tus palabras qué es la trazabilidad de requerimientos y por qué es importante en un proyecto real.**
 
 _Respuesta:_
+Es poder seguirle el rastro a un requisito desde donde nació hasta donde termina. 
+Desde la idea del cliente, hasta el diseño, el código y la prueba.
 
 
 ---
@@ -157,7 +166,15 @@ _Respuesta:_
 **16. Menciona dos métricas que se pueden aplicar a los requerimientos de un proyecto y qué información le aporta cada una al equipo.**
 
 _Respuesta:_
+1. Estabilidad de requisitos:
+Mide cuánto cambian los requisitos. 
+Formula: (Requisitos que no cambiaron / Total de requisitos) x 100
+Si te da bajo, tu proyecto es muy inestable.
 
+2. Completitud:
+Mide si todos los requisitos fueron diseñados y probados.
+Formula: (Requisitos con prueba / Total de requisitos) x 100
+Lo ideal es que sea 100%, significa que todo lo pedido está cubierto.
 
 **17. Reflexión final:** pensá en un proyecto de software (hipotético o real). Describí qué técnica de obtención, qué técnica de especificación y qué técnica de validación usarías para sus requerimientos, y justificá tu elección considerando el tipo de proyecto y de usuarios.
 

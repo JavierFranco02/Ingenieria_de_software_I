@@ -114,8 +114,10 @@ Desarrollar un sistema web para la chipería "[Nombre de la Chipería]" que perm
 
 | Riesgo | Impacto | Estrategia de mitigación |
 |---|---|---|
-| [ej. Baja disponibilidad del cliente para validaciones] | [Alto/Medio/Bajo] | [cómo se planea mitigar] |
-| [Riesgo 2] | [Alto/Medio/Bajo] | [cómo se planea mitigar] |
+**Dificultad de los empleados para adaptarse al nuevo sistema informático.** | Alto | Diseñar una interfaz visualmente limpia y organizar capacitaciones cortas con simulaciones de uso antes de implementar el sistema de forma oficial. |
+| **Retrasos en el desarrollo durante el semestre.** | Medio | Dividir el proyecto en etapas, priorizando los módulos de Caja y Stock (Producto Mínimo Viable) para asegurar una entrega funcional a tiempo. |
+| **Cambios constantes en los requerimientos solicitados por el dueño.** | Medio | Validar y aprobar formalmente este documento de conceptualización con el cliente antes de iniciar la etapa de programación. |
+| **Dificultades técnicas en la integración del Frontend (JS) con el Backend (Java).** | Medio | Utilizar una arquitectura basada en API REST y realizar pruebas de integración de manera frecuente entre los desarrolladores responsables. |
 
 ---
 
@@ -123,9 +125,10 @@ Desarrollar un sistema web para la chipería "[Nombre de la Chipería]" que perm
 
 | Componente | Elección | Justificación breve |
 |---|---|---|
-| Lenguaje de programación | [ej. Python / Java / TypeScript] | [por qué] |
-| Framework | [ej. Django / Spring Boot / React] | [por qué] |
-| Base de datos | [ej. PostgreSQL / MongoDB] | [por qué] |
+**Lenguaje de programación** | Backend: Java / Frontend: JavaScript | Java ofrece gran estabilidad y seguridad para la lógica de negocio y cálculos de ventas. JavaScript permite crear vistas dinámicas y rápidas para el usuario. |
+| **Framework** | Spring Boot (Backend) / Bootstrap (Frontend) | Spring Boot agiliza la configuración del servidor y la conexión a la base de datos. Bootstrap facilita el diseño de pantallas adaptables y modernas de forma rápida. |
+| **Base de datos** | PostgreSQL | Es un motor relacional gratuito, robusto y muy seguro, ideal para garantizar que no se pierda la información financiera del negocio. |
+
 
 ---
 

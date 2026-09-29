@@ -85,7 +85,15 @@ _Respuesta:
 
 **7. Elegí un proyecto de software (hipotético o real) y justificá qué modelo de proceso usarías para desarrollarlo y por qué.**
 
-_Respuesta:_
+Elijo Tetravago, un sistema web de reservación de hoteles con búsqueda, reseñas y comentarios de usuarios, donde el administrador puede gestionar varios hoteles.
+
+Usaría el modelo incremental, por estas razones:
+
+Se puede dividir en módulos funcionales. Cada incremento entrega algo utilizable: 1) registro de usuarios y gestión de hoteles, 2) búsqueda y reserva de habitaciones, 3) reseñas y comentarios, 4) panel de administración multi-hotel.
+Entrega valor temprano. Con el primer incremento ya se puede mostrar un sistema básico que funciona, sin esperar al producto completo.
+Los requisitos principales están claros (reservar, buscar, administrar), pero pueden aparecer mejoras por el camino (filtros, pagos, notificaciones). El incremental permite sumarlas en incrementos posteriores sin rehacer todo.
+Es más flexible que cascada, que obligaría a definir todo desde el principio, y más simple que el espiral, que resulta excesivo para un proyecto de este tamaño.
+Reduce riesgos, porque se prueba y valida cada módulo por separado antes de integrarlo.
 
 
 ---
@@ -94,13 +102,15 @@ _Respuesta:_
 
 **8. Explica con tus palabras por qué la mayoría de los procesos modernos son iterativos.**
 
-_Respuesta:_
+La mayoría de los procesos modernos son iterativos porque los requisitos casi nunca se conocen completos ni se mantienen estables al inicio de un proyecto. El cliente cambia de opinión, el mercado se modifica o recién entiende lo que necesita cuando ve algo funcionando. Si se intenta planificar y construir todo de una sola vez, un error de comprensión se descubre recién al final, cuando corregirlo es muy costoso.
 
+Con la iteración, el software se construye en ciclos repetidos (planear, diseñar, construir, probar y evaluar). En cada vuelta se obtiene retroalimentación del cliente, se corrigen errores temprano y se ajusta el rumbo. Además, se reducen los riesgos, se entrega valor más rápido y el producto va mejorando de forma progresiva en lugar de depender de una gran entrega final
 
 **9. Menciona una ventaja y una desventaja de trabajar con iteraciones cortas.**
 
-_Respuesta:_
+Ventaja	Permiten obtener retroalimentación rápida del cliente y detectar errores o malentendidos a tiempo, cuando corregirlos es barato. También dan sensación de avance constante, ya que siempre hay algo nuevo para mostrar.
 
+Desventaja	Generan más carga de planificación, reuniones y pruebas, porque cada ciclo repite esas tareas. Además, si no hay buena disciplina, la documentación puede quedar descuidada y el diseño global puede degradarse por los cambios continuos
 
 ---
 

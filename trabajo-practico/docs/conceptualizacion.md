@@ -45,13 +45,14 @@ Esta falta de un sistema informático genera problemas concretos en el día a d�
 
 **Objetivo general:**
 
-[Redactar en una frase el objetivo general del sistema.]
+Desarrollar un sistema web para la chipería "[Nombre de la Chipería]" que permita agilizar las ventas en mostrador, controlar el stock de producción diaria y facilitar la liquidación de los vendedores ambulantes.
 
 **Objetivos específicos:**
 
-1. [Objetivo específico 1]
-2. [Objetivo específico 2]
-3. [Objetivo específico 3]
+1. **Registrar** las ventas diarias mediante un módulo de Punto de Venta (POS) intuitivo que calcule automáticamente los totales y vueltos.
+2. **Controlar** la cantidad de productos terminados, registrando los lotes de producción ("horneadas") para mantener actualizado el stock del mostrador.
+3. **Gestionar** las salidas y devoluciones de los canasteros, calculando de forma automática el dinero que deben rendir al final del día.
+4. **Generar** reportes visuales básicos para que el propietario pueda consultar los ingresos diarios y semanales del negocio.
 
 ---
 
@@ -59,13 +60,17 @@ Esta falta de un sistema informático genera problemas concretos en el día a d�
 
 **Incluye (dentro del alcance):**
 
-- [Funcionalidad / módulo 1]
-- [Funcionalidad / módulo 2]
+- **Módulo de Caja (Punto de Venta):** Interfaz para registrar los productos vendidos, calcular totales/vueltos, registrar la forma de pago (efectivo, tarjeta) y realizar la apertura, el arqueo de caja y cierre.
+- **Módulo de Producción y Stock:** Opción para registrar el ingreso de nuevas "horneadas" de chipa y mantener un conteo actualizado de los productos listos para la venta.
+- **Módulo de Canasteros y Pedidos:** Registro de las unidades entregadas a cada vendedor ambulante por la mañana y las devueltas por la tarde, además de una agenda para pedidos de eventos con una seña.
+- **Módulo de Usuarios y Reportes:** Sistema de acceso con usuarios (Cajero, Dueño, Producción) y un panel principal con gráficos de las ventas realizadas.
 
 **No incluye (fuera de alcance):**
 
-- [Aspecto explícitamente excluido 1]
-- [Aspecto explícitamente excluido 2]
+- **Control de materia prima:** El sistema no gestionará el inventario de insumos como bolsas de almidón, queso o harina.
+- **Facturación electrónica de la SET:** No habrá integración con el sistema SIFEN; solo se generarán comprobantes de uso interno.
+- **Pasarela de pagos en línea:** Las ventas cobradas con tarjetas o transferencias se anotarán de forma manual en el sistema como registro, sin conectarse directamente con entidades bancarias.
+- **Aplicación móvil para clientes:** El sistema será de uso exclusivo para los empleados de la chipería y no contará con una tienda virtual pública.
 
 ---
 

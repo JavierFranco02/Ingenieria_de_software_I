@@ -56,8 +56,12 @@ _Respuesta:La diferencia principal radica en que un requerimiento es una necesid
 
 **5. Elegí un sistema que conozcas (una app, una plataforma, un sistema de tu universidad o trabajo) y da un ejemplo propio de un requerimiento funcional y uno no funcional para ese mismo sistema.**
 
-_Respuesta:_
-
+_Respuesta: Sistema de control de Llegadas y Salidas
+| Aspecto | Requerimientos de usuario | Requerimientos de sistema |
+|---|---|---|
+| Audiencia principal |La audiencia principal son los usuarios o empleados |Tener vinculada una cuenta o registrar un email de respaldo, tener datos o acceso a internet|
+| Nivel de detalle |Simple pero funcional, responde a la experiencia de usuario |Cumple con sus funcionalidades sin bugs |
+| Lenguaje utilizado |Java Script |Java Script |
 
 ---
 

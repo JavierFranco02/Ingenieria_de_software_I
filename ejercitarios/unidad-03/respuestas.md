@@ -31,12 +31,24 @@ Un proceso es una secuencia de pasos o actividades relacionadas para lograr un o
 
 **3. Enumera las cinco actividades genéricas del marco de trabajo de Pressman.**
 
-_Respuesta:_
+_Respuesta:Las cinco actividades genéricas del marco de trabajo del proceso de software, según el autor Roger Pressman en su libro Ingeniería del Software: Un enfoque práctico, son las siguientes:
+1. Comunicación: Esta fase inicial implica una colaboración intensa con los clientes y otras partes interesadas. El objetivo es comprender las metas del proyecto y definir los requisitos del software.
+2. Planeación: En esta actividad se crea el mapa de ruta para el viaje del desarrollo. Incluye la estimación de riesgos, la definición de los recursos necesarios, los productos de trabajo y el calendario de actividades.
+3. Modelado: Consiste en la creación de modelos que permiten al desarrollador y al cliente entender mejor los requisitos del software y el diseño que los satisfará. Se divide en análisis de requisitos y diseño arquitectónico.
+4. Construcción: Esta actividad combina la generación de código (programación) y las pruebas necesarias para descubrir errores en el código.
+5. Despliegue: El software se entrega al cliente, quien lo evalúa y proporciona comentarios basados en dicha evaluación.
 
 
 **4. Menciona dos actividades "de la sombrilla" y explica por qué se dice que "cubren" todo el proceso.**
 
-_Respuesta:_
+_Respuesta:
+|Dos actividades sombrilla:|
+|• Seguimiento y control del proyecto: Permite evaluar el progreso real frente al plan establecido y tomar medidas correctivas para cumplir con la programación.|
+|• Gestión del riesgo: Identifica, analiza y mitiga posibles problemas técnicos, de costos o de calendario antes de que afecten el proyecto.|
+|¿Por qué se dice que cubren todo el proceso?|
+|• No son secuenciales: A diferencia de las fases principales (como diseño o construcción), no ocurren en un solo momento específico.|
+|• Son paralelas y continuas: Se ejecutan de principio a fin durante todas las etapas del ciclo de vida del proyecto.|
+|• Brindan soporte global: Su función es supervisar, proteger y asegurar la calidad y el control de todas las actividades estructurales del desarrollo.|
 
 
 ---

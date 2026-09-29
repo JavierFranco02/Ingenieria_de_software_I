@@ -71,10 +71,10 @@ _Respuesta: Sistema de control de Llegadas y Salidas
 
 | Característica | Pregunta que permite verificarla |
 |---|---|
-| Correcto | |
-| No ambiguo | |
-| Completo | |
-| Verificable | |
+| Correcto | ¿El requisito describe fielmente una necesidad real, válida y autorizada del usuario o negocio? |
+| No ambiguo | ¿Tiene el requisito una única interpretación posible para todos los lectores y desarrolladores? |
+| Completo | ¿Contiene toda la información necesaria, restricciones, condiciones de borde y respuestas ante excepciones? |
+| Verificable | ¿Existe un método objetivo y factible de prueba (test, inspección o demostración) para comprobar que el sistema lo cumple? |
 
 **7. Tomá el requerimiento "El sistema debe ser rápido" y reescribilo de forma que cumpla con las características de un buen requerimiento vistas en clase.**
 
@@ -116,10 +116,10 @@ El requerimiento "El sistema debe ser rápido" es ambiguo y no se puede verifica
 
 | Técnica | Ventaja | Limitación |
 |---|---|---|
-| Lenguaje natural estructurado | | |
-| Casos de uso | | |
-| Historias de usuario | | |
-| Diagramas (UML) | | |
+| Lenguaje natural estructurado | Es sumamente accesible y fácil de leer para usuarios no técnicos gracias al uso de plantillas estandarizadas (ej. formato IEEE). | Puede volverse muy extenso y mantener cierta ambigüedad sintáctica si no se aplican reglas estrictas de redacción. |
+| Casos de uso | Excelente para capturar el comportamiento funcional y modelar interacciones complejas, flujos alternativos y excepciones. | No están diseñados para plasmar requerimientos no funcionales ni detalles de diseño de interfaces. |
+| Historias de usuario | Mantienen el foco en el valor del usuario final y promueven la flexibilidad y la comunicación continua en entornos ágiles. | Por sí solas carecen de profundidad técnica y estructural, requiriendo criterios de aceptación detallados para evitar malentendidos. |
+| Diagramas (UML) | Proveen una representación visual, precisa y estandarizada que reduce drásticamente la ambigüedad conceptual. | Requieren conocimientos técnicos especializados para su interpretación, lo que dificulta su revisión directa con clientes o usuarios de negocio. |
 
 ---
 
@@ -202,4 +202,24 @@ Lo ideal es que sea 100%, significa que todo lo pedido está cubierto.
 
 **17. Reflexión final:** pensá en un proyecto de software (hipotético o real). Describí qué técnica de obtención, qué técnica de especificación y qué técnica de validación usarías para sus requerimientos, y justificá tu elección considerando el tipo de proyecto y de usuarios.
 
-_Respuesta:_
+_MotoGestión_
+
+Un sistema web y móvil diseñado para la administración de stock de repuestos, gestión de turnos y seguimiento de órdenes de trabajo en talleres mecánicos de motocicletas. Sus usuarios clave son los mecánicos (perfil operativo con poco tiempo) y los administradores del taller (enfoque en control financiero y de procesos).
+
+_Técnica de Obtención:_ Observación en Campo y Entrevistas Semiestructuradas
+
+Consiste en realizar shadowing (acompañar al mecánico durante su jornada laboral en el taller) para observar cómo interactúan con las motos, herramientas y registros actuales, complementado con entrevistas breves.
+
+Justificación: Los usuarios operativos suelen omitir detalles cotidianos en una oficina o cuestionario. Ver el flujo real en el taller permite descubrir necesidades críticas del entorno (por ejemplo, que necesitan interfaces con botones grandes o lectura de códigos porque tienen las manos con grasa).
+
+_Técnica de Especificación:_ Historias de Usuario con Prototipos de Baja Fidelidad
+
+Redactar los requerimientos funcionales en formato ágil ("Como mecánico, quiero buscar repuestos escaneando un código de barras para no interrumpir el armado"), acompañados de bocetos esquemáticos de pantallas.
+
+Justificación: Este enfoque mantiene el foco en el valor del usuario y es altamente comprensible tanto para el equipo de desarrollo como para los dueños del taller, facilitando iteraciones rápidas sobre la interfaz.
+
+_Técnica de Validación:_ Prototipado Interactivo y Revisiones (Walkthroughs)
+
+Presentar un prototipo navegable a los usuarios clave para simular escenarios reales de uso (como registrar el ingreso de una moto siniestrada).
+
+Justificación: Al ser un entorno dinámico, validar mediante prototipos visuales permite detectar malentendidos, requerimientos ambiguos o funciones innecesarias antes de escribir código, asegurando que el producto final sea exacto y útil.

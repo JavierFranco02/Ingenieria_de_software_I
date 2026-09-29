@@ -13,7 +13,7 @@ _Respuesta:La ingeniería de requerimientos es el proceso estructurado para defi
 
 **2. Explica la diferencia entre "requerimiento", "especificación de requisitos" e "ingeniería de requisitos", con un ejemplo de cada uno.**
 
-_Respuesta:La diferencia principal radica en que un requerimiento es una necesidad puntual expresada por el usuario, la especificación de requisitos es el documento formal y detallado de esas necesidades, y la ingeniería de requisitos es el proceso completo y metódico para obtener, analizar y gestionar dichos elementos.\n
+_Respuesta:La diferencia principal radica en que un requerimiento es una necesidad puntual expresada por el usuario, la especificación de requisitos es el documento formal y detallado de esas necesidades, y la ingeniería de requisitos es el proceso completo y metódico para obtener, analizar y gestionar dichos elementos.
 1. Requerimiento (o Requisito)
 • Qué es: Es la condición, necesidad o deseo básico expresado por el cliente o usuario sobre lo que el sistema debe lograr (el "qué").
 • Ejemplo: "El usuario necesita una forma rápida de iniciar sesión en la aplicación móvil con su huella digital."

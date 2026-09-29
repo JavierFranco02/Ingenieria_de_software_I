@@ -38,9 +38,9 @@ _Respuesta:La diferencia principal radica en que un requerimiento es una necesid
 
 | Tipo de requerimiento | Descripción |
 |---|---|
-| A. Funcional | ___ |
-| B. No funcional | ___ |
-| C. Del dominio | ___ |
+| A. Funcional | 2 |
+| B. No funcional | 3 |
+| C. Del dominio | 1 |
 
 1. Proviene de las reglas o restricciones propias del área o dominio de negocio.
 2. Describe una función o servicio concreto que el sistema debe realizar.

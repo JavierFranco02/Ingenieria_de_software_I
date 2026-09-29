@@ -78,19 +78,23 @@ Desarrollar un sistema web para la chipería "[Nombre de la Chipería]" que perm
 
 | Interesado | Descripción | Interés en el proyecto |
 |---|---|---|
-| [Usuario final] | [quién es] | [qué espera del sistema] |
-| [Cliente] | [quién es] | [qué espera del sistema] |
-| [Administrador del sistema] | [quién es] | [qué espera del sistema] |
+| **Cajero / Vendedor** | Empleado encargado de la atención en el local. | Requiere un sistema ágil que calcule correctamente los montos para evitar faltantes de dinero en su turno. |
+| **Dueño de la Chipería** | Propietario y administrador del negocio. | Busca tener un mayor control de los ingresos diarios, evitar pérdidas de productos y monitorear el rendimiento comercial. |
+| **Maestro Chipero** | Encargado del área de cocina y horneado. | Necesita una función simple para registrar rápidamente las cantidades de chipa que terminan de cocinarse. |
+| **Canastero (Revendedor)** | Vendedor ambulante que comercializa los productos en la vía pública. | Espera un proceso de rendición claro y sin errores al finalizar su jornada para evitar malentendidos sobre el dinero a entregar. |
+| **Equipo de Desarrollo** | Estudiantes de Ingeniería de Software responsables del proyecto. | Desean desarrollar una aplicación funcional, estable y bien documentada que cumpla con los requisitos académicos de la materia. |
 
 ---
 
 ## 6. Justificación / viabilidad
 
-**Viabilidad técnica:** [¿el grupo cuenta con el conocimiento o puede adquirirlo?]
+**Argumento de conveniencia:** La implementación de ChipeSoft transformará un negocio familiar administrado de forma empírica en un establecimiento informatizado y eficiente. Permitirá eliminar pérdidas económicas causadas por errores humanos en los cierres de caja y en la rendición de los canasteros, garantizando un control riguroso de las ganancias y proporcionando datos reales al propietario para impulsar el crecimiento de su chipería.
 
-**Viabilidad operativa:** [¿el usuario/cliente podrá usar y mantener el sistema?]
+**Viabilidad técnica:** El grupo de estudiantes posee o está adquiriendo los conocimientos necesarios en lenguajes como Java y JavaScript, así como en el manejo de bases de datos relacionales, lo que garantiza la capacidad técnica para construir el sistema.
 
-**Viabilidad económica (alto nivel):** [¿es razonable en términos de costo/esfuerzo para el contexto del proyecto?]
+**Viabilidad operativa:** El sistema contará con una interfaz gráfica amigable, con opciones claras y botones accesibles (utilizando Bootstrap), lo que permitirá que el personal de la chipería aprenda a utilizarlo en poco tiempo, independientemente de su nivel de experiencia con computadoras.
+
+**Viabilidad económica:** El proyecto es altamente factible económicamente. Se emplearán lenguajes de programación, frameworks y gestores de bases de datos de código abierto (Open Source), eliminando los costos de licencias de software, lo cual es ideal tanto para un trabajo universitario como para un negocio familiar.
 
 ---
 

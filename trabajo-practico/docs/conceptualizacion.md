@@ -99,18 +99,22 @@ Desarrollar un sistema web para la chipería "[Nombre de la Chipería]" que perm
 ---
 
 ## 7. Visión general de la solución
+El sistema consistirá en una aplicación web accesible desde una computadora instalada en la chipería. 
 
-[Descripción breve, en lenguaje llano y sin detalle técnico, de cómo el grupo imagina que el sistema resolverá el problema planteado.]
+Al iniciar el día, el cajero registrará la apertura de su caja. Durante la jornada, cada vez que el maestro chipero finalice una tanda de cocción, ingresará al sistema para sumar esas nuevas unidades al stock. Cuando los clientes compren en el local, el cajero utilizará la pantalla interactiva para seleccionar los productos; el sistema descontará el stock automáticamente y registrará el ingreso del dinero. 
+
+Paralelamente, se registrará la cantidad de chipas que lleva cada canastero por la mañana. Al regresar por la tarde, se anotarán sus devoluciones, y el sistema calculará exactamente cuánto dinero en efectivo debe entregar. Finalmente, el dueño podrá ingresar con su usuario y observar un resumen gráfico de todas las ventas y movimientos del día.
 
 ---
 
 ## 8. Glosario de términos
 
 | Término | Definición |
-|---|---|
-| [Término 1] | [definición en el contexto del negocio] |
-| [Término 2] | [definición en el contexto del negocio] |
-| [Término 3] | [definición en el contexto del negocio] |
+| **Horneada / Lote** | Cantidad de productos (chipas) terminados que se retiran del horno en una sola tanda para su comercialización. |
+| **Canastero / Revendedor** | Vendedor ambulante que retira productos del local para comercializarlos en la vía pública. |
+| **Arqueo de Caja** | Proceso de verificar que el dinero físico en la caja registradora coincida con el total de ventas registrado por el sistema. |
+| **Punto de Venta (POS)** | Interfaz principal del sistema donde el cajero registra los productos que adquiere el cliente y efectúa el cobro. |
+| **Seña** | Pago anticipado y parcial que realiza un cliente para reservar un pedido grande para una fecha futura. |
 
 ---
 

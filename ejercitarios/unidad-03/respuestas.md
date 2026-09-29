@@ -8,12 +8,25 @@
 
 **1. Define en tus propias palabras qué es un proceso de software.**
 
-_Respuesta:_
+_Respuesta: Una serie de actividades que se relacionan para la creación, desarrollo y mantenimiento de un producto de software.
 
 
 **2. Explica la diferencia entre proceso, metodología y modelo de proceso, con un ejemplo de cada uno.**
 
-_Respuesta:_
+_Respuesta:
+Un proceso es una secuencia de pasos o actividades relacionadas para lograr un objetivo, una metodología es el conjunto de reglas, métodos y prácticas que guían cómo aplicar esos pasos, y un modelo de proceso es la representación abstracta o marco teórico que estructura y organiza dicho proceso.
+|1. Proceso
+• Definición: Es la serie de acciones, tareas o fases encadenadas que transforman una entrada en un resultado o producto final.
+• Enfoque: En el qué se debe hacer de forma general para cumplir una meta.
+• Ejemplo: El proceso de desarrollo de software (que incluye planificar, analizar, diseñar, codificar, probar y desplegar).
+2. Metodología
+• Definición: Es el conjunto coherente de métodos, técnicas, normas y filosofías que dictan cómo se deben coordinar y ejecutar las tareas dentro de un proyecto o trabajo.
+• Enfoque: En la guía práctica, la filosofía de trabajo y las pautas específicas de colaboración.
+• Ejemplo: La metodología Scrum (dentro del desarrollo ágil, que define roles como Scrum Master, artefactos como el Product Backlog y ceremonias como las reuniones diarias).
+3. Modelo de Proceso
+• Definición: Es la representación esquemática, conceptual o simplificada de un proceso que muestra el orden y la relación lógica de sus fases.
+• Enfoque: En la estructura visual o teórica de cómo fluye el trabajo (si es paso a paso o flexible).
+• Ejemplo: El modelo en cascada (Waterfall), que representa el proceso de desarrollo de software de forma estrictamente secuencial, donde una fase (como el diseño) debe terminar por completo antes de que empiece la siguiente.|
 
 
 **3. Enumera las cinco actividades genéricas del marco de trabajo de Pressman.**

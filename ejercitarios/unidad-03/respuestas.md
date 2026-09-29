@@ -110,15 +110,23 @@ _Respuesta:_
 
 | Actividad | Qué implica |
 |---|---|
-| Especificación | |
-| Diseño e implementación | |
-| Validación | |
-| Evolución | |
+| Especificación | Definir qué debe hacer el sistema y sus restricciones de funcionamiento |
+| Diseño e implementación | Diseñar la estructura del sistema y escribir el código para construirlo |
+| Validación | Probar el software para asegurar que realmente hace lo que el cliente necesita |
+| Evolución | Modificar y actualizar el software según cambien las necesidades del usuario o del mercado |
 
 **11. Relaciona estas cuatro actividades con las cinco fases del ciclo del software vistas en la Unidad 1 (análisis, diseño, implementación, pruebas, mantenimiento). ¿En qué se parecen y en qué se diferencian?**
 
 _Respuesta:_
 
+Se parecen en que son prácticamente los mismos conceptos con otro agrupamiento:
+
+- Especificación equivale a Análisis.
+- Diseño e implementación agrupa Diseño + Implementación.
+- Validación equivale a Pruebas.
+- Evolución equivale a Mantenimiento.
+
+La diferencia principal es que las 5 fases tradicionales suelen dar la idea de un camino rígido o secuencial (paso a paso), mientras que esas cuatro actividades se plantean como actividades fundamentales que ocurren de forma continua e iterativa dentro de cualquier proyecto.
 
 ---
 
@@ -127,6 +135,9 @@ _Respuesta:_
 **12. Menciona dos formas de representar un proceso (no un sistema) y explica brevemente cada una.**
 
 _Respuesta:_
+
+- Diagramas de flujo de proceso: Gráficos que muestran el paso a paso de las actividades de trabajo y las decisiones que cambian el camino.
+- Patrones de proceso: Plantillas que describen una solución probada ante un problema recurrente del equipo al desarrollar software, para reutilizarla en futuros proyectos.
 
 
 **13. ¿Qué es un patrón de proceso? Da un ejemplo hipotético de un problema recurrente en un proyecto y su solución.**
@@ -173,3 +184,6 @@ Enterprise Architect -> hace análisis y código en uno.
 
 _Respuesta:_
 
+Elegiría el modelo incremental (o evolutivo por prototipos).
+- Tamaño y tiempo: Al ser un proyecto personal y pequeño, hacer una planificación rígida inicial (como en Cascada) quita mucho tiempo.
+- Requisitos: Por lo general, en un proyecto propio los requisitos no están 100% claros al inicio. Ir construyendo entregas cortas y funcionales me permite probar la idea rápido e ir ajustándola sobre la marcha sin desperdiciar trabajo.

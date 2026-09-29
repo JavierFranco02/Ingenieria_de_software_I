@@ -16,12 +16,15 @@ _Respuesta:La ingeniería de requerimientos es el proceso estructurado para defi
 _Respuesta:La diferencia principal radica en que un requerimiento es una necesidad puntual expresada por el usuario, la especificación de requisitos es el documento formal y detallado de esas necesidades, y la ingeniería de requisitos es el proceso completo y metódico para obtener, analizar y gestionar dichos elementos.
 1. Requerimiento (o Requisito)
 • Qué es: Es la condición, necesidad o deseo básico expresado por el cliente o usuario sobre lo que el sistema debe lograr (el "qué").
+
 • Ejemplo: "El usuario necesita una forma rápida de iniciar sesión en la aplicación móvil con su huella digital."
 2. Especificación de Requisitos
 • Qué es: Es el documento técnico formal, detallado y sin ambigüedades que traduce el requerimiento en reglas claras, alcances y criterios de aceptación para los desarrolladores.
+
 • Ejemplo: El documento oficial de software especifica: "El módulo de autenticación debe soportar biometría mediante la API de huella digital de Android e iOS, devolviendo un error si el escaneo falla tres veces seguidas."
 3. Ingeniería de Requisitos
 • Qué es: Es la disciplina y el conjunto de fases ordenadas (obtención, análisis, especificación, validación y gestión) que permiten descubrir y mantener los requisitos a lo largo del proyecto.
+
 • Ejemplo: El proceso completo en el que un analista entrevista a los clientes del banco, analiza la viabilidad técnica de la biometría, redacta el documento de especificación y controla los futuros cambios de la app.
 
 

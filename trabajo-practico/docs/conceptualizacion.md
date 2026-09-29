@@ -110,10 +110,15 @@ Paralelamente, se registrará la cantidad de chipas que lleva cada canastero por
 ## 8. Glosario de términos
 
 | Término | Definición |
+
 | **Horneada / Lote** | Cantidad de productos (chipas) terminados que se retiran del horno en una sola tanda para su comercialización. |
-| **Canastero / Revendedor** | Vendedor ambulante que retira productos del local para comercializarlos en la vía pública. |
+
+| **Canastero / Revendedor** | Vendedor ambulante que retira productos del local para comercializarlos en la vía pública.|
+
 | **Arqueo de Caja** | Proceso de verificar que el dinero físico en la caja registradora coincida con el total de ventas registrado por el sistema. |
+
 | **Punto de Venta (POS)** | Interfaz principal del sistema donde el cajero registra los productos que adquiere el cliente y efectúa el cobro. |
+
 | **Seña** | Pago anticipado y parcial que realiza un cliente para reservar un pedido grande para una fecha futura. |
 
 ---

@@ -42,13 +42,14 @@ _Respuesta:Las cinco actividades genéricas del marco de trabajo del proceso de 
 **4. Menciona dos actividades "de la sombrilla" y explica por qué se dice que "cubren" todo el proceso.**
 
 _Respuesta:
-|Dos actividades sombrilla:|
-|• Seguimiento y control del proyecto: Permite evaluar el progreso real frente al plan establecido y tomar medidas correctivas para cumplir con la programación.|
-|• Gestión del riesgo: Identifica, analiza y mitiga posibles problemas técnicos, de costos o de calendario antes de que afecten el proyecto.|
-|¿Por qué se dice que cubren todo el proceso?|
-|• No son secuenciales: A diferencia de las fases principales (como diseño o construcción), no ocurren en un solo momento específico.|
-|• Son paralelas y continuas: Se ejecutan de principio a fin durante todas las etapas del ciclo de vida del proyecto.|
-|• Brindan soporte global: Su función es supervisar, proteger y asegurar la calidad y el control de todas las actividades estructurales del desarrollo.|
+| Dos actividades sombrilla: |
+|---|
+| • Seguimiento y control del proyecto: Permite evaluar el progreso real frente al plan establecido y tomar medidas correctivas para cumplir con la programación. |
+| • Gestión del riesgo: Identifica, analiza y mitiga posibles problemas técnicos, de costos o de calendario antes de que afecten el proyecto. |
+| ¿Por qué se dice que cubren todo el proceso? |
+| • No son secuenciales: A diferencia de las fases principales (como diseño o construcción), no ocurren en un solo momento específico. |
+| • Son paralelas y continuas: Se ejecutan de principio a fin durante todas las etapas del ciclo de vida del proyecto. |
+| • Brindan soporte global: Su función es supervisar, proteger y asegurar la calidad y el control de todas las actividades estructurales del desarrollo. |
 
 
 ---

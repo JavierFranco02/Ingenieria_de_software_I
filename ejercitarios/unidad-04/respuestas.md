@@ -78,7 +78,7 @@ _Respuesta: Sistema de control de Llegadas y Salidas
 
 **7. Tomá el requerimiento "El sistema debe ser rápido" y reescribilo de forma que cumpla con las características de un buen requerimiento vistas en clase.**
 
-_Respuesta:_
+El requerimiento "El sistema debe ser rápido" es ambiguo y no se puede verificar, porque no dice cuánto es "rápido". segun lo dado en clase seria algo así: "El sistema debe mostrar los resultados de una búsqueda en máximo 3 segundos, con hasta 100 usuarios conectados a la vez." Ahora es claro, no ambiguo, completo (dice qué acción, cuánto tiempo y bajo qué condiciones) y verificable, porque se puede medir con una prueba.
 
 
 ---
@@ -87,16 +87,22 @@ _Respuesta:_
 
 **8. Enumera las cuatro etapas del ciclo de obtención y análisis de requerimientos vistas en clase.**
 
-_Respuesta:_
+1.Descubrimiento de requerimientos.
+
+2.Clasificación y organización.
+
+3.Priorización y negociación.
+
+4.Especificación de requerimientos.
 
 
 **9. Ejercicio de relación** (completen con el número que corresponda a cada letra):
 
 | Técnica de obtención | Situación en que conviene usarla |
 |---|---|
-| A. Entrevistas | ___ |
-| B. Observación | ___ |
-| C. Talleres / workshops | ___ |
+| A. Entrevistas | 3 |
+| B. Observación | 1 |
+| C. Talleres / workshops | 2 |
 
 1. Cuando el usuario no puede verbalizar fácilmente lo que necesita.
 2. Cuando hay varios interesados con visiones distintas que negociar.

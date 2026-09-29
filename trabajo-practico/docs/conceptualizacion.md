@@ -13,23 +13,31 @@ layout: default
 
 ## 1. Presentación del proyecto
 
-**Nombre del sistema:** [nombre]
+**Nombre del sistema:** ChipeSoft - Sistema Web de Gestión y Ventas para Chipería
 
 **Integrantes del grupo:**
 
 | Nombre | Rol |
 |---|---|
-| [Nombre 1] | [rol] |
-| [Nombre 2] | [rol] |
-| [Nombre 3] | [rol] |
+| Javier De Jesús Franco Vega | Líder del Proyecto y Desarrollador Backend |
+| Adan Sebastián Estigarribia Vargas | Desarrollador Frontend y Diseño de Interfaz |
+| Ángel David Invernizzi Franco | Administrador de Base de Datos |
+| Brahian Osvaldo Peralta Correa | Control de calidad (QA) |
+| Fabián Andrés Giménez Garcete | Desarrollador Fullstack |
 
-**Usuario / cliente real:** [nombre y breve descripción del usuario o cliente para quien se desarrolla el sistema]
+**Usuario / cliente real:** La chipería "[Nombre de la Chipería]" de la ciudad de Caraguatay (Cordillera). Es un negocio familiar tradicional dedicado a la elaboración y venta de chipas, operando tanto en un local físico (mostrador) como a través de vendedores ambulantes (canasteros).
 
 ---
 
 ## 2. Definición del problema
 
-[Describir la situación actual del usuario/cliente y la problemática concreta que motiva el desarrollo del sistema. ¿Qué hace hoy el usuario para resolver esto? ¿Qué dificultades enfrenta?]
+Actualmente, la chipería "[Nombre de la Chipería]" realiza la gestión de sus procesos de forma manual. Las ventas de mostrador se registran a lápiz en cuadernos, el arqueo de caja se calculan sumando el efectivo a mano, el panadero lleva el control de la producción de memoria y las entregas a los canasteros se anotan en hojas sueltas.
+
+Esta falta de un sistema informático genera problemas concretos en el día a día del negocio:
+1. **Descuadres en la caja:** Ocurren diferencias frecuentes entre el dinero recaudado y lo anotado en los cuadernos, principalmente por errores al calcular vueltos o ventas no registradas durante las horas de mayor clientela.
+2. **Dificultad en el control de stock:** El cajero no tiene visibilidad en tiempo real de cuántas chipas quedan disponibles. Esto provoca que a veces se pierdan ventas por falta de producto, o que se produzca de más y el excedente se desperdicie.
+3. **Inconsistencias en las liquidaciones con revendedores:** Resulta complicado calcular el monto exacto que cada canastero debe entregar al finalizar su jornada, ya que los registros en papel de las chipas que llevaron y devolvieron suelen perderse o ser confusos.
+4. **Ausencia de estadísticas de venta:** El propietario no cuenta con información rápida y clara sobre cuáles son sus días de mayor venta o los productos más rentables, dificultando la toma de decisiones.
 
 ---
 

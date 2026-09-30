@@ -3,7 +3,7 @@ title: "Conceptualización"
 layout: default
 ---
 
-[← Volver al inicio](/Ingenieria_de_software_I/index.md)
+[← Volver al inicio](/Ingenieria_de_software_I/index.html)
 
 # Entrega 1 · Conceptualización
 
@@ -142,4 +142,4 @@ Paralelamente, se registrará la cantidad de chipas que lleva cada canastero por
 
 ---
 
-[← Volver al inicio](/index.md) · [Siguiente: Análisis →](analisis.md)
+[← Volver al inicio](/Ingenieria_de_software_I/index.html) · [Siguiente: Análisis →](analisis.md)

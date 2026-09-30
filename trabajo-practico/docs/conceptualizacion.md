@@ -3,7 +3,7 @@ title: "Conceptualización"
 layout: default
 ---
 
-[← Volver al inicio](index.md)
+[← Volver al inicio](/index.md)
 
 # Entrega 1 · Conceptualización
 
@@ -142,4 +142,4 @@ Paralelamente, se registrará la cantidad de chipas que lleva cada canastero por
 
 ---
 
-[← Volver al inicio](index.md) · [Siguiente: Análisis →](analisis.md)
+[← Volver al inicio](/index.md) · [Siguiente: Análisis →](analisis.md)

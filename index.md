@@ -27,9 +27,9 @@ layout: default
 
 | Entrega | Descripción | Enlace |
 |---|---|---|
-| 📋 Entrega 1 | Conceptualización — el problema, el propósito y el alcance del proyecto | [Ir a Conceptualización](conceptualizacion.md) |
-| 🔍 Entrega 2 | Análisis — requisitos, casos de uso y modelo de dominio | [Ir a Análisis](analisis.md) |
-| 🛠️ Entrega 3 | Diseño — arquitectura, clases de diseño y base de datos | [Ir a Diseño](diseno.md) |
+| 📋 Entrega 1 | Conceptualización — el problema, el propósito y el alcance del proyecto | [Ir a Conceptualización](trabajo-practico/docs/conceptualizacion.md) |
+| 🔍 Entrega 2 | Análisis — requisitos, casos de uso y modelo de dominio | [Ir a Análisis](trabajo-practico/docs/analisis.md) |
+| 🛠️ Entrega 3 | Diseño — arquitectura, clases de diseño y base de datos | [Ir a Diseño](trabajo-practico/docs/diseno.md) |
 
 ---
 

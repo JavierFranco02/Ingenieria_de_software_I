@@ -25,13 +25,13 @@ layout: default
 | Brahian Osvaldo Peralta Correa | Control de calidad (QA) |
 | Fabián Andrés Giménez Garcete | Desarrollador Fullstack |
 
-**Usuario / cliente real:** La chipería "[Nombre de la Chipería]" de la ciudad de Caraguatay (Cordillera). Es un negocio familiar tradicional dedicado a la elaboración y venta de chipas, operando tanto en un local físico (mostrador) como a través de vendedores ambulantes (canasteros).
+**Usuario / cliente real:** La chipería "Chiperia la Caraguateña" de la ciudad de Caraguatay (Cordillera). Es un negocio familiar tradicional dedicado a la elaboración y venta de chipas, operando tanto en un local físico (mostrador) como a través de vendedores ambulantes (canasteros).
 
 ---
 
 ## 2. Definición del problema
 
-Actualmente, la chipería "[Nombre de la Chipería]" realiza la gestión de sus procesos de forma manual. Las ventas de mostrador se registran a lápiz en cuadernos, el arqueo de caja se calculan sumando el efectivo a mano, el panadero lleva el control de la producción de memoria y las entregas a los canasteros se anotan en hojas sueltas.
+Actualmente, la chipería "Chiperia la Caraguateña" realiza la gestión de sus procesos de forma manual. Las ventas de mostrador se registran a lápiz en cuadernos, el arqueo de caja se calculan sumando el efectivo a mano, el panadero lleva el control de la producción de memoria y las entregas a los canasteros se anotan en hojas sueltas.
 
 Esta falta de un sistema informático genera problemas concretos en el día a día del negocio:
 1. **Descuadres en la caja:** Ocurren diferencias frecuentes entre el dinero recaudado y lo anotado en los cuadernos, principalmente por errores al calcular vueltos o ventas no registradas durante las horas de mayor clientela.
@@ -45,7 +45,7 @@ Esta falta de un sistema informático genera problemas concretos en el día a d�
 
 **Objetivo general:**
 
-Desarrollar un sistema web para la chipería "[Nombre de la Chipería]" que permita agilizar las ventas en mostrador, controlar el stock de producción diaria y facilitar la liquidación de los vendedores ambulantes.
+Desarrollar un sistema web para la chipería "Chiperia la Caraguateña" que permita agilizar las ventas en mostrador, controlar el stock de producción diaria y facilitar la liquidación de los vendedores ambulantes.
 
 **Objetivos específicos:**
 
@@ -99,6 +99,7 @@ Desarrollar un sistema web para la chipería "[Nombre de la Chipería]" que perm
 ---
 
 ## 7. Visión general de la solución
+
 El sistema consistirá en una aplicación web accesible desde una computadora instalada en la chipería. 
 
 Al iniciar el día, el cajero registrará la apertura de su caja. Durante la jornada, cada vez que el maestro chipero finalice una tanda de cocción, ingresará al sistema para sumar esas nuevas unidades al stock. Cuando los clientes compren en el local, el cajero utilizará la pantalla interactiva para seleccionar los productos; el sistema descontará el stock automáticamente y registrará el ingreso del dinero. 
@@ -110,15 +111,11 @@ Paralelamente, se registrará la cantidad de chipas que lleva cada canastero por
 ## 8. Glosario de términos
 
 | Término | Definición |
-
+|---|---|
 | **Horneada / Lote** | Cantidad de productos (chipas) terminados que se retiran del horno en una sola tanda para su comercialización. |
-
 | **Canastero / Revendedor** | Vendedor ambulante que retira productos del local para comercializarlos en la vía pública.|
-
 | **Arqueo de Caja** | Proceso de verificar que el dinero físico en la caja registradora coincida con el total de ventas registrado por el sistema. |
-
 | **Punto de Venta (POS)** | Interfaz principal del sistema donde el cajero registra los productos que adquiere el cliente y efectúa el cobro. |
-
 | **Seña** | Pago anticipado y parcial que realiza un cliente para reservar un pedido grande para una fecha futura. |
 
 ---

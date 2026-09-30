@@ -1,34 +1,27 @@
 # Respuestas — Ejercitario Unidad 04
 
-> Completen cada pregunta debajo de su enunciado. Pueden borrar este bloque de instrucciones una vez que empiecen.
-
 ---
 
 ## Tema 1 · El proceso de requerimientos
 
 **1. Define en tus propias palabras qué es la ingeniería de requerimientos.**
 
-_Respuesta:La ingeniería de requerimientos es el proceso estructurado para definir, documentar y gestionar las necesidades y restricciones que un sistema o software debe cumplir para satisfacer los objetivos de un negocio y las expectativas de los usuarios. Actúa como un puente fundamental entre los clientes y los equipos técnicos.
-
+_Respuesta:_ La ingeniería de requerimientos es el proceso estructurado para definir, documentar y gestionar las necesidades y restricciones que un sistema o software debe cumplir para satisfacer los objetivos de un negocio y las expectativas de los usuarios. Actúa como un puente fundamental entre los clientes y los equipos técnicos.
 
 **2. Explica la diferencia entre "requerimiento", "especificación de requisitos" e "ingeniería de requisitos", con un ejemplo de cada uno.**
 
-_Respuesta:La diferencia principal radica en que un requerimiento es una necesidad puntual expresada por el usuario, la especificación de requisitos es el documento formal y detallado de esas necesidades, y la ingeniería de requisitos es el proceso completo y metódico para obtener, analizar y gestionar dichos elementos.
+_Respuesta:_ La diferencia principal radica en que un requerimiento es una necesidad puntual expresada por el usuario, la especificación de requisitos es el documento formal y detallado de esas necesidades, y la ingeniería de requisitos es el proceso completo y metódico para obtener, analizar y gestionar dichos elementos.
 1. Requerimiento (o Requisito)
-• Qué es: Es la condición, necesidad o deseo básico expresado por el cliente o usuario sobre lo que el sistema debe lograr (el "qué").
-
-• Ejemplo: "El usuario necesita una forma rápida de iniciar sesión en la aplicación móvil con su huella digital."
+    * Qué es: Es la condición, necesidad o deseo básico expresado por el cliente o usuario sobre lo que el sistema debe lograr (el "qué").
+    * Ejemplo: "El usuario necesita una forma rápida de iniciar sesión en la aplicación móvil con su huella digital."
 
 2. Especificación de Requisitos
-• Qué es: Es el documento técnico formal, detallado y sin ambigüedades que traduce el requerimiento en reglas claras, alcances y criterios de aceptación para los desarrolladores.
-
-• Ejemplo: El documento oficial de software especifica: "El módulo de autenticación debe soportar biometría mediante la API de huella digital de Android e iOS, devolviendo un error si el escaneo falla tres veces seguidas."
+    * Qué es: Es el documento técnico formal, detallado y sin ambigüedades que traduce el requerimiento en reglas claras, alcances y criterios de aceptación para los desarrolladores.
+    * Ejemplo: El documento oficial de software especifica: "El módulo de autenticación debe soportar biometría mediante la API de huella digital de Android e iOS, devolviendo un error si el escaneo falla tres veces seguidas."
 
 3. Ingeniería de Requisitos
-• Qué es: Es la disciplina y el conjunto de fases ordenadas (obtención, análisis, especificación, validación y gestión) que permiten descubrir y mantener los requisitos a lo largo del proyecto.
-
-• Ejemplo: El proceso completo en el que un analista entrevista a los clientes del banco, analiza la viabilidad técnica de la biometría, redacta el documento de especificación y controla los futuros cambios de la app.
-
+    * Qué es: Es la disciplina y el conjunto de fases ordenadas (obtención, análisis, especificación, validación y gestión) que permiten descubrir y mantener los requisitos a lo largo del proyecto.
+    * Ejemplo: El proceso completo en el que un analista entrevista a los clientes del banco, analiza la viabilidad técnica de la biometría, redacta el documento de especificación y controla los futuros cambios de la app.
 
 ---
 
@@ -50,18 +43,16 @@ _Respuesta:La diferencia principal radica en que un requerimiento es una necesid
 
 | Aspecto | Requerimientos de usuario | Requerimientos de sistema |
 |---|---|---|
-| Audiencia principal | | |
-| Nivel de detalle | | |
-| Lenguaje utilizado | | |
+| Audiencia principal | Clientes, gerentes y usuarios finales (sin formación técnica) | Ingenieros, analistas y desarrolladores que construyen el sistema |
+| Nivel de detalle | General y de alto nivel (describen qué se espera del sistema) | Detallado y preciso (describen detalladamente servicios, funciones y restricciones) |
+| Lenguaje utilizado | Lenguaje natural cotidiano y diagramas simples | Lenguaje técnico, estructurado, casos de uso, UML o especificaciones formales |
 
 **5. Elegí un sistema que conozcas (una app, una plataforma, un sistema de tu universidad o trabajo) y da un ejemplo propio de un requerimiento funcional y uno no funcional para ese mismo sistema.**
 
-_Respuesta: Sistema de control de Llegadas y Salidas
-| Aspecto | Requerimientos de usuario | Requerimientos de sistema |
-|---|---|---|
-| Audiencia principal |La audiencia principal son los usuarios o empleados |Tener vinculada una cuenta o registrar un email de respaldo, tener datos o acceso a internet|
-| Nivel de detalle |Simple pero funcional, responde a la experiencia de usuario |Cumple con sus funcionalidades sin bugs |
-| Lenguaje utilizado |Java Script |Java Script |
+_Respuesta:_  Sistema elegido: Sistema de Control de Llegadas y Salidas (Marcación de empleados)
+
+- **Requerimiento Funcional** (qué debe hacer el sistema): El sistema debe permitir a los empleados registrar su marcado de entrada y salida ingresando su número de documento o mediante huella dactilar, guardando automáticamente la fecha y hora exacta.
+- **Requerimiento No Funcional** (cómo debe comportarse / restricción): El sistema debe procesar y confirmar el registro de marcación en menos de 2 segundos para evitar filas o aglomeraciones en la entrada durante las horas pico.
 
 ---
 
@@ -78,23 +69,18 @@ _Respuesta: Sistema de control de Llegadas y Salidas
 
 **7. Tomá el requerimiento "El sistema debe ser rápido" y reescribilo de forma que cumpla con las características de un buen requerimiento vistas en clase.**
 
-El requerimiento "El sistema debe ser rápido" es ambiguo y no se puede verificar, porque no dice cuánto es "rápido". segun lo dado en clase seria algo así: "El sistema debe mostrar los resultados de una búsqueda en máximo 3 segundos, con hasta 100 usuarios conectados a la vez." Ahora es claro, no ambiguo, completo (dice qué acción, cuánto tiempo y bajo qué condiciones) y verificable, porque se puede medir con una prueba.
-
+_Respuesta:_ El requerimiento "El sistema debe ser rápido" es ambiguo y no se puede verificar, porque no dice cuánto es "rápido". segun lo dado en clase seria algo así: "El sistema debe mostrar los resultados de una búsqueda en máximo 3 segundos, con hasta 100 usuarios conectados a la vez." Ahora es claro, no ambiguo, completo (dice qué acción, cuánto tiempo y bajo qué condiciones) y verificable, porque se puede medir con una prueba.
 
 ---
 
 ## Tema 4 · Obtención y análisis de requerimientos
 
 **8. Enumera las cuatro etapas del ciclo de obtención y análisis de requerimientos vistas en clase.**
-
-1.Descubrimiento de requerimientos.
-
-2.Clasificación y organización.
-
-3.Priorización y negociación.
-
-4.Especificación de requerimientos.
-
+_Respuesta:_ 
+1. Descubrimiento de requerimientos.
+2. Clasificación y organización.
+3. Priorización y negociación.
+4. Especificación de requerimientos.
 
 **9. Ejercicio de relación** (completen con el número que corresponda a cada letra):
 
@@ -159,29 +145,20 @@ _Respuesta:_
 
 **14. Completen el siguiente cuadro relacionando cada técnica de validación con el tipo de problema que detecta mejor.**
 
-Técnicas de Validación de Requisitos:
+| Técnica de validación | Qué tipo de problema detecta mejor |
+|---|---|
+| Revisiones de requisitos |  requisitos ambiguos, incompletos o contradictorios |
+| Prototipado | malentendidos con el cliente y requisitos que faltan |
+| Generación de casos de prueba | requisitos que no se pueden probar o que no son realistas |
 
-1. Revisión técnica: El equipo lee el documento de requisitos junto.
-Detecta: requisitos ambiguos, incompletos o contradictorios.
-
-2. Prototipo: Se hace una maqueta rápida del sistema para mostrar al cliente.
-Detecta: malentendidos con el cliente y requisitos que faltan.
-
-3. Casos de prueba: Se crean pruebas a partir de cada requisito.
-Detecta: requisitos que no se pueden probar o que no son realistas.
-
-4. Checklist: Se usa una lista de preguntas para verificar.
-Detecta: requisitos que no se pueden rastrear y falta de estándares.
 ---
 
 ## Tema 10 · Administración de requerimientos
 
 **15. Explica con tus palabras qué es la trazabilidad de requerimientos y por qué es importante en un proyecto real.**
 
-_Respuesta:_
-Es poder seguirle el rastro a un requisito desde donde nació hasta donde termina. 
+_Respuesta:_ Es poder seguirle el rastro a un requisito desde donde nació hasta donde termina. 
 Desde la idea del cliente, hasta el diseño, el código y la prueba.
-
 
 ---
 
@@ -190,35 +167,33 @@ Desde la idea del cliente, hasta el diseño, el código y la prueba.
 **16. Menciona dos métricas que se pueden aplicar a los requerimientos de un proyecto y qué información le aporta cada una al equipo.**
 
 _Respuesta:_
-1. Estabilidad de requisitos:
-Mide cuánto cambian los requisitos. 
+1. Estabilidad de requisitos: Mide cuánto cambian los requisitos. 
 Formula: (Requisitos que no cambiaron / Total de requisitos) x 100
 Si te da bajo, tu proyecto es muy inestable.
 
-2. Completitud:
-Mide si todos los requisitos fueron diseñados y probados.
+2. Completitud: Mide si todos los requisitos fueron diseñados y probados.
 Formula: (Requisitos con prueba / Total de requisitos) x 100
 Lo ideal es que sea 100%, significa que todo lo pedido está cubierto.
 
 **17. Reflexión final:** pensá en un proyecto de software (hipotético o real). Describí qué técnica de obtención, qué técnica de especificación y qué técnica de validación usarías para sus requerimientos, y justificá tu elección considerando el tipo de proyecto y de usuarios.
 
-_MotoGestión_
+_Respuesta:_ MotoGestión
 
 Un sistema web y móvil diseñado para la administración de stock de repuestos, gestión de turnos y seguimiento de órdenes de trabajo en talleres mecánicos de motocicletas. Sus usuarios clave son los mecánicos (perfil operativo con poco tiempo) y los administradores del taller (enfoque en control financiero y de procesos).
 
-_Técnica de Obtención:_ Observación en Campo y Entrevistas Semiestructuradas
+* _Técnica de Obtención:_ Observación en Campo y Entrevistas Semiestructuradas
 
 Consiste en realizar shadowing (acompañar al mecánico durante su jornada laboral en el taller) para observar cómo interactúan con las motos, herramientas y registros actuales, complementado con entrevistas breves.
 
 Justificación: Los usuarios operativos suelen omitir detalles cotidianos en una oficina o cuestionario. Ver el flujo real en el taller permite descubrir necesidades críticas del entorno (por ejemplo, que necesitan interfaces con botones grandes o lectura de códigos porque tienen las manos con grasa).
 
-_Técnica de Especificación:_ Historias de Usuario con Prototipos de Baja Fidelidad
+* _Técnica de Especificación:_ Historias de Usuario con Prototipos de Baja Fidelidad
 
 Redactar los requerimientos funcionales en formato ágil ("Como mecánico, quiero buscar repuestos escaneando un código de barras para no interrumpir el armado"), acompañados de bocetos esquemáticos de pantallas.
 
 Justificación: Este enfoque mantiene el foco en el valor del usuario y es altamente comprensible tanto para el equipo de desarrollo como para los dueños del taller, facilitando iteraciones rápidas sobre la interfaz.
 
-_Técnica de Validación:_ Prototipado Interactivo y Revisiones (Walkthroughs)
+* _Técnica de Validación:_ Prototipado Interactivo y Revisiones (Walkthroughs)
 
 Presentar un prototipo navegable a los usuarios clave para simular escenarios reales de uso (como registrar el ingreso de una moto siniestrada).
 

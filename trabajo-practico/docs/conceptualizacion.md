@@ -3,7 +3,7 @@ title: "Conceptualización"
 layout: default
 ---
 
-[← Volver al inicio](/index.md)
+[← Volver al inicio](/Ingenieria_de_software_I/index.md)
 
 # Entrega 1 · Conceptualización
 

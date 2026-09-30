@@ -39,7 +39,7 @@ Esta sección contiene el análisis, modelado y diseño del sistema **ChipeSoft*
 
 El sitio publicado mediante GitHub Pages a partir de la carpeta `/trabajo-practico/docs` constituye nuestra entrega oficial. **No se enviarán archivos impresos ni copias por otros medios.**
 
-🔗 **Sitio web oficial del proyecto:** `https://[usuario-o-organizacion].github.io/[nombre-del-repositorio]/`
+🔗 **Sitio web oficial del proyecto:** `https://javierfranco02.github.io/Ingenieria_de_software_I/`
 
 ### Equipo de Trabajo
 
@@ -84,8 +84,10 @@ Aquí alojamos las respuestas grupales a los ejercitarios teóricos y prácticos
 
 | Unidad | Documento Original de la Cátedra | Resolución del Grupo |
 |:---:|---|---|
-| **1** | [Guía del ejercitario 01](https://github.com/fjlesme/ingsw1/blob/main/ejercitarios/unidad-01-ejercitario.docx) | [Ver respuestas.md](ejercitarios/unidad-01/respuestas.md) |
-| **2** | [Guía del ejercitario 02](https://github.com/fjlesme/ingsw1/blob/main/ejercitarios/unidad-02-ejercitario.docx) | [Ver respuestas.md](ejercitarios/unidad-02/respuestas.md) |
+| **1** | [Guía del ejercitario 01](ejercitarios/unidad-01/unidad-01-vision-previa.pdf) | [Ver respuestas.md](ejercitarios/unidad-01/respuestas.md) |
+| **2** | [Guía del ejercitario 02](ejercitarios/unidad-02//unidad-02-ingenieria-de-sistemas.pdf) | [Ver respuestas.md](ejercitarios/unidad-02/respuestas.md) |
+| **3** | [Guía del ejercitario 03](ejercitarios//unidad-03/unidad-03-procesos-del-software.pdf) | [Ver respuestas.md](ejercitarios/unidad-03/respuestas.md) |
+| **4** | [Guía del ejercitario 04](ejercitarios/unidad-04/unidad-04-requerimientos.pdf) | [Ver respuestas.md](ejercitarios/unidad-04/respuestas.md) |
 
 ### Dinámica de Entrega para el Grupo
 1. Ingresar al archivo `respuesta.md` de la unidad correspondiente.

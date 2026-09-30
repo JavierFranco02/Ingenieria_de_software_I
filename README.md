@@ -1,7 +1,5 @@
 # Repositorio — Ingeniería de Software I, 4<sup><small>to</small></sup>B T.M.
 
-> **Nota para el equipo:** Esta es la plantilla unificada del repositorio. Reemplacen todo el texto entre `[corchetes]` con la información real de su proyecto antes de la primera entrega.
-
 ¡Bienvenidos! Este repositorio centraliza todo el trabajo académico de nuestro grupo para la asignatura **Ingeniería de Software**. Para mantener el orden y facilitar la evaluación, hemos dividido nuestro trabajo en dos grandes ramas: el **Trabajo Práctico Integrador (TPI)** y las resoluciones de los **Ejercitarios** de cada unidad.
 
 **Navegación rápida:**
@@ -37,7 +35,7 @@ Para separar el código, la documentación web y las tareas teóricas, organizam
 
 ## Trabajo Práctico Integrador
 
-Esta sección contiene el análisis, modelado y diseño del sistema **[Nombre del Sistema]**. 
+Esta sección contiene el análisis, modelado y diseño del sistema **ChipeSoft**. 
 
 El sitio publicado mediante GitHub Pages a partir de la carpeta `/trabajo-practico/docs` constituye nuestra entrega oficial. **No se enviarán archivos impresos ni copias por otros medios.**
 
@@ -47,21 +45,26 @@ El sitio publicado mediante GitHub Pages a partir de la carpeta `/trabajo-practi
 
 | Nombre completo | Rol / Responsabilidad principal | Usuario de GitHub |
 |---|---|---|
-| [Nombre 1] | [ej. Análisis de requisitos / Scrum Master] | [@usuario1] |
-| [Nombre 2] | [ej. Modelado UML y diagramas] | [@usuario2] |
-| [Nombre 3] | [ej. Diseño de arquitectura y documentación] | [@usuario3] |
+| Javier De Jesús Franco Vega | Líder del Proyecto y Desarrollador Backend | [@JavierFranco02](https://github.com/JavierFranco02) |
+| Adan Sebastián Estigarribia Vargas | Desarrollador Frontend y Diseño de Interfaz | [@AdanNat](https://github.com/AdanNat) |
+| Ángel David Invernizzi Franco | Administrador de Base de Datos | [@PES-LEGENDARY](https://github.com/PES-LEGENDARY) |
+| Brahian Osvaldo Peralta Correa | Control de calidad (QA) | [@peraltabrahian56-bit](https://github.com/peraltabrahian56-bit) |
+| Fabián Andrés Giménez Garcete | Desarrollador Fullstack | [@Usu-htan](https://github.com/Usu-htan) |
 
 ### Contexto del Proyecto
 
 #### Usuario / cliente real
 
-**[Nombre del usuario o cliente]** — [breve descripción de quién es y por qué necesita el sistema].
+**Dueña de Chipería "Chiperia la Caraguateña"** — La propietaria de una chipería tradicional ubicada en la ciudad de Caraguatay necesita el sistema para informatizar la gestión comercial de su negocio familiar, reemplazando el registro manual en cuadernos por una herramienta digital que le permita controlar con precisión las ventas de mostrador, el stock de chipas horneadas y las rendiciones diarias de dinero de sus canasteros.
 
 #### Metodología de diseño y desarrollo elegida
 
-[Nombre de la metodología, por ejemplo: RUP, Scrum aplicado al modelado, Design Thinking + UML, etc.]
+Elegimos esta metodología ágil porque se adapta perfectamente al tiempo del semestre universitario y al trabajo en equipo de 5 integrantes. Nos permite organizar el desarrollo en iteraciones cortas (Sprints), donde en cada etapa entregaremos módulos funcionales y probados. 
 
-[Breve justificación de por qué el grupo eligió esta metodología para este proyecto.]
+Esta elección se justifica por las siguientes razones:
+1. **Entregas incrementales:** Nos permite priorizar el Producto Mínimo Viable (los módulos de Caja y Stock) para asegurar un sistema funcional a tiempo, dejando reportes y ajustes para sprints posteriores.
+2. **División clara del trabajo:** Facilita la distribución de tareas específicas según el rol de cada uno de los 5 integrantes (Backend, Frontend, Base de Datos, QA).
+3. **Flexibilidad ante cambios:** Si durante las revisiones con el cliente o el profesor surgen ajustes en los requerimientos, la metodología nos permite adaptarnos sin rehacer todo el proyecto desde cero.
 
 ### Entregables del Sistema
 

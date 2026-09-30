@@ -1,5 +1,5 @@
 ---
-title: "[Nombre del Sistema]"
+title: "ChipeSoft - Sistema Web de Gestión y Ventas para Chipería"
 layout: default
 ---
 
@@ -18,9 +18,9 @@ ChipeSoft es un sistema web de gestión comercial y control de stock que automat
 - **Brahian Osvaldo Peralta Correa** — Control de calidad (QA) 
 - **Fabián Andrés Giménez Garcete** — Desarrollador Fullstack 
 
-**Usuario / cliente real:** [nombre del usuario o cliente]
+**Usuario / cliente real:** Dueña de Chipería "Chiperia la Caraguateña"
 
-**Metodología utilizada:** [nombre de la metodología elegida]
+**Metodología utilizada:** Scrum adaptado al proyecto académico (con artefactos UML)
 
 ---
 

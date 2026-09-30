@@ -59,6 +59,8 @@ El sitio publicado mediante GitHub Pages a partir de la carpeta `/trabajo-practi
 
 #### Metodología de diseño y desarrollo elegida
 
+**Scrum adaptado al proyecto académico (con artefactos UML)**
+
 Elegimos esta metodología ágil porque se adapta perfectamente al tiempo del semestre universitario y al trabajo en equipo de 5 integrantes. Nos permite organizar el desarrollo en iteraciones cortas (Sprints), donde en cada etapa entregaremos módulos funcionales y probados. 
 
 Esta elección se justifica por las siguientes razones:

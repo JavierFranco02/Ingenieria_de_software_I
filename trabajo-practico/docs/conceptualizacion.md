@@ -3,7 +3,7 @@ title: "Conceptualización"
 layout: default
 ---
 
-[← Volver al inicio](index.md)
+[← Volver al inicio](/index.md)
 
 # Entrega 1 · Conceptualización
 
@@ -116,4 +116,4 @@ layout: default
 
 ---
 
-[← Volver al inicio](index.md) · [Siguiente: Análisis →](analisis.md)
+[← Volver al inicio](/index.md) · [Siguiente: Análisis →](analisis.md)

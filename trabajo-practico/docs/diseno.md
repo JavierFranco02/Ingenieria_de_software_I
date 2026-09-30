@@ -3,7 +3,7 @@ title: "Diseño"
 layout: default
 ---
 
-[← Volver al inicio](index.md)
+[← Volver al inicio](/index.md)
 
 # Entrega 3 · Diseño
 

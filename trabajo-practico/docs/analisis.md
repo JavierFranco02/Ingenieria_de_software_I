@@ -3,7 +3,7 @@ title: "Análisis"
 layout: default
 ---
 
-[← Volver al inicio](index.md)
+[← Volver al inicio](/index.md)
 
 # Entrega 2 · Análisis
 

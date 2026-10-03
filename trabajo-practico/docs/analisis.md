@@ -3,7 +3,7 @@ title: "Análisis"
 layout: default
 ---
 
-[← Volver al inicio](/Ingenieria_de_software_I/index.html)
+[← Volver al inicio](../../index.md)
 
 # Entrega 2 · Análisis
 

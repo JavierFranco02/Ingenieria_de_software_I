@@ -61,21 +61,21 @@ _Respuesta:
 
 | Modelo | ¿Cuándo conviene usarlo? |
 |---|---|
-| Cascada | |
-| Incremental | |
-| Evolutivo (prototipos) | |
-| Evolutivo (espiral) | |
-| Concurrente | |
+| Cascada | Cuando los requisitos están bien definidos desde el principio y se requiere un enfoque estrictamente secuencial y lineal. |
+| Incremental | Cuando se busca entregar porciones funcionales del producto de manera progresiva, donde cada incremento es entregable y utilizable por el cliente. |
+| Evolutivo (prototipos) | Cuando el cliente conoce los objetivos generales, pero no puede detallar con precisión las entradas, procesos o salidas, permitiendo visualizar y validar requisitos poco claros antes de construir el producto final. |
+| Evolutivo (espiral) | Cuando el proyecto presenta un alto nivel de riesgo y se necesita realizar un análisis explícito de este en cada iteración antes de seguir invirtiendo recursos. |
+| Concurrente | Cuando las actividades del proceso pueden llevarse a cabo en paralelo (no en secuencia estricta), permitiendo que un mismo elemento o parte del sistema se encuentre en distintos estados al mismo tiempo. |
 
 **6. Ejercicio de relación** (completá con el número que corresponda a cada letra):
 
 | Modelo de proceso | Característica principal |
 |---|---|
-| A. Cascada | ___ |
-| B. Incremental | ___ |
-| C. Prototipos | ___ |
-| D. Espiral | ___ |
-| E. Concurrente | ___ |
+| A. Cascada | 2 |
+| B. Incremental | 4 |
+| C. Prototipos | 5 |
+| D. Espiral | 1 |
+| E. Concurrente | 3 |
 
 1. Combina iteración con análisis explícito de riesgo en cada vuelta.
 2. Enfoque secuencial y lineal, actividad por actividad.

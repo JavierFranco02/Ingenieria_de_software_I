@@ -62,8 +62,8 @@ _Respuesta:_
 
 | Estrategia | Módulos propuestos |
 |---|---|
-| Por capas |  |
-| Por dominio |  |
+| Por capas | Presentación (Interfaz web/móvil para médicos y pacientes), Lógica de negocio (Gestión de turnos, validación de historias clínicas y reglas de atención), y Acceso a datos (Consultas y transacciones con la base de datos de pacientes, médicos y recetas) |
+| Por dominio | Módulo de Pacientes (admisión e historia clínica), Módulo de Citas/Agendamiento (gestión de turnos y agendas médicas), Módulo de Facturación (cobros, obras sociales y pagos), y Módulo de Farmacia/Recetas (emisión de recetas y control de medicamentos). |
 
 
 ---
@@ -74,26 +74,28 @@ _Respuesta:_
 
 | Módulo | Tipo de cohesión y justificación |
 |---|---|
-| a) "Utilidades": FormatearFecha, EnviarCorreo y CalcularIVA. |  |
-| b) "IniciarSistema": abre la conexión a la base, carga la configuración y borra archivos temporales. |  |
-| c) "CalcularPromedioAlumno": obtiene las notas de un alumno y devuelve su promedio. |  |
-| d) "ProcesarOperacion": recibe un código y, según su valor, imprime, guarda o elimina un registro. |  |
-| e) Lee un registro, lo valida y, con el registro ya validado, calcula su total. |  |
+| a) "Utilidades": FormatearFecha, EnviarCorreo y CalcularIVA. | Coincidental: Agrupa tareas sin relación entre sí por mera casualidad. |
+| b) "IniciarSistema": abre la conexión a la base, carga la configuración y borra archivos temporales. | Temporal: Las tareas están agrupadas únicamente porque ocurren en el mismo momento (durante el arranque). |
+| c) "CalcularPromedioAlumno": obtiene las notas de un alumno y devuelve su promedio. | Funcional: Todas las partes del módulo contribuyen a una única tarea bien definida. |
+| d) "ProcesarOperacion": recibe un código y, según su valor, imprime, guarda o elimina un registro. | Lógica: Agrupa elementos lógicamente relacionados donde la ejecución de uno u otro es seleccionada por un parámetro o selector interno. |
+| e) Lee un registro, lo valida y, con el registro ya validado, calcula su total. | Secuencial: Las salidas o datos procesados en un paso sirven como entrada para el siguiente paso dentro de una secuencia lógica. |
 
 **8. Indica el tipo de acoplamiento en cada caso (de datos, por estampado, de control, externo, común o de contenido).**
 
 | Situación | Tipo de acoplamiento |
 |---|---|
-| a) El módulo A llama a B pasándole solo el idAlumno. |  |
-| b) A le pasa a B una bandera modo = "imprimir" / "guardar" que decide qué hace B. |  |
-| c) Varios módulos leen y modifican la variable global TotalVentas. |  |
-| d) A modifica directamente un atributo privado de B. |  |
-| e) A le pasa a B el objeto Alumno completo, aunque B solo usa la fecha de nacimiento. |  |
+| a) El módulo A llama a B pasándole solo el idAlumno. | De datos: Se pasan únicamente los datos necesarios como parámetros simples. |
+| b) A le pasa a B una bandera modo = "imprimir" / "guardar" que decide qué hace B. | De control: Un módulo le pasa a otro un indicador o bandera que controla el flujo y la lógica interna del receptor. |
+| c) Varios módulos leen y modifican la variable global TotalVentas. | Común: Múltiples módulos comparten y dependen de un mismo bloque de datos globales. |
+| d) A modifica directamente un atributo privado de B. | De contenido: Un módulo accede o modifica directamente los datos internos de otro, violando el ocultamiento de información. |
+| e) A le pasa a B el objeto Alumno completo, aunque B solo usa la fecha de nacimiento. | Por estampado: Se pasa una estructura de datos completa (objeto compuesto) aunque el módulo receptor solo utilice una porción de ella. |
 
 **9. Explica por qué la alta cohesión y el bajo acoplamiento suelen ir de la mano. Da un ejemplo.**
 
 _Respuesta:_
 
+La alta cohesión implica que un módulo se enfoca en una única responsabilidad bien definida. Al estar tan enfocado y autocontenido, necesita intercambiar poca información con el exterior y requiere mínimos detalles de otros componentes, lo que de forma natural reduce sus dependencias (bajo acoplamiento). Por el contrario, un módulo mal cohesionado que mezcla múltiples tareas dispersas inevitablemente requerirá múltiples datos y llamadas externas, elevando su acoplamiento.
+Ejemplo: Un módulo funcional dedicado exclusivamente a ValidarMatriculaMedico solo necesita recibir el número de matrícula y consultar la base de datos de forma directa y limpia (alta cohesión y bajo acoplamiento). Si el mismo módulo se encargara además de cobrar la consulta, enviar correos y actualizar el inventario (baja cohesión), se vería obligado a acoplarse con múltiples subsistemas y variables globales de la aplicación.
 
 ---
 
@@ -103,11 +105,11 @@ _Respuesta:_
 
 | Estilo arquitectónico | Número |
 |---|---|
-| A. En capas | ___ |
-| B. Cliente-servidor | ___ |
-| C. Centrado en datos (repositorio) | ___ |
-| D. Tuberías y filtros | ___ |
-| E. Modelo-Vista-Controlador | ___ |
+| A. En capas | 5 |
+| B. Cliente-servidor | 4 |
+| C. Centrado en datos (repositorio) | 2 |
+| D. Tuberías y filtros | 1 |
+| E. Modelo-Vista-Controlador | 3 |
 
 1. Un compilador: análisis léxico → sintáctico → semántico → generación de código.
 2. Un entorno de desarrollo donde editor, depurador y analizador comparten un modelo central del proyecto.

@@ -1,3 +1,4 @@
+
 # Respuestas — Ejercitario Unidad 05
 
 > Completen cada pregunta debajo de su enunciado. Pueden borrar este bloque de instrucciones una vez que empiecen.
@@ -189,8 +190,6 @@ Ejemplo: en un sistema web de reservación de hoteles, el requerimiento explíci
 
 **16. Ejercicio de relación** (completen con el número que corresponda a cada letra):
 
-| Síntoma | Número |
-|---|---|
 | A. Rigidez | 3 |
 | B. Fragilidad | 4 |
 | C. Inmovilidad | 2 |
@@ -207,9 +206,6 @@ Ejemplo: en un sistema web de reservación de hoteles, el requerimiento explíci
 ## Tema 8 · Principios SOLID
 
 **17. Completa el cuadro con el nombre de cada principio y lo que propone, en una oración.**
-
-| Letra | Principio | ¿Qué propone? |
-|---|---|---|
 | S | Single Responsibility - Responsabilidad Única | Una clase debe tener una sola razón para cambiar, una sola responsabilidad. |
 | O | Open/Closed - Abierto/Cerrado | El software debe estar abierto a extensión pero cerrado a modificación. |
 | L | Liskov Substitution - Sustitución de Liskov | Las clases hijas deben poder sustituir a su clase padre sin romper el sistema. |

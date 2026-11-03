@@ -158,19 +158,56 @@ layout: default
 
 **Diagrama de clases conceptual:**
 
-`[Insertar imagen: diagramas/modelo-dominio.png]`
+![Diagrama de clases conceptual del modelo de dominio](../diagramas/modelo-dominio.png)
 
-[Breve descripción de las entidades principales del negocio y cómo se relacionan entre sí, sin detalles de implementación.]
+**Descripción de las entidades:**
+
+- **Usuario:** persona que usa el sistema; su rol (Cajero, Dueño o Producción) define a qué módulos accede. Un Usuario abre Cajas (si es Cajero) y registra Horneadas (si es del área de Producción).
+- **Caja:** turno de trabajo del Cajero, desde su apertura con un monto inicial hasta su cierre. Contiene las Ventas del turno y, al cerrarse, queda asociada a un **Arqueo de Caja**, donde se compara el efectivo contado con el esperado.
+- **Venta / Detalle de Venta:** una Venta es la compra de un cliente en el mostrador (Punto de Venta) y se compone de una o más líneas, cada una referida a un Producto.
+- **Producto:** tipo de chipa a la venta, con su precio y su stock actual. Es el eje del modelo: se vende, se hornea, se entrega a los canasteros y se pide para eventos.
+- **Horneada:** lote de unidades de un Producto retirado del horno, que aumenta el stock.
+- **Canastero / Salida de Canastero / Detalle de Salida:** el Canastero retira productos por la mañana y devuelve lo que no vendió por la tarde. La Salida guarda lo entregado y lo devuelto de cada Producto, y de ahí se calcula el monto a rendir.
+- **Pedido / Detalle de Pedido:** reserva de productos de un cliente para una fecha futura, garantizada con una Seña.
 
 ---
 
 ## 5. Diagramas de comportamiento
+Cada caso de uso principal tiene un diagrama: secuencia para CU-03, CU-05 y CU-08 (donde importa la interacción entre usuario y sistema) y actividad con calles (*swimlanes*) para CU-04 y CU-07 (donde hay decisiones y responsabilidades repartidas entre el Cajero y el Sistema).
 
-**Diagrama de secuencia / actividad — [Nombre del flujo principal]:**
+### 5.1 Diagrama de secuencia · CU-03 Registrar venta
 
-`[Insertar imagen: diagramas/secuencia-flujo-principal.png]`
+![Diagrama de secuencia CU-03 Registrar venta](../diagramas/secuencia-cu03-registrar-venta.png)
 
-[Breve explicación del flujo representado.]
+El Cajero carga los productos en el POS. El sistema consulta el stock antes de agregar cada línea; si alcanza, continúa hasta confirmar y guardar la venta con el descuento de stock en una sola operación, y si no alcanza, avisa al Cajero (flujo alternativo 3a).
+
+### 5.2 Diagrama de actividad con calles · CU-04 Arquear y cerrar caja
+
+![Diagrama de actividad CU-04 Arquear y cerrar caja](../diagramas/actividad-cu04-cierre-caja.png)
+
+Las dos calles separan lo que hace el Cajero (solicitar el cierre, contar el efectivo, registrar la observación y confirmar) de lo que hace el Sistema (mostrar el efectivo esperado, calcular la diferencia y registrar el arqueo). Si la diferencia no es cero, el Cajero debe registrar una observación antes de confirmar; si no confirma, la caja sigue abierta (flujos alternativos 4a y 5a).
+
+### 5.3 Diagrama de secuencia · CU-05 Registrar horneada
+
+![Diagrama de secuencia CU-05 Registrar horneada](../diagramas/secuencia-cu05-registrar-horneada.png)
+
+El Maestro Chipero informa lo que terminó de hornear; el sistema valida la cantidad y, si es correcta, guarda la horneada y actualiza el stock disponible para el mostrador.
+
+### 5.4 Diagrama de actividad con calles · CU-07 Registrar devolución y rendición
+
+![Diagrama de actividad CU-07 Registrar devolución y rendición](../diagramas/actividad-cu07-rendicion-canastero.png)
+
+Muestra la liquidación del canastero al final de la jornada. El Cajero selecciona al canastero e ingresa lo devuelto y el dinero recibido; el Sistema verifica que haya una salida pendiente, valida las cantidades (RN-08), actualiza el stock, calcula el monto a rendir (RN-07) y registra la rendición, con una observación si la diferencia no es cero.
+
+### 5.5 Diagrama de secuencia · CU-08 Registrar pedido con seña
+
+![Diagrama de secuencia CU-08 Registrar pedido con seña](../diagramas/secuencia-cu08-pedido-con-sena.png)
+
+El sistema calcula el total del pedido y solo lo confirma si la seña y la fecha cumplen las reglas del negocio (RN-05 y RN-06).
+
+
+
+
 
 ---
 

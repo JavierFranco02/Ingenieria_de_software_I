@@ -118,40 +118,31 @@ layout: default
 - **Postcondición:** La horneada queda registrada y el stock del producto aumentó en la cantidad ingresada.
 
 ### CU-07 · Registrar devolución y rendición
-
-- **Actor(es):** Cajero
-- **Precondición:** El Cajero inició sesión, hay una caja abierta y el Canastero tiene una salida del día pendiente de liquidar (CU-06).
-- **Flujo principal:**
-  1. El Cajero selecciona al Canastero.
-  2. El sistema muestra la salida del día (productos y cantidades entregadas).
-  3. El Cajero ingresa las cantidades devueltas de cada producto.
-  4. El sistema suma las unidades devueltas al stock (CU-10) y calcula el monto a rendir: (entregadas − devueltas) × precio unitario.
-  5. El Cajero ingresa el dinero que efectivamente entrega el Canastero.
-  6. El sistema calcula la diferencia, registra la rendición, suma el dinero recibido al efectivo de la caja abierta y marca la salida como liquidada.
-- **Flujos alternativos:**
-  - *1a. El Canastero no tiene una salida pendiente:* el sistema lo informa y el caso de uso termina.
-  - *1b. No hay una caja abierta:* el sistema no permite iniciar la rendición e indica que primero debe abrirse la caja (CU-02).
-  - *3a. Cantidad devuelta mayor a la entregada:* el sistema rechaza el dato y solicita corregirlo.
-  - *6a. La diferencia es distinta de cero:* el sistema registra la rendición con la diferencia y una observación.
-- **Postcondición:** La salida queda liquidada con el monto a rendir y el monto recibido registrados, el stock refleja las devoluciones y el dinero recibido forma parte del efectivo de la caja.
-
+| ID | Regla de Negocio |
+|---|---|
+| RN-01 | Un Canastero no puede tener más de una salida del día pendiente de rendición. |
+| RN-02 | No se permiten cantidades inválidas: cero, negativas o no numéricas en horneada ni en entregas. |
+| RN-03 | Si el Maestro Chipero cancela, la horneada no se registra en el sistema. |
+| RN-04 | La cantidad devuelta por el Canastero no puede ser mayor a la cantidad entregada en su salida. |
+| RN-05 | Si hay una caja abierta, no se puede abrir otra hasta cerrar la actual. |
+| RN-06 | Si la diferencia entre lo rendido y lo vendido es distinta de cero, el sistema debe registrar la diferencia como faltante/sobrante. |
+| RN-07 | Para registrar una devolución y rendición, el Canastero debe tener una salida pendiente y una caja abierta. |
+| RN-08 | La fecha de entrega de un pedido con seña no puede ser anterior a la fecha actual. |
+| RN-09 | La seña de un pedido no puede ser igual a cero ni mayor o igual al total del pedido. |
+| RN-10 | El sistema debe sumar automáticamente las unidades devueltas al stock. |
+| RN-11 | Toda horneada, salida, devolución y pedido debe quedar registrada con fecha, responsable y estado final. |
 ### CU-08 · Registrar pedido con seña
 
-- **Actor(es):** Cajero
-- **Precondición:** El Cajero inició sesión.
-- **Flujo principal:**
-  1. El Cajero selecciona "Nuevo pedido".
-  2. Ingresa el nombre y el teléfono del cliente.
-  3. Selecciona los productos y las cantidades solicitadas.
-  4. Indica la fecha de entrega.
-  5. El sistema calcula el total del pedido.
-  6. El Cajero ingresa el monto de la seña.
-  7. El sistema valida los datos, registra el pedido como confirmado y muestra el saldo pendiente.
-- **Flujos alternativos:**
-  - *4a. Fecha de entrega anterior a la fecha actual:* el sistema la rechaza y solicita otra.
-  - *7a. Seña igual a cero o mayor al total:* el sistema la rechaza y solicita un monto válido.
-- **Postcondición:** El pedido queda registrado en la agenda como confirmado, con su seña y su saldo pendiente.
+| Requisito | Caso de Uso |
+|---|---|
+| RF-01 | CU-07 - Registrar devolución y rendición |
+| RF-02 | CU-08 - Registrar pedido con seña |
+| RF-03 | CU-05 - Registrar horneada |
 
+| Requisito No Funcional | Caso de Uso |
+|---|---|
+| RNF-01 | CU-07 - Tiempo de respuesta < 3 seg |
+| RNF-02 | CU-08 - Validación de seña y datos |
 ---
 
 ## 4. Modelo de dominio

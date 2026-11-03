@@ -116,9 +116,18 @@ _Respuesta:_
 5. Un sistema contable organizado en presentación, lógica de negocio y acceso a datos.
 
 **11. Dibujá o describí la arquitectura en capas de un sistema que conozcas (de tu trabajo, de la universidad o una app de uso diario), indicando la responsabilidad de cada capa. Si lo dibujan, agreguen la imagen al repositorio y enlácenla en la respuesta.**
+Sistema elegido: sistema de reservación de hoteles en la web (tipo Trivago).
 
-_Respuesta:_
+Presentación	Mostrar la información al usuario (búsqueda de hoteles, detalle de habitaciones, formulario de reserva) y recibir sus acciones. No contiene reglas de negocio ni accede directo a la base de datos.
 
+Lógica de negocio	Aplicar las reglas del sistema: verificar que la habitación esté disponible en las fechas pedidas, calcular el precio total, impedir reservas superpuestas y confirmar la reserva.
+
+Acceso a datos	Ejecutar las consultas y transacciones necesarias (guardar una reserva, buscar habitaciones libres), ocultando a la capa de negocio los detalles de la base de datos.
+
+Base de datos	Almacenar de forma persistente los hoteles, habitaciones, clientes y reservas.
+
+
+Reglas del estilo: cada capa solo usa la capa inmediatamente inferior. Si se cambia el motor de base de datos, solo se modifica el acceso a datos. Si se agrega una app móvil, se reutiliza la lógica de negocio existente.
 
 ---
 
@@ -128,23 +137,31 @@ _Respuesta:_
 
 | Aspecto | Monolito modular | Microservicios |
 |---|---|---|
-| Despliegue |  |  |
-| Escalado |  |  |
-| Complejidad operativa |  |  |
-| ¿Cuándo conviene? |  |  |
+| Despliegue | Una sola unidad: simple de publicar. | Cada servicio se despliega por separado: requiere automatización. |
+| Escalado |Se escala la aplicación completa.  |  Se escala solo el servicio que lo necesita.|
+| Complejidad operativa | Baja. | Alta: red, monitoreo, trazas y fallos parciales. |
+| ¿Cuándo conviene? | Equipos chicos y dominio aún cambiante. | Equipos grandes y autónomos, o partes con cargas muy distintas. |
 
 **13. Una empresa nueva con tres desarrolladores quiere empezar su producto directamente con quince microservicios. ¿Qué le recomendarías y por qué?**
 
-_Respuesta:_
+1. Complejidad operativa desproporcionada. Quince servicios implican quince despliegues, monitoreo, trazas y manejo de fallos parciales de red. Tres desarrolladores gastarían más tiempo en infraestructura que en el producto.
+   
+2. El dominio todavía está cambiando. En una empresa nueva los límites del negocio se descubren con el tiempo. Si se separan mal los servicios, corregirlo es caro porque hay que mover datos y contratos entre servicios.
+   
+3. Consistencia de datos. Con una base por servicio, las transacciones simples pasan a ser un problema difícil. En un monolito hay una sola base y transacciones simples.
+   
+4. Escala real inexistente. Los microservicios se justifican cuando hay equipos grandes y autónomos o partes con cargas muy distintas, y ninguna de esas condiciones se da aquí.
+
+Recomendación concreta: un monolito dividido en módulos con límites claros (alta cohesión y bajo acoplamiento, organizados por dominio). Más adelante, si un módulo necesita escalar de forma independiente o el equipo crece, ese módulo puede extraerse como microservicio. Esto aplica el principio KISS: la solución más simple que resuelve el problema suele ser la mejor.
 
 
 **14. Para cada escenario, indica el atributo de calidad prioritario y un estilo arquitectónico que lo favorezca.**
 
 | Escenario | Atributo prioritario | Estilo que lo favorece |
 |---|---|---|
-| Plataforma de venta de entradas con picos enormes de demanda al abrir la venta. |  |  |
-| Sistema bancario de transferencias entre cuentas. |  |  |
-| Sistema académico cuyas reglas de inscripción cambian cada semestre. |  |  |
+| Plataforma de venta de entradas con picos enormes de demanda al abrir la venta. | Escalabilidad (junto con disponibilidad) | Microservicios o arquitectura orientada a eventos, con componentes sin estado que se escalan por separado (por ejemplo, el servicio de compra). |
+| Sistema bancario de transferencias entre cuentas. | Seguridad (junto con confiabilidad y consistencia de datos) | Arquitectura en capas, con controles en los bordes y mínima superficie expuesta, sobre una base de datos transaccional única. |
+| Sistema académico cuyas reglas de inscripción cambian cada semestre. | Mantenibilidad | Arquitectura en capas o monolito modular, con la lógica de negocio aislada en su propia capa o módulo, de alta cohesión y bajo acoplamiento, para cambiar las reglas sin tocar el resto. |
 
 
 ---
@@ -152,8 +169,20 @@ _Respuesta:_
 ## Tema 7 · Características de un buen diseño
 
 **15. Menciona las tres directrices de calidad de Pressman para un buen diseño y explica una de ellas con un ejemplo propio.**
+Según Pressman, un buen diseño debe cumplir como mínimo estas tres condiciones:
 
-_Respuesta:_
+1. Implementar los requerimientos. Debe satisfacer todos los requerimientos explícitos del modelo de requerimientos y también los implícitos que el cliente espera.
+   
+2. Ser legible y comprensible. Debe poder ser entendido por quienes van a construirlo, probarlo y mantenerlo.
+
+3. Dar una visión completa. Debe describir los datos, las funciones y el comportamiento desde la perspectiva de la implementación.
+
+Explicación de una directriz con un ejemplo propio: “Implementar los requerimientos”
+
+Esta directriz exige que el diseño cubra todo lo que el sistema debe hacer, incluso lo que el cliente no escribió pero da por hecho.
+
+Ejemplo: en un sistema web de reservación de hoteles, el requerimiento explícito es “el usuario puede reservar una habitación para unas fechas”. El diseño debe cubrir eso, pero también los requerimientos implícitos: que el sistema no permita reservar dos veces la misma habitación en las mismas fechas, que los datos de pago viajen de forma segura y que el usuario reciba una confirmación. Si el diseño solo contempla el formulario de reserva y omite la verificación de disponibilidad, aunque nadie la haya pedido por escrito, no cumple la directriz.
+
 
 
 **16. Ejercicio de relación** (completen con el número que corresponda a cada letra):

@@ -248,17 +248,17 @@ _Respuesta:_
 
 | Regla de oro | Ejemplo que la cumple | Ejemplo que la viola |
 |---|---|---|
-| Dar el control al usuario |  |  |
-| Reducir la carga de memoria |  |  |
-| Lograr una interfaz consistente |  |  |
+| Dar el control al usuario | Gmail: después de enviar un correo aparece la opción "Deshacer", y se puede cancelar el envío. | Un formulario de inscripción que no tiene botón para volver atrás ni cancelar, y obliga a completar todo de nuevo si uno se equivoca. |
+| Reducir la carga de memoria | Google: sugiere búsquedas mientras se escribe y recuerda las búsquedas recientes, así no hay que acordarse de todo. | Un sitio que pide anotar un código en una pantalla y escribirlo de memoria en la siguiente, sin mostrarlo de nuevo. |
+| Lograr una interfaz consistente | Microsoft Office: los íconos, menús y atajos (guardar, copiar, pegar) funcionan igual en Word, Excel y PowerPoint. | Un sitio donde cada pantalla tiene los botones en lugares distintos, con colores y nombres diferentes para la misma acción (a veces "Aceptar", a veces "Guardar", a veces "OK"). |
 
 **22. Realiza el análisis previo al diseño de la interfaz para la aplicación de autogestión de alumnos de la universidad.**
 
 | Aspecto | Descripción |
 |---|---|
-| Usuarios |  |
-| Tareas principales |  |
-| Entorno de uso |  |
+| Usuarios | Estudiantes de la universidad, en su mayoría jóvenes y adultos de entre 18 y 40 años, de distintas carreras. Tienen experiencia media con la tecnología, ya que usan redes sociales y el celular todos los días, pero no son expertos en sistemas. Algunos trabajan y entran solo de a ratos. |
+| Tareas principales | Inscribirse a materias y a exámenes, consultar notas e historial académico, ver horarios y aulas, revisar el estado de las cuotas y pagos, y pedir constancias o certificados. La inscripción y la consulta de notas son las más frecuentes. |
+| Entorno de uso | Principalmente desde el celular (en el colectivo, en el trabajo, en la universidad) y también desde una computadora en casa. A veces con mala conexión a internet. En épocas de inscripción entra mucha gente al mismo tiempo, así que la interfaz tiene que ser rápida y liviana. |
 
 
 ---
@@ -267,17 +267,41 @@ _Respuesta:_
 
 **23. Evaluación heurística: elijan una pantalla real (de un sitio web o una app que usen), agreguen una captura al repositorio e identifiquen al menos tres problemas de usabilidad o accesibilidad.**
 
+Pantalla elegida: pantalla de inicio de sesión de Instagram (versión web, modo oscuro).
+
+![captura del inicio de sesión de Instagram](captura-instagram-login.png)
+
+
 | Problema detectado | Heurística de Nielsen violada | Mejora propuesta |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| Al ingresar datos incorrectos, el mensaje dice solamente que "la información de inicio de sesión es incorrecta". No aclara si el error está en el usuario o en la contraseña, y ningún campo se marca como el que falló. | Ayudar a reconocer y recuperarse de errores. | Indicar cuál dato es el incorrecto, marcando ese campo, y mantener el enlace de recuperación junto al mensaje. |
+| Los textos de las etiquetas de los campos y los enlaces del pie de página son pequeños y de color gris sobre fondo oscuro, por lo que cuesta leerlos. | Diseño estético y minimalista (y accesibilidad: contraste suficiente y tamaño de texto). | Aumentar el tamaño de la letra y usar un gris más claro para mejorar el contraste con el fondo. |
+| La mitad izquierda de la pantalla está ocupada por una ilustración y un eslogan que no ayudan a la tarea de iniciar sesión, y compiten con el formulario. | Diseño estético y minimalista. | Reducir ese espacio o llevarlo a un segundo plano para que el formulario sea lo principal. |
 
 **24. Elijan una pantalla clave del sistema de su Trabajo Práctico y dibujen su wireframe (puede ser la foto de un boceto en papel, agregada al repositorio). Indiquen qué regla de oro o heurística tuvieron en cuenta en al menos dos decisiones.**
 
 _Respuesta:_
 
+Pantalla elegida: Punto de Venta (POS) del cajero.
+
+![wireframe punto de venta](wireframe-POS.png)
+
+Decisiones tomadas:
+
+1. **Reconocer antes que recordar (Heurística #6) / reducir la carga de memoria (regla de oro):** cada producto aparece como un botón con su stock visible, así el cajero no tiene que acordarse cuántas chipas quedan. El producto sin stock aparece marcado para que no se venda por error.
+2. **Control y libertad del usuario (Heurística #3):** cada ítem de la venta tiene una "x" para quitarlo y siempre está disponible el botón "Cancelar", por si el cajero se equivoca durante la atención.
+3. **Visibilidad del estado del sistema (Heurística #1):** el total y el vuelto se calculan y se muestran al instante, para evitar errores de cálculo en las horas de mayor clientela.
 
 **25. Reflexión final: ¿qué estilo arquitectónico proponen para el sistema de su Trabajo Práctico y por qué? Justifiquen la elección con al menos dos atributos de calidad del sistema.**
 
 _Respuesta:_
+
+Proponemos un **monolito modular con arquitectura en capas** (presentación, lógica de negocio, acceso a datos y base de datos). El frontend en JavaScript con Bootstrap se comunica con el backend en Java (Spring Boot) por medio de una API REST. El backend se divide en módulos por dominio: caja, producción y stock, canasteros y reportes.
+
+Lo elegimos por los siguientes atributos de calidad:
+
+- **Mantenibilidad:** el equipo es chico (cinco personas) y el negocio puede pedir cambios en el futuro. Con capas y módulos de alta cohesión y bajo acoplamiento, un cambio (por ejemplo, en cómo se calcula la rendición de un canastero) se hace en un solo lugar sin romper el resto.
+- **Confiabilidad y consistencia de los datos:** el sistema maneja dinero y stock, y no puede haber descuadres. Una única base de datos PostgreSQL permite transacciones simples, de modo que una venta descuenta el stock y registra el ingreso a la vez, o no se hace ninguna de las dos cosas.
+- **Usabilidad:** el personal tiene poca experiencia con computadoras, así que separar la presentación de la lógica permite mejorar las pantallas y probarlas con los usuarios sin tocar las reglas del negocio.
+
+No usamos microservicios porque el sistema se usa en una sola chipería, no hay una carga que justifique escalar por partes, y con tres o cuatro desarrolladores sería una complejidad innecesaria (principio KISS).

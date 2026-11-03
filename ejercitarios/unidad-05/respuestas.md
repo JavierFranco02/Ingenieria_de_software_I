@@ -191,10 +191,10 @@ Ejemplo: en un sistema web de reservación de hoteles, el requerimiento explíci
 
 | Síntoma | Número |
 |---|---|
-| A. Rigidez | ___ |
-| B. Fragilidad | ___ |
-| C. Inmovilidad | ___ |
-| D. Repetición innecesaria | ___ |
+| A. Rigidez | 3 |
+| B. Fragilidad | 4 |
+| C. Inmovilidad | 2 |
+| D. Repetición innecesaria | 1 |
 
 1. La misma lógica está copiada en varios lugares del sistema.
 2. Cuesta reutilizar un componente porque arrastra demasiadas dependencias.
@@ -210,18 +210,36 @@ Ejemplo: en un sistema web de reservación de hoteles, el requerimiento explíci
 
 | Letra | Principio | ¿Qué propone? |
 |---|---|---|
-| S |  |  |
-| O |  |  |
-| L |  |  |
-| I |  |  |
-| D |  |  |
+| S | Single Responsibility - Responsabilidad Única | Una clase debe tener una sola razón para cambiar, una sola responsabilidad. |
+| O | Open/Closed - Abierto/Cerrado | El software debe estar abierto a extensión pero cerrado a modificación. |
+| L | Liskov Substitution - Sustitución de Liskov | Las clases hijas deben poder sustituir a su clase padre sin romper el sistema. |
+| I | Interface Segregation - Segregación de Interfaces | Es mejor tener muchas interfaces específicas que una sola interfaz general y gigante. |
+| D | Dependency Inversion - Inversión de Dependencias | Depender de abstracciones (interfaces), no de clases concretas. |
 
 **18. Analiza la siguiente clase: "ReporteVentas obtiene las ventas desde SQL Server, calcula los totales, arma un PDF y lo envía por correo". ¿Qué principio SOLID viola principalmente? Propone una mejor distribución de responsabilidades (nombres de clases o interfaces y qué hace cada una).**
 
 _Respuesta:_
+Principio que viola:** S - Single Responsibility Principle (Responsabilidad Única).
 
+**Por qué:** La clase `ReporteVentas` tiene 4 responsabilidades distintas:
+1. Acceso a datos (obtiene ventas desde SQL Server)
+2. Lógica de negocio (calcula totales)
+3. Presentación (arma un PDF)
+4. Infraestructura/Comunicación (envía por correo)
 
----
+Si cambia la base de datos, si cambia el formato del PDF, si cambia el cálculo o si cambia el proveedor de correo, hay que modificar la misma clase. Eso genera Rigidez y Fragilidad.
+
+**Propuesta de mejor distribución:**
+
+| Clase / Interfaz | Responsabilidad |
+|---|---|
+| `IVentaRepository` / `VentaRepositorySQL` | Solo obtiene las ventas de SQL Server. |
+| `CalculadoraTotalesVentas` | Solo calcula los totales y estadísticas de las ventas. |
+| `IGeneradorReporte` / `GeneradorPDFVentas` | Solo toma los datos calculados y arma el PDF. |
+| `IEnviadorCorreo` / `ServicioEmail` | Solo envía el archivo por correo. |
+| `ServicioReporteVentas` | Clase orquestadora que coordina: pide datos -> calcula -> genera PDF -> envía. No hace el trabajo, solo coordina. |
+
+Así cada clase tiene una sola razón para cambiar y se pueden reutilizar y probar por separado.
 
 ## Tema 9 · Evaluación y validación del diseño
 
@@ -229,15 +247,27 @@ _Respuesta:_
 
 _Respuesta:_
 
+**Revisión técnica del diseño:** Es una verificación ESTÁTICA, sin ejecutar código. Se revisan documentos (analisis.md, diagramas, casos de uso) para encontrar errores, incoherencias o reglas de negocio mal definidas. Se hace entre personas. Es preventiva.
+
+**Prueba del software:** Es una verificación DINÁMICA, ejecutando el código. Se prueba el programa ya hecho para ver si hace lo que debe y si falla. Se hace con casos de prueba, datos de entrada y salida. Es correctiva.
+
+**¿Por qué conviene revisar el diseño antes de programar?**
+
+Porque corregir un error en un documento cuesta 1 hora, pero corregir ese mismo error ya programado cuesta 10 o 100 veces más. Si el diseño está mal (ej: RN-04 mal definida), se programa mal, se prueba mal y se entrega mal. Revisar antes evita:
+
+1.  Re-trabajo de programación.
+2.  Horneadas, devoluciones y pedidos mal registrados que afectan stock y caja.
+3.  Discusiones con el cliente después.
+Es mucho más barato prevenir que corregir.
+
 
 **20. Completa la matriz de trazabilidad para un sistema de biblioteca, indicando qué elementos de diseño (módulos, clases, interfaces, pantallas) satisfacen cada requerimiento.**
-
 | Req. | Descripción | Elementos de diseño que lo satisfacen |
 |---|---|---|
-| RF-01 | Registrar el préstamo de un libro a un socio. |  |
-| RF-02 | Avisar por correo al socio cuando vence un préstamo. |  |
-| RF-03 | Buscar libros por título, autor o tema. |  |
-| RNF-01 | Solo el personal de la biblioteca puede registrar préstamos. |  |
+| RF-01 | Registrar el préstamo de un libro a un socio. | **Pantalla:** `PantallaRegistroPrestamo` <br> **Clases:** `Prestamo`, `Libro`, `Socio`, `PrestamoService` <br> **Módulo:** `ModuloPrestamos` |
+| RF-02 | Avisar por correo al socio cuando vence un préstamo. | **Interfaces:** `IEnviadorCorreo`, `IProgramadorTareas` <br> **Clases:** `ServicioNotificacionVencimiento`, `PlantillaEmail`, `EmailService` <br> **Módulo:** `ModuloNotificaciones` |
+| RF-03 | Buscar libros por título, autor o tema. | **Pantalla:** `PantallaBusquedaLibros` <br> **Clases:** `BuscadorLibros`, `FiltroBusqueda` <br> **Interfaz:** `ILibroRepository` <br> **Módulo:** `ModuloCatalogo` |
+| RNF-01 | Solo el personal de la biblioteca puede registrar préstamos. | **Pantalla:** `PantallaLogin` <br> **Clases:** `Usuario`, `Rol`, `AutenticacionService`, `AutorizacionService` <br> **Módulo:** `ModuloSeguridad` |
 
 
 ---

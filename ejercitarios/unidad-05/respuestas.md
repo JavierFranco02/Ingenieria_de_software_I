@@ -38,12 +38,12 @@ Aquí ya se especifican detalles concretos de implementación.
 
 | Concepto | Número |
 |---|---|
-| A. Abstracción | __4_ |
-| B. Refinamiento progresivo | __6_ |
-| C. Ocultamiento de información | __2_ |
-| D. Separación de intereses | __5_ |
-| E. Patrón | __3_ |
-| F. Refactorización | __1_ |
+| A. Abstracción | _4_ |
+| B. Refinamiento progresivo | _6_ |
+| C. Ocultamiento de información | _2_ |
+| D. Separación de intereses | _5_ |
+| E. Patrón | _3_ |
+| F. Refactorización | _1_ |
 
 1. Mejorar la estructura interna sin cambiar el comportamiento externo.
 2. Cada módulo esconde sus decisiones internas y solo expone su interfaz.
@@ -54,8 +54,10 @@ Aquí ya se especifican detalles concretos de implementación.
 
 **4. Aplica refinamiento progresivo a la tarea "Registrar una venta en un comercio": escribí al menos tres niveles de detalle, refinando en el tercer nivel uno de los pasos del segundo.**
 
-_Respuesta: El refinamiento progresivo descompone la tarea en niveles cada vez más detallados, y aquí se presentan tres niveles donde el tercero profundiza uno de los pasos del segundo.
+_Respuesta:_ El refinamiento progresivo descompone la tarea en niveles cada vez más detallados, y aquí se presentan tres niveles donde el tercero profundiza uno de los pasos del segundo.
+
 A continuación se muestra una descomposición completa en tres niveles, con un refinamiento específico en el tercer nivel.
+
 Nivel 1: Descripción general de la tarea
 Este nivel resume la tarea en términos amplios, sin entrar en detalles operativos.
 Registrar una venta en un comercio consiste en identificar los productos que el cliente desea comprar, calcular el total a pagar, recibir el pago y generar un comprobante de la transacción.

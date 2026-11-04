@@ -204,13 +204,73 @@ El sistema calcula el total del pedido y solo lo confirma si la seña y la fecha
 
 ## 6. Prototipo de interfaz (mockups)
 
-**Pantalla — [Nombre de la pantalla]:**
+> Prototipo de interfaz interactivo disponible [aqui](../prototipo-interfaz-interactiva/login.html)
 
-`[Insertar imagen: diagramas/mockup-pantalla1.png]`
+**Pantalla — Inicio:**
 
-[Breve descripción de la interacción que ilustra este mockup.]
+![Mockup inicio cajero](../diagramas/mockup-inicio-cajero.png)
+![Mockup inicio chipero](../diagramas/mockup-inicio-chipero.png)
 
-*(Repetir para cada pantalla principal.)*
+- **Caso de uso:** pantalla de apoyo a CU-01, que resume el estado del día según el rol (RF-01)
+- **Actor:** Cajero, Maestro Chipero o Dueño
+- **Datos:** Caja (estado, monto inicial), Venta (total del día), Producto (stock actual), Salida de Canastero
+- **Interacción:** Tras iniciar sesión, el usuario ve un resumen con accesos directos a lo que más usa: el Cajero, el estado de la caja, los canasteros en la calle y los productos con poco stock; el Maestro Chipero, el resumen de la producción del día (horneadas, unidades producidas, última horneada y productos con poco stock); el Dueño, los ingresos del día y de la semana.
+
+**Pantalla — Punto de venta (POS):**
+
+![Mockup POS](../diagramas/mockup-pos.png)
+
+- **Caso de uso:** CU-03 Registrar venta (con CU-11 cuando el pago no es en efectivo)
+- **Actor:** Cajero
+- **Datos:** Producto (nombre, precio, stock actual), Venta (total, forma de pago, monto recibido, vuelto, referencia de pago), Detalle de Venta (cantidad, subtotal)
+- **Interacción:** Con la caja abierta, el Cajero toca los productos para agregarlos y ajusta las cantidades. Elige la forma de pago: en efectivo ingresa el monto recibido y el sistema calcula el vuelto; con tarjeta o transferencia anota el número de comprobante. Al confirmar, el sistema descuenta el stock, suma el importe a la caja y muestra el comprobante interno. Con la caja cerrada la pantalla queda bloqueada con un aviso (RN-01), y no permite vender más unidades que el stock (RN-02).
+
+**Pantalla — Canasteros:**
+
+![Mockup canasteros](../diagramas/mockup-canasteros.png)
+
+- **Casos de uso:** CU-06 Registrar salida de canastero y CU-07 Registrar devolución y rendición
+- **Actor:** Cajero
+- **Datos:** Canastero, Salida de Canastero (fecha, estado, monto a rendir, monto recibido, diferencia)
+- **Interacción:** La pantalla lista a cada canastero con su estado (sin salida, en la calle o liquidado), lo que llevó y el botón de la acción que corresponde: "Registrar salida" si no tiene una salida pendiente, o "Devolución y rendición" si está en la calle (RN-12). Abajo se listan las rendiciones del día.
+
+**Pantalla — Dialogo devolución y rendición:**
+
+![Mockup dialogo de devolución y rendición de canasteros](../diagramas/mockup-dialogo-salida.png)
+
+- **Caso de uso:** CU-07 Registrar devolución y rendición
+- **Actor:** Cajero
+- **Datos:** Salida de Canastero (monto a rendir, monto recibido, diferencia, estado), Detalle de Salida (cantidad entregada, cantidad devuelta), Caja
+- **Interacción:** El Cajero ingresa las unidades devueltas de cada producto, sin superar lo entregado (RN-08); el monto a rendir se calcula automáticamente (RN-07). Luego ingresa el dinero recibido y el sistema muestra la diferencia, que exige una observación si no es cero. Al confirmar, las devoluciones vuelven al stock, el dinero entra a la caja abierta (RN-13) y la salida queda liquidada. Con la caja cerrada el botón está deshabilitado.
+
+
+**Pantalla — Cierre de caja:**
+
+![Mockup cierre de caja](../diagramas/mockup-cierre-caja.png)
+
+- **Caso de uso:** CU-04 Arquear y cerrar caja
+- **Actor:** Cajero
+- **Datos:** Caja (monto inicial, estado), Arqueo de Caja (efectivo esperado, efectivo contado, diferencia, observación), Venta (por forma de pago)
+- **Interacción:** Desde el botón "Cerrar caja" de la barra superior, el sistema muestra el efectivo esperado (monto inicial, ventas en efectivo y rendiciones de canasteros) y los movimientos del turno. El Cajero ingresa el efectivo contado y ve la diferencia; si no es cero, debe escribir una observación (RN-09). Puede cancelar y volver al Punto de Venta, o confirmar el cierre en una ventana de confirmación; la caja cerrada ya no admite movimientos (RN-11) y queda el resumen con la opción de abrir una nueva caja.
+
+
+**Pantalla — Horneada:**
+
+![Mockup horneada](../diagramas/mockup-horneada.png)
+
+- **Caso de uso:** CU-05 Registrar horneada
+- **Actor:** Maestro Chipero
+- **Datos:** Horneada (fecha y hora, cantidad), Producto (stock actual), Usuario
+- **Interacción:** El Maestro Chipero elige el producto e ingresa la cantidad que salió del horno. El sistema valida que sea un entero mayor a 0 (RN-10), suma las unidades al stock y agrega la horneada al historial del día con la hora y el usuario que la registró. El panel de stock marca en rojo los productos con poco stock.
+
+**Pantalla — Reportes:**
+
+![Mockup reportes](../diagramas/mockup-reportes.png)
+
+- **Caso de uso:** CU-09 Consultar reportes
+- **Actor:** Dueño
+- **Datos:** Venta (total, fecha y hora, forma de pago), Salida de Canastero (monto recibido), Producto (unidades vendidas)
+- **Interacción:** El Dueño consulta los ingresos en un gráfico de barras que alterna entre vista diaria y semanal, junto con los ingresos de hoy (mostrador y canasteros), el ticket promedio, los productos más vendidos y los ingresos de hoy por origen.
 
 ---
 

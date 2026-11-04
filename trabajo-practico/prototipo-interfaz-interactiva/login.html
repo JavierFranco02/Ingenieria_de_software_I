@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ChipeSoft · Iniciar sesión</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Figtree:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/tema.js"></script>
+</head>
+<body data-pagina="login">
+  <button type="button" class="tbtn flotante" data-tema-boton></button>
+
+  <div class="login-wrap">
+    <div class="tarjeta">
+      <div class="marca marca-login"><span class="logo"></span><div>ChipeSoft<small>Chiperia la Caraguateña</small></div></div>
+      <h1>Buen día, a hornear y vender</h1>
+      <p class="sub">Ingresá con tu usuario. Tu cuenta define qué pantallas podés usar.</p>
+      <form id="form-login">
+        <label>Usuario<input id="usuario" autocomplete="off"></label>
+        <label>Contraseña
+          <div class="pw">
+            <input id="clave" type="password">
+            <button type="button" id="ver-clave" aria-label="Mostrar contraseña" title="Mostrar contraseña">
+              <svg id="ojo-abierto" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg id="ojo-cerrado" viewBox="0 0 24 24" hidden><path d="M3 3l18 18M10.6 6.1A9.8 9.8 0 0112 6c6 0 10 6 10 6a17 17 0 01-3.2 3.9M6.6 6.7A17 17 0 002 12s4 6 10 6c1.6 0 3-.4 4.3-1M9.9 9.9a3 3 0 004.2 4.2"/></svg>
+            </button>
+          </div>
+        </label>
+        <p class="msg err" id="error-login" hidden>Usuario o contraseña incorrectos.</p>
+        <button class="btn" type="submit">Ingresar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="demo">
+    <b>Cuentas de prueba</b>
+    <span>cajero · caja123</span>
+    <span>maestro · horno123</span>
+    <span>dueno · dueno123</span>
+  </div>
+
+  <script src="js/utilidades.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

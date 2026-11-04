@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ChipeSoft · Horneada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Figtree:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/tema.js"></script>
+</head>
+<body data-pagina="horneada">
+  <div class="app">
+    <aside class="side" id="sidebar"></aside>
+    <main>
+      <div class="topbar" id="topbar"></div>
+      <h1>Horneada</h1>
+      <div class="cols">
+        <div class="tarjeta">
+          <h2>¿Qué salió del horno?</h2>
+          <label>Producto<select id="producto"></select></label>
+          <label>Cantidad de unidades<input id="cantidad" type="number" min="1" value="20"></label>
+          <button type="button" class="btn" id="btn-registrar">Registrar horneada</button>
+          <h3 class="mt">Horneadas de hoy</h3>
+          <table>
+            <thead><tr><th>Hora</th><th>Producto</th><th>Unid.</th><th>Registró</th></tr></thead>
+            <tbody id="historial"></tbody>
+          </table>
+          <p class="vacio" id="sin-horneadas">Todavía no hay horneadas hoy.</p>
+        </div>
+        <div class="tarjeta">
+          <h2>Stock actual</h2>
+          <div id="stock"></div>
+          <div class="banda err" id="aviso-stock" hidden><span id="texto-stock"></span></div>
+        </div>
+      </div>
+
+      <template id="tpl-horneada"><tr><td data-campo="hora"></td><td data-campo="producto"></td><td data-campo="cantidad"></td><td data-campo="usuario"></td></tr></template>
+      <template id="tpl-stock"><div class="hb"><span data-campo="nombre"></span><i></i><b data-campo="stock"></b></div></template>
+    </main>
+  </div>
+  <script src="js/utilidades.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/reglas.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/horneada.js"></script>
+</body>
+</html>

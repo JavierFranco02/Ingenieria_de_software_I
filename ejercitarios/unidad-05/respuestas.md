@@ -27,11 +27,7 @@ Aquí ya se especifican detalles concretos de implementación.
 | Diseño de datos | Define la estructura lógica de la información, sus relaciones, reglas y restricciones. Incluye entidades, atributos, claves, integridad y cómo se almacenan y gestionan los datos. | Tablas como Estudiantes, Cursos, Inscripciones.
 Relaciones: un estudiante puede inscribirse en muchos cursos; un curso tiene muchos estudiantes.
 Restricciones: un curso no puede exceder su cupo máximo. |
-| Diseño arquitectónico | Define la estructura global del sistema, sus módulos principales, capas, componentes y cómo se comunican. Es la vista de alto nivel del sistema. | Arquitectura en capas:
-Capa de presentación (web o móvil).
-Capa de lógica de negocio (gestión de inscripciones, validaciones).
-Capa de datos (base de datos relacional).
-Servicios: módulo de autenticación, módulo de gestión de cursos, módulo de reportes. |
+| Diseño arquitectónico | Define la estructura global del sistema, sus módulos principales, capas, componentes y cómo se comunican. Es la vista de alto nivel del sistema. | Arquitectura en capas:Capa de presentación (web o móvil).Capa de lógica de negocio (gestión de inscripciones, validaciones).Capa de datos (base de datos relacional).Servicios: módulo de autenticación, módulo de gestión de cursos, módulo de reportes. |
 | Diseño de interfaces | Define cómo interactúan los usuarios y los sistemas entre sí: pantallas, formularios, API, flujos de interacción, usabilidad y accesibilidad. | Pantalla de inicio de sesión.
 Formulario para inscribir un estudiante en un curso.
 Interfaz de consulta de cursos disponibles.

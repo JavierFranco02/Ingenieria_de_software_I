@@ -287,10 +287,21 @@ El sistema calcula el total del pedido y solo lo confirma si la seña y la fecha
 
 ## 7. Reglas del negocio
 
-| ID | Regla |
-|---|---|
-| RN-01 | [ej. Un usuario no puede registrar dos reservas superpuestas] |
-| RN-02 | [Regla 2] |
+| ID | Regla | Aplica a |
+|---|---|---|
+| RN-01 | Una venta solo puede registrarse si existe una caja en estado abierta. | CU-03 · Caja |
+| RN-02 | No se puede vender ni entregar a un canastero una cantidad mayor al stock actual del producto. | CU-03, CU-06 · Producto |
+| RN-03 | En un pago en efectivo, el monto recibido debe ser mayor o igual al total de la venta, y el vuelto es igual al monto recibido menos el total. | CU-03 · Venta |
+| RN-04 | Un Cajero no puede tener más de una caja abierta al mismo tiempo. | CU-02 · Caja |
+| RN-05 | Un pedido solo se confirma si la seña es mayor a 0 y menor o igual al total del pedido. | CU-08 · Pedido |
+| RN-06 | La fecha de entrega de un pedido no puede ser anterior a la fecha de su registro. | CU-08 · Pedido |
+| RN-07 | El monto a rendir por un canastero es igual a la suma de (unidades entregadas − unidades devueltas) × precio unitario de cada producto. | CU-07 · Salida de Canastero |
+| RN-08 | Las unidades devueltas por un canastero no pueden superar las unidades que se le entregaron. | CU-07 · Detalle de Salida |
+| RN-09 | El efectivo esperado de una caja es igual al monto inicial más las ventas cobradas en efectivo y las rendiciones de canasteros recibidas; toda diferencia con el efectivo contado debe quedar registrada con una observación. | CU-04 · Arqueo de Caja |
+| RN-10 | Una horneada debe registrar una cantidad entera mayor a 0. | CU-05 · Horneada |
+| RN-11 | Una caja cerrada no puede recibir nuevas ventas ni rendiciones, ni modificarse. | CU-03, CU-04, CU-07 · Caja |
+| RN-12 | Un canastero no puede tener más de una salida pendiente de rendición al mismo tiempo. | CU-06 · Salida de Canastero |
+| RN-13 | Una rendición solo puede registrarse con una caja abierta, y el monto recibido se suma al efectivo de esa caja. | CU-07 · Caja |
 
 ---
 
@@ -299,8 +310,30 @@ El sistema calcula el total del pedido y solo lo confirma si la seña y la fecha
 | Requisito | Caso(s) de uso relacionado(s) |
 |---|---|
 | RF-01 | CU-01 |
-| RF-02 | CU-02, CU-03 |
-| RF-03 | CU-01 |
+| RF-02 | CU-02 |
+| RF-03 | CU-04 |
+| RF-04 | CU-03, CU-11 |
+| RF-05 | CU-05, CU-10 |
+| RF-06 | CU-06 |
+| RF-07 | CU-07 |
+| RF-08 | CU-08 |
+| RF-09 | CU-09 |
+
+**Caso de uso → requisito:**
+
+| Caso de uso | Requisito que satisface |
+|---|---|
+| CU-01 | RF-01 |
+| CU-02 | RF-02 |
+| CU-03 | RF-04 |
+| CU-04 | RF-03 |
+| CU-05 | RF-05 |
+| CU-06 | RF-06 |
+| CU-07 | RF-07 |
+| CU-08 | RF-08 |
+| CU-09 | RF-09 |
+| CU-10 | RF-05 |
+| CU-11 | RF-04 |
 
 ---
 

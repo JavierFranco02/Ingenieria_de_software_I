@@ -15,10 +15,15 @@ layout: default
 
 | ID | Requisito | Prioridad |
 |---|---|---|
-| RF-01 | [El sistema debe permitir...] | Alta |
-| RF-02 | [El sistema debe permitir...] | Alta |
-| RF-03 | [El sistema debe permitir...] | Media |
-| RF-04 | [El sistema debe permitir...] | Baja |
+| RF-01 | El sistema debe controlar el acceso de los usuarios, permitiendo operar solo los módulos que corresponden a su rol (Cajero, Dueño o Producción) tras iniciar sesión. | Alta |
+| RF-02 | El sistema debe permitir abrir la caja registrando el monto inicial en efectivo. | Alta |
+| RF-03 | El sistema debe permitir cerrar la caja mediante un arqueo que compare el efectivo contado con el efectivo esperado. | Alta |
+| RF-04 | El sistema debe permitir registrar ventas de mostrador indicando productos, cantidades y forma de pago (efectivo, tarjeta o transferencia), calculando el total y el vuelto. | Alta |
+| RF-05 | El sistema debe controlar el stock de cada producto, aumentándolo con cada horneada o devolución de canastero registrada y disminuyéndolo con cada venta o salida de canastero. | Alta |
+| RF-06 | El sistema debe permitir registrar la salida de un canastero indicando los productos y las cantidades que lleva. | Alta |
+| RF-07 | El sistema debe permitir registrar las unidades devueltas por un canastero y determinar con ellas el monto que debe rendir. | Alta |
+| RF-08 | El sistema debe permitir registrar pedidos para eventos con fecha de entrega y seña. | Media |
+| RF-09 | El sistema debe mostrar los ingresos diarios y semanales en un panel con gráficos. | Media |
 
 ---
 
@@ -26,9 +31,15 @@ layout: default
 
 | ID | Requisito | Categoría |
 |---|---|---|
-| RNF-01 | [ej. El sistema debe responder en menos de 2s] | Rendimiento |
-| RNF-02 | [ej. Las contraseñas deben almacenarse cifradas] | Seguridad |
-| RNF-03 | [ej. La interfaz debe ser utilizable sin capacitación previa] | Usabilidad |
+| RNF-01 | El registro de una venta (desde la confirmación hasta la emisión del comprobante) debe completarse en 2 segundos o menos en el 95 % de las operaciones, con hasta 3 usuarios conectados al mismo tiempo. | Rendimiento |
+| RNF-02 | El panel de reportes debe cargar en 5 segundos o menos con hasta 12 meses de ventas registradas. | Rendimiento |
+| RNF-03 | Las contraseñas deben almacenarse con un algoritmo de hash con sal (por ejemplo, bcrypt); ninguna contraseña debe figurar en texto plano en la base de datos. | Seguridad |
+| RNF-04 | Toda venta, apertura y cierre de caja, horneada y liquidación de canastero debe guardar el usuario, la fecha y la hora en que se realizó. | Seguridad (trazabilidad) |
+| RNF-05 | Un empleado sin experiencia previa en el sistema debe poder registrar una venta de 3 productos en 1 minuto o menos, luego de una capacitación de máximo 30 minutos. | Usabilidad |
+| RNF-06 | Las operaciones más frecuentes (registrar venta, registrar horneada) deben poder iniciarse en 2 clics o menos desde la pantalla de inicio. | Usabilidad |
+| RNF-07 | El sistema debe estar disponible durante el horario de atención de la chipería, con al menos 99 % de disponibilidad mensual en ese horario. | Disponibilidad |
+| RNF-08 | Una venta, el descuento de stock y su registro en caja deben guardarse juntos o no guardarse; ante un fallo durante el registro no debe quedar ninguna venta con el stock sin descontar. | Integridad de datos |
+| RNF-09 | El sistema debe construirse solo con software de código abierto, con costo de licencias igual a 0 Gs. | Restricción económica |
 
 ---
 

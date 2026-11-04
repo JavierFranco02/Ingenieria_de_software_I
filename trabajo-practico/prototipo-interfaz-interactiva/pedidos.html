@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ChipeSoft · Pedidos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Figtree:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/tema.js"></script>
+</head>
+<body data-pagina="pedidos">
+  <div class="app">
+    <aside class="side" id="sidebar"></aside>
+    <main>
+      <div class="topbar" id="topbar"></div>
+      <h1>Pedidos</h1>
+      <p class="sub">Reservá pedidos grandes para eventos con una seña.</p>
+
+      <div class="cols ped">
+        <div class="tarjeta">
+          <h2>Nuevo pedido</h2>
+          <div class="fila">
+            <label>Cliente<input id="cliente"></label>
+            <label>Teléfono<input id="telefono"></label>
+            <label>Fecha de entrega<input id="fecha" type="date"></label>
+          </div>
+          <h3>Productos del pedido</h3>
+          <div class="agr">
+            <label>Producto<select id="producto"></select></label>
+            <label>Cantidad<input id="cantidad" type="number" min="1" value="50"></label>
+            <button type="button" class="btn sec" id="btn-agregar">Agregar</button>
+          </div>
+          <div id="lineas-pedido"></div>
+          <p class="vacio" id="sin-lineas">Agregá los productos del pedido.</p>
+          <div class="resumen">
+            <div><small>Total</small><b id="total"></b></div>
+            <label>Seña<input id="sena" type="number" min="0"></label>
+            <div><small>Saldo pendiente</small><b id="saldo"></b></div>
+          </div>
+          <button type="button" class="btn" id="btn-confirmar">Confirmar pedido</button>
+        </div>
+
+        <div class="tarjeta">
+          <h2>Agenda de pedidos</h2>
+          <div id="agenda"></div>
+          <p class="vacio" id="sin-pedidos">Todavía no hay pedidos en la agenda.</p>
+        </div>
+      </div>
+
+      <template id="tpl-linea-pedido">
+        <div class="linea"><span data-campo="detalle"></span><b data-campo="importe"></b><button type="button" class="x" title="Quitar">✕</button></div>
+      </template>
+      <template id="tpl-pedido">
+        <div class="ped-i">
+          <div class="fecha"><b data-campo="dia"></b><span data-campo="mes"></span></div>
+          <div><b data-campo="cliente"></b><br><span class="vacio" data-campo="detalle"></span><br>Saldo <span data-campo="saldo"></span> <span class="badge">confirmado</span></div>
+        </div>
+      </template>
+    </main>
+  </div>
+  <script src="js/utilidades.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/reglas.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pedidos.js"></script>
+</body>
+</html>

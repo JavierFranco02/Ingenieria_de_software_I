@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ChipeSoft · Punto de Venta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Figtree:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/tema.js"></script>
+</head>
+<body data-pagina="pos">
+  <div class="app">
+    <aside class="side" id="sidebar"></aside>
+    <main>
+      <div class="topbar" id="topbar"></div>
+      <h1>Punto de Venta</h1>
+
+      <div class="banda err" id="aviso-caja-cerrada" hidden>
+        La caja está cerrada. Abrila para poder registrar movimientos de dinero.
+        <button type="button" class="btn chico" data-abrir-caja>Abrir caja</button>
+      </div>
+
+      <div class="cols" id="panel-venta">
+        <div>
+          <label>Buscar producto<input id="buscar" placeholder="Ej.: guasu"></label>
+          <div class="grid" id="productos"></div>
+          <h3 class="mt">Últimas ventas del turno</h3>
+          <ul id="ultimas-ventas"></ul>
+          <p class="vacio" id="sin-ventas">Todavía no hay ventas en este turno.</p>
+        </div>
+
+        <aside class="tarjeta">
+          <h2>Venta actual</h2>
+          <div id="lineas"></div>
+          <p class="vacio" id="sin-lineas">Tocá un producto para sumarlo a la venta.</p>
+          <p class="total"><span>Total</span><span id="total"></span></p>
+          <label>Forma de pago
+            <select id="forma-pago"><option>Efectivo</option><option>Tarjeta</option><option>Transferencia</option></select>
+          </label>
+          <div id="bloque-efectivo">
+            <label>Monto recibido<input id="monto-recibido" type="number" min="0"></label>
+            <p>Vuelto: <b id="vuelto"></b></p>
+          </div>
+          <div id="bloque-electronico" hidden>
+            <label>Número de comprobante del pago<input id="referencia"></label>
+          </div>
+          <button type="button" class="btn" id="btn-confirmar">Confirmar venta</button>
+          <button type="button" class="btn sec mt-s" id="btn-cancelar">Cancelar venta</button>
+        </aside>
+      </div>
+
+      <dialog class="modal" id="dlg-comprobante">
+        <h2 id="comprobante-titulo"></h2>
+        <div id="comprobante-lineas"></div>
+        <p class="total"><span>Total</span><span id="comprobante-total"></span></p>
+        <p id="comprobante-pago"></p>
+        <p class="vacio">Comprobante interno, sin validez fiscal.</p>
+        <button type="button" class="btn" id="btn-nueva-venta">Nueva venta</button>
+      </dialog>
+
+      <template id="tpl-producto">
+        <button type="button" class="prod"><div class="aro" data-campo="stock"></div><b data-campo="nombre"></b><span data-campo="precio"></span></button>
+      </template>
+      <template id="tpl-linea">
+        <div class="linea">
+          <span data-campo="nombre"></span>
+          <span><button type="button" data-accion="menos">−</button> <span data-campo="cantidad"></span> <button type="button" data-accion="mas">+</button></span>
+          <b data-campo="subtotal"></b>
+          <button type="button" class="x" data-accion="quitar" title="Quitar">✕</button>
+        </div>
+      </template>
+      <template id="tpl-ultima-venta"><li data-campo="texto"></li></template>
+      <template id="tpl-linea-comprobante"><div class="linea"><span data-campo="detalle"></span><b data-campo="importe"></b></div></template>
+    </main>
+  </div>
+  <script src="js/utilidades.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/reglas.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pos.js"></script>
+</body>
+</html>

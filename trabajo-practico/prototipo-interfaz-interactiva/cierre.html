@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ChipeSoft · Cierre de caja</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Figtree:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/tema.js"></script>
+</head>
+<body data-pagina="cierre">
+  <div class="app">
+    <aside class="side" id="sidebar"></aside>
+    <main>
+      <div class="topbar" id="topbar"></div>
+      <h1>Cierre de caja</h1>
+
+      <section id="sin-caja" hidden>
+        <div class="banda err">No hay una caja abierta. <button type="button" class="btn chico" data-abrir-caja>Abrir nueva caja</button></div>
+        <div class="tarjeta ancho-form" id="resumen-cierre" hidden>
+          <h2>Resumen del cierre</h2>
+          <div class="linea"><span>Efectivo esperado</span><b data-campo="esperado"></b></div>
+          <div class="linea"><span>Efectivo contado</span><b data-campo="contado"></b></div>
+          <div class="linea"><span>Diferencia</span><b class="dif" data-campo="diferencia"></b></div>
+          <p id="cierre-observacion" hidden>Observación: <span data-campo="observacion"></span></p>
+          <p class="vacio">La caja cerrada no admite nuevos movimientos.</p>
+        </div>
+      </section>
+
+      <section id="panel-arqueo" hidden>
+        <p class="sub">Contá el efectivo y compará con lo esperado.</p>
+        <div class="cols">
+          <div class="tarjeta">
+            <h2>Arqueo</h2>
+            <div class="linea"><span>Monto inicial</span><b data-campo="montoInicial"></b></div>
+            <div class="linea"><span>Ventas en efectivo</span><b data-campo="ventasEfectivo"></b></div>
+            <div class="linea"><span>Rendiciones de canasteros</span><b data-campo="rendiciones"></b></div>
+            <div class="linea"><span>Efectivo esperado</span><b data-campo="esperado"></b></div>
+            <label>Efectivo contado<input id="contado" type="number" min="0"></label>
+            <p>Diferencia: <b class="dif" id="diferencia"></b></p>
+            <label id="observacion-bloque" hidden>Observación (obligatoria si hay diferencia)
+              <textarea id="observacion" rows="2"></textarea>
+            </label>
+            <div class="mbtn">
+              <a class="btn sec" href="pos.html">Cancelar</a>
+              <button type="button" class="btn" id="btn-cerrar">Confirmar cierre de caja</button>
+            </div>
+          </div>
+          <div class="tarjeta" id="movimientos">
+            <h2>Movimientos del turno</h2>
+            <div class="linea"><span>Ventas en efectivo</span><b data-campo="efectivo"></b></div>
+            <div class="linea"><span>Ventas con tarjeta</span><b data-campo="tarjeta"></b></div>
+            <div class="linea"><span>Ventas por transferencia</span><b data-campo="transferencia"></b></div>
+            <div class="linea"><span>Rendiciones (efectivo)</span><b data-campo="rendicionesMov"></b></div>
+            <div class="linea"><span>Cantidad de ventas</span><b data-campo="cantidadVentas"></b></div>
+          </div>
+        </div>
+      </section>
+
+      <dialog class="modal" id="dlg-cierre">
+        <h2>¿Cerrar la caja?</h2>
+        <p>Una vez cerrada no admite nuevos movimientos.</p>
+        <div class="mbtn">
+          <button type="button" class="btn sec" id="cierre-volver">Volver</button>
+          <button type="button" class="btn" id="cierre-confirmar">Sí, cerrar caja</button>
+        </div>
+      </dialog>
+    </main>
+  </div>
+  <script src="js/utilidades.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/reglas.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cierre.js"></script>
+</body>
+</html>

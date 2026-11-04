@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ChipeSoft · Reportes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Figtree:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/tema.js"></script>
+</head>
+<body data-pagina="reportes">
+  <div class="app">
+    <aside class="side" id="sidebar"></aside>
+    <main>
+      <div class="topbar" id="topbar"></div>
+      <h1>Reportes</h1>
+      <div class="kpis">
+        <div class="kpi"><small>Ingresos de hoy</small><b data-campo="ingresosHoy"></b><span>mostrador y canasteros</span></div>
+        <div class="kpi"><small>Semana en curso</small><b data-campo="semana"></b></div>
+        <div class="kpi"><small>Ticket promedio</small><b data-campo="ticket"></b><span>ventas de mostrador</span></div>
+      </div>
+      <div class="cols">
+        <div class="tarjeta">
+          <div class="tabs">
+            <button type="button" class="chip on" data-modo="dia">Por día</button>
+            <button type="button" class="chip" data-modo="semana">Por semana</button>
+          </div>
+          <h2 id="titulo-grafico"></h2>
+          <div class="bars" id="grafico"></div>
+        </div>
+        <div>
+          <div class="tarjeta">
+            <h2>Productos más vendidos</h2>
+            <div id="ranking"></div>
+          </div>
+          <div class="tarjeta mt" id="origen">
+            <h2>Ingresos de hoy por origen</h2>
+            <div class="linea"><span>Mostrador, efectivo</span><b data-campo="efectivo"></b></div>
+            <div class="linea"><span>Mostrador, tarjeta</span><b data-campo="tarjeta"></b></div>
+            <div class="linea"><span>Mostrador, transferencia</span><b data-campo="transferencia"></b></div>
+            <div class="linea"><span>Canasteros (efectivo)</span><b data-campo="canasteros"></b></div>
+          </div>
+        </div>
+      </div>
+
+      <template id="tpl-barra"><div><span data-campo="valor"></span><i></i><span data-campo="nombre"></span></div></template>
+      <template id="tpl-ranking"><div class="hb"><span data-campo="nombre"></span><i></i><b data-campo="vendidas"></b></div></template>
+    </main>
+  </div>
+  <script src="js/utilidades.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/reglas.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/reportes.js"></script>
+</body>
+</html>

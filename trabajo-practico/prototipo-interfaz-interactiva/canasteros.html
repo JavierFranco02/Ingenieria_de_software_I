@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ChipeSoft · Canasteros</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Figtree:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/tema.js"></script>
+</head>
+<body data-pagina="canasteros">
+  <div class="app">
+    <aside class="side" id="sidebar"></aside>
+    <main>
+      <div class="topbar" id="topbar"></div>
+      <h1>Canasteros</h1>
+      <p class="sub">Registrá lo que se lleva cada canastero y su rendición al volver.</p>
+
+      <div class="banda err" id="aviso-caja" hidden>
+        Para registrar una rendición hace falta una caja abierta, porque el dinero entra a la caja.
+        <button type="button" class="btn chico" data-abrir-caja>Abrir caja</button>
+      </div>
+
+      <div class="tarjeta">
+        <table>
+          <thead><tr><th>Canastero</th><th>Estado</th><th>Llevó</th><th></th></tr></thead>
+          <tbody id="tabla-canasteros"></tbody>
+        </table>
+      </div>
+
+      <div class="tarjeta mt">
+        <h2>Rendiciones de hoy</h2>
+        <ul id="lista-rendiciones"></ul>
+        <p class="vacio" id="sin-rendiciones">Todavía no hay rendiciones.</p>
+      </div>
+
+      <dialog class="modal" id="dlg-salida">
+        <h2 id="salida-titulo"></h2>
+        <p class="vacio">Indicá cuántas unidades se lleva de cada producto.</p>
+        <table>
+          <thead><tr><th>Producto</th><th>Stock</th><th>Entregar</th></tr></thead>
+          <tbody id="salida-productos"></tbody>
+        </table>
+        <div class="mbtn">
+          <button type="button" class="btn sec" id="salida-cancelar">Cancelar</button>
+          <button type="button" class="btn" id="salida-confirmar">Registrar salida</button>
+        </div>
+      </dialog>
+
+      <dialog class="modal" id="dlg-rendicion">
+        <h2 id="rendicion-titulo"></h2>
+        <table>
+          <thead><tr><th>Producto</th><th>Entregadas</th><th>Devueltas</th></tr></thead>
+          <tbody id="rendicion-productos"></tbody>
+        </table>
+        <p class="total"><span>Monto a rendir</span><span id="rendicion-monto"></span></p>
+        <label>Dinero recibido<input id="rendicion-recibido" type="number" min="0"></label>
+        <p>Diferencia: <b class="dif" id="rendicion-diferencia"></b></p>
+        <label id="rendicion-obs-bloque" hidden>Observación (obligatoria si hay diferencia)
+          <textarea id="rendicion-observacion" rows="2"></textarea>
+        </label>
+        <p class="vacio">El dinero recibido entra a la caja abierta como ingreso en efectivo.</p>
+        <div class="mbtn">
+          <button type="button" class="btn sec" id="rendicion-cancelar">Cancelar</button>
+          <button type="button" class="btn" id="rendicion-confirmar">Registrar rendición</button>
+        </div>
+      </dialog>
+
+      <template id="tpl-canastero">
+        <tr>
+          <td><b data-campo="nombre"></b></td>
+          <td><span class="badge" data-campo="estado"></span></td>
+          <td data-campo="llevo"></td>
+          <td><button type="button" class="btn chico"></button></td>
+        </tr>
+      </template>
+      <template id="tpl-rendicion">
+        <li><b data-campo="nombre"></b> rindió <span data-campo="recibido"></span> de <span data-campo="monto"></span>. Diferencia <b class="dif" data-campo="diferencia"></b></li>
+      </template>
+      <template id="tpl-fila-salida">
+        <tr><td data-campo="producto"></td><td data-campo="stock"></td><td><input type="number" min="0" value="0"></td></tr>
+      </template>
+      <template id="tpl-fila-devolucion">
+        <tr><td data-campo="producto"></td><td data-campo="entregadas"></td><td><input type="number" min="0" value="0"></td></tr>
+      </template>
+    </main>
+  </div>
+  <script src="js/utilidades.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/reglas.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/canasteros.js"></script>
+</body>
+</html>

@@ -308,7 +308,6 @@ El sistema calcula el total del pedido y solo lo confirma si la seña y la fecha
 ## 8. Matriz de trazabilidad
 
 | Requisito | Caso(s) de uso relacionado(s) |
-|---|---|
 | RF-01 | CU-01 |
 | RF-02 | CU-02 |
 | RF-03 | CU-04 |

@@ -62,6 +62,7 @@ Nivel 1: Descripción general de la tarea
 Este nivel resume la tarea en términos amplios, sin entrar en detalles operativos.
 Registrar una venta en un comercio consiste en identificar los productos que el cliente desea comprar, calcular el total a pagar, recibir el pago y generar un comprobante de la transacción.
 Este nivel establece el propósito global: transformar la intención de compra del cliente en una transacción registrada.
+
 Nivel 2: Desglose en pasos principales
 Aquí se detallan los componentes esenciales del proceso, manteniendo un nivel operativo pero aún general.
 Identificar los productos o servicios adquiridos por el cliente.
@@ -76,6 +77,7 @@ Emitir el comprobante de la transacción.
 Puede ser un ticket, factura o boleta, según el tipo de comercio y normativa.
 Entregar los productos al cliente.
 Se verifica que todo esté correcto y se finaliza la atención.
+
 Nivel 3: Refinamiento de uno de los pasos del nivel 2
 Se elige el paso 3: Registrar la venta en el sistema del comercio para refinarlo con mayor detalle.
 Refinamiento del paso 3: Registrar la venta en el sistema

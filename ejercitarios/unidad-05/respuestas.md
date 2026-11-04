@@ -10,17 +10,38 @@
 
 **1. Explica con tus palabras la diferencia entre diseño conceptual y diseño técnico (detallado). Da un ejemplo de una decisión de cada tipo para un sistema de gestión de una biblioteca.**
 
-_Respuesta:_
+_Respuesta: El diseño conceptual define qué debe hacer el sistema y cómo se organiza la información, mientras que el diseño técnico define cómo se implementará en detalle usando tecnologías, estructuras y componentes específicos.
+ Ejemplo de decisiones para un sistema de gestión de biblioteca
+ Ejemplo de decisión de diseño conceptual
+Definir que un “Libro” es una entidad con título, autor, categoría y estado de disponibilidad, y que un “Usuario” puede realizar préstamos y devoluciones.
+Esta decisión describe la estructura del sistema y sus reglas, sin mencionar bases de datos ni tecnologías.
+ Ejemplo de decisión de diseño técnico (detallado)
+Decidir que la tabla libros tendrá un índice en el campo titulo para acelerar las búsquedas, y que el sistema usará PostgreSQL como base de datos.
+Aquí ya se especifican detalles concretos de implementación.
 
 
 **2. Completa el siguiente cuadro sobre los elementos del modelo de diseño.**
 
 | Elemento del diseño | ¿Qué define? | Ejemplo en un sistema de inscripciones |
 |---|---|---|
-| Diseño de datos |  |  |
-| Diseño arquitectónico |  |  |
-| Diseño de interfaces |  |  |
-| Diseño de componentes |  |  |
+| Diseño de datos | Define la estructura lógica de la información, sus relaciones, reglas y restricciones. Incluye entidades, atributos, claves, integridad y cómo se almacenan y gestionan los datos. | Tablas como Estudiantes, Cursos, Inscripciones.
+Relaciones: un estudiante puede inscribirse en muchos cursos; un curso tiene muchos estudiantes.
+Restricciones: un curso no puede exceder su cupo máximo. |
+| Diseño arquitectónico | Define la estructura global del sistema, sus módulos principales, capas, componentes y cómo se comunican. Es la vista de alto nivel del sistema. | Arquitectura en capas:
+Capa de presentación (web o móvil).
+Capa de lógica de negocio (gestión de inscripciones, validaciones).
+Capa de datos (base de datos relacional).
+Servicios: módulo de autenticación, módulo de gestión de cursos, módulo de reportes. |
+| Diseño de interfaces | Define cómo interactúan los usuarios y los sistemas entre sí: pantallas, formularios, API, flujos de interacción, usabilidad y accesibilidad. | Pantalla de inicio de sesión.
+Formulario para inscribir un estudiante en un curso.
+Interfaz de consulta de cursos disponibles.
+API REST para que otra aplicación consulte inscripciones. |
+| Diseño de componentes | Define la implementación interna de cada módulo, sus funciones, clases, métodos y cómo se organizan para cumplir la lógica del sistema. | Clase GestorInscripciones con métodos:
+inscribir(estudiante, curso)
+cancelarInscripcion(id)
+verInscripciones(estudiante)
+Componente de validación de cupos.
+Componente de generación de comprobantes. |
 
 
 ---
@@ -31,12 +52,12 @@ _Respuesta:_
 
 | Concepto | Número |
 |---|---|
-| A. Abstracción | ___ |
-| B. Refinamiento progresivo | ___ |
-| C. Ocultamiento de información | ___ |
-| D. Separación de intereses | ___ |
-| E. Patrón | ___ |
-| F. Refactorización | ___ |
+| A. Abstracción | __4_ |
+| B. Refinamiento progresivo | __6_ |
+| C. Ocultamiento de información | __2_ |
+| D. Separación de intereses | __5_ |
+| E. Patrón | __3_ |
+| F. Refactorización | __1_ |
 
 1. Mejorar la estructura interna sin cambiar el comportamiento externo.
 2. Cada módulo esconde sus decisiones internas y solo expone su interfaz.
@@ -47,7 +68,45 @@ _Respuesta:_
 
 **4. Aplica refinamiento progresivo a la tarea "Registrar una venta en un comercio": escribí al menos tres niveles de detalle, refinando en el tercer nivel uno de los pasos del segundo.**
 
-_Respuesta:_
+_Respuesta: El refinamiento progresivo descompone la tarea en niveles cada vez más detallados, y aquí se presentan tres niveles donde el tercero profundiza uno de los pasos del segundo.
+A continuación se muestra una descomposición completa en tres niveles, con un refinamiento específico en el tercer nivel.
+Nivel 1: Descripción general de la tarea
+Este nivel resume la tarea en términos amplios, sin entrar en detalles operativos.
+Registrar una venta en un comercio consiste en identificar los productos que el cliente desea comprar, calcular el total a pagar, recibir el pago y generar un comprobante de la transacción.
+Este nivel establece el propósito global: transformar la intención de compra del cliente en una transacción registrada.
+Nivel 2: Desglose en pasos principales
+Aquí se detallan los componentes esenciales del proceso, manteniendo un nivel operativo pero aún general.
+Identificar los productos o servicios adquiridos por el cliente.
+Incluye verificar cantidades, precios y disponibilidad.
+Calcular el monto total de la venta.
+Se suman los precios, se aplican descuentos y se calculan impuestos.
+Registrar la venta en el sistema del comercio.
+Se ingresa la información en el software o libro de ventas.
+Procesar el pago del cliente.
+Se acepta efectivo, tarjeta u otro medio de pago y se confirma la operación.
+Emitir el comprobante de la transacción.
+Puede ser un ticket, factura o boleta, según el tipo de comercio y normativa.
+Entregar los productos al cliente.
+Se verifica que todo esté correcto y se finaliza la atención.
+Nivel 3: Refinamiento de uno de los pasos del nivel 2
+Se elige el paso 3: Registrar la venta en el sistema del comercio para refinarlo con mayor detalle.
+Refinamiento del paso 3: Registrar la venta en el sistema
+Abrir la interfaz de registro de ventas.
+El empleado accede al módulo correspondiente en el sistema de punto de venta.
+Ingresar los productos seleccionados.
+Escanear códigos de barras,
+Buscar productos manualmente,
+Verificar que las cantidades coincidan con lo solicitado.
+Confirmar precios y aplicar descuentos.
+Revisar precios cargados automáticamente,
+Aplicar promociones vigentes,
+Validar descuentos especiales autorizados.
+Verificar impuestos y totales.
+El sistema calcula IVA u otros tributos; el empleado revisa que los montos sean correctos.
+Guardar la venta en el sistema.
+Se confirma la operación para que quede registrada en la base de datos del comercio.
+Preparar la información para la emisión del comprobante.
+El sistema genera los datos necesarios para imprimir o enviar el ticket o factura.
 
 
 ---
@@ -56,7 +115,16 @@ _Respuesta:_
 
 **5. Explica por qué no conviene dividir un sistema ni en muy pocos ni en demasiados módulos. ¿Qué costos aumentan en cada extremo?**
 
-_Respuesta:_
+_Respuesta: Un sistema con muy pocos módulos aumenta los costos de mantenimiento y comprensión, mientras que uno con demasiados módulos incrementa los costos de coordinación, comunicación y gestión de dependencias.
+Módulos demasiado grandes (muy pocos)
+Cuando el sistema se divide en muy pocos módulos, cada módulo termina abarcando demasiadas responsabilidades. Esto genera:
+Baja cohesión: los elementos del módulo no pertenecen realmente juntos, lo que dificulta entender su propósito 
+Alto acoplamiento interno: muchos elementos dependen entre sí, haciendo que un cambio afecte a múltiples partes del sistema 
+Mantenibilidad reducida: localizar errores o modificar funcionalidades se vuelve más difícil porque el módulo es grande y heterogéneo.
+Comprensión más compleja: el desarrollador debe cargar más información mental para entender cada módulo, aumentando el costo cognitivo 
+Menor reutilización: módulos grandes y poco específicos son difíciles de reutilizar en otros sistemas 
+
+En resumen, aumentan los costos de mantenimiento, comprensión y evolución del sistema.
 
 
 **6. Para un sistema de gestión de un consultorio médico, propone dos descomposiciones distintas e indica qué módulos tendría cada una.**

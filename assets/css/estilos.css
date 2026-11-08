@@ -1,0 +1,354 @@
+/* ChipeSoft · estilos del sitio de documentación.
+   Misma paleta y tipografías que el prototipo: azul ao po'i, dorado chipa.
+
+   Cómo está organizado este archivo:
+     1. Variables      → colores y "roles" (qué color usa cada cosa), en claro y en oscuro
+     2. Base           → reglas generales de la página
+     3. Encabezado     → barra azul, menú, desplegables y botón de tema
+     4. Contenido      → lo que sale de los .md (títulos, tablas, imágenes...)
+     5. Pie y celular
+
+   Regla de oro: los colores NO se escriben dentro de cada componente, se piden con
+   var(--rol). El modo oscuro solo cambia las variables de la sección 1, y así ningún
+   componente necesita una regla especial para el modo oscuro. */
+
+
+/* ============================================================
+   1. VARIABLES
+   ============================================================ */
+
+:root {
+  /* Paleta base */
+  --azul:  #1c2a5e;
+  --azul2: #2f4390;
+  --oro:   #f2b632;
+  --oro2:  #fbe3a1;
+
+  /* Superficies y texto */
+  --fondo:  #f4f6fb;   /* fondo de la página */
+  --card:   #ffffff;   /* fondo del contenido y de los desplegables */
+  --tinta:  #1b2140;   /* texto principal */
+  --gris:   #5a6281;   /* texto secundario */
+  --borde:  #d9deed;
+
+  /* Roles: lo que usan los componentes */
+  --titulo:          var(--azul);
+  --subtitulo:       var(--azul2);
+  --enlace:          var(--azul2);
+  --enlace-hover:    var(--azul);
+  --foco:            var(--azul2);   /* contorno al navegar con teclado */
+  --tabla-cabecera:  var(--azul);
+  --lista-hover:     #e8ecf8;        /* ítem de desplegable con el mouse encima */
+  --activo-fondo:    var(--oro2);    /* ítem de desplegable = página actual */
+  --activo-texto:    var(--azul);
+
+  --radio: 14px;
+}
+
+html[data-tema="dark"] {
+  --fondo:  #0d1225;
+  --card:   #161d38;
+  --tinta:  #e9edff;
+  --gris:   #a3acd1;
+  --borde:  #2b3560;
+
+  --titulo:          var(--oro2);
+  --subtitulo:       #b7c3ff;
+  --enlace:          #9fb0ff;
+  --enlace-hover:    var(--oro2);
+  --foco:            var(--oro);
+  --tabla-cabecera:  #232d63;
+  --lista-hover:     #232d63;
+  --activo-fondo:    var(--oro2);
+  --activo-texto:    var(--azul);
+
+  color-scheme: dark;
+}
+
+
+/* ============================================================
+   2. BASE
+   ============================================================ */
+
+* { box-sizing: border-box; }
+
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  font: 16px/1.65 Figtree, "Segoe UI", system-ui, sans-serif;
+  color: var(--tinta);
+  background: var(--fondo);
+}
+
+:focus-visible {
+  outline: 3px solid var(--foco);
+  outline-offset: 2px;
+}
+
+
+/* ============================================================
+   3. ENCABEZADO
+   ============================================================ */
+
+/* --- Barra azul --- */
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: .8rem 1.5rem;
+  color: #fff;
+  background:
+    radial-gradient(circle at 20px 20px, transparent 9px, rgba(242,182,50,.22) 10px, transparent 11px) 0 0 / 40px 40px,
+    var(--azul);
+  border-bottom: 5px solid var(--oro);
+}
+/* Sobre el fondo azul el contorno de foco tiene que ser dorado */
+.top :focus-visible { outline-color: var(--oro); }
+
+/* --- Marca (logo + nombre) --- */
+.marca {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  color: #fff;
+  text-decoration: none;
+  font: 800 1.4rem "Bricolage Grotesque", Georgia, serif;
+}
+.marca small {
+  display: block;
+  font: 400 .8rem Figtree, sans-serif;
+  opacity: .85;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 9px solid var(--oro);
+  background: var(--azul);
+  box-shadow: inset 0 0 0 3px #fff3;
+}
+
+/* --- Menú: Inicio, desplegables y GitHub --- */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .4rem;
+  margin: 0 auto 0 1rem;   /* empuja el botón de tema hacia la derecha */
+}
+
+/* Cada ítem del menú (enlace o botón) tiene 4 estados, todos escritos acá:
+   normal, con el mouse encima, activo (sección actual) y activo con el mouse encima. */
+.menu-item {
+  padding: .4rem 1rem;
+  border: 0;
+  border-radius: 99px;
+  background: #ffffff1f;
+  color: #fff;
+  font: 700 .95rem Figtree, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+.menu-item:hover        { background: #ffffff38; color: #fff; }
+.menu-item.activo       { background: var(--oro);  color: var(--azul); }
+.menu-item.activo:hover { background: var(--oro2); color: var(--azul); }
+
+.flecha { margin-left: .15rem; font-size: .75em; }
+
+/* --- Desplegables --- */
+.drop { position: relative; }
+
+.drop-lista {
+  position: absolute;
+  top: calc(100% + .5rem);
+  left: 0;
+  z-index: 20;
+  min-width: 220px;
+  padding: .4rem;
+  background: var(--card);
+  border: 1px solid var(--borde);
+  border-top: 4px solid var(--oro);
+  border-radius: var(--radio);
+  box-shadow: 0 12px 30px #1c2a5e33;
+}
+/* La lista tiene fondo claro/oscuro propio, así que el foco usa el color normal */
+.drop-lista :focus-visible { outline-color: var(--foco); }
+
+/* Cada ítem de la lista, con sus estados completos (texto Y fondo en cada uno) */
+.lista-item {
+  display: block;
+  padding: .5rem .8rem;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--tinta);
+  font-weight: 700;
+  text-decoration: none;
+}
+.lista-item:hover        { background: var(--lista-hover);   color: var(--tinta); }
+.lista-item.activo       { background: var(--activo-fondo);  color: var(--activo-texto); }
+.lista-item.activo:hover { background: var(--activo-fondo);  color: var(--activo-texto); }
+
+/* --- Botones redondos de la derecha: repositorio de GitHub y modo claro/oscuro --- */
+.acciones {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.tbtn {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ffffff55;
+  border-radius: 50%;
+  background: #ffffff1f;
+  color: #fff;
+  text-decoration: none;   /* el botón de GitHub es un enlace */
+  cursor: pointer;
+}
+.tbtn:hover { background: #ffffff38; color: #fff; }
+.tbtn svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.tbtn-repo svg { fill: currentColor; stroke: none; }
+
+
+/* ============================================================
+   4. CONTENIDO (lo que sale de los .md)
+   ============================================================ */
+
+.contenido {
+  max-width: 980px;
+  margin: 2rem auto;
+  padding: 2rem 2.4rem;
+  background: var(--card);
+  border: 1px solid var(--borde);
+  border-top: 6px solid var(--oro);
+  border-radius: var(--radio);
+  box-shadow: 0 10px 30px #1c2a5e14;
+}
+.contenido > :first-child { margin-top: 0; }
+
+/* --- Títulos --- */
+.contenido :is(h1, h2, h3, h4) {
+  margin: 2rem 0 .7rem;
+  font-family: "Bricolage Grotesque", Georgia, serif;
+  line-height: 1.2;
+}
+.contenido h1 { font-size: 2.2rem; font-weight: 800; color: var(--titulo); }
+.contenido h2 { font-size: 1.5rem; font-weight: 700; padding-left: .7rem; border-left: 6px solid var(--oro); }
+.contenido h3 { font-size: 1.15rem; font-weight: 700; color: var(--subtitulo); }
+
+/* --- Texto y listas --- */
+.contenido :is(p, ul, ol) { margin: .7rem 0; }
+.contenido li { margin: .25rem 0; }
+
+/* --- Enlaces (solo los del contenido; el menú tiene sus propias reglas) --- */
+.contenido a {
+  color: var(--enlace);
+  font-weight: 700;
+  text-underline-offset: 2px;
+}
+.contenido a:hover {
+  color: var(--enlace-hover);
+  text-decoration-color: var(--oro);
+  text-decoration-thickness: 2px;
+}
+
+hr { margin: 2rem 0; border: 0; border-top: 2px dashed var(--borde); }
+
+/* --- Citas: las frases en cursiva bajo cada título quedan como aviso dorado --- */
+blockquote {
+  margin: 1rem 0;
+  padding: .6rem 1rem;
+  border-left: 5px solid var(--oro);
+  border-radius: 0 var(--radio) var(--radio) 0;
+  background: var(--fondo);
+  color: var(--gris);
+}
+blockquote p { margin: .3rem 0; }
+
+/* --- Tablas (el layout las envuelve en .tabla para que se desplacen en el celular) --- */
+.tabla {
+  overflow-x: auto;
+  margin: 1.2rem 0;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+}
+table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+th {
+  padding: .6rem .8rem;
+  text-align: left;
+  white-space: nowrap;
+  background: var(--tabla-cabecera);
+  color: #fff;
+}
+td { padding: .55rem .8rem; border-top: 1px solid var(--borde); vertical-align: top; }
+tbody tr:nth-child(even) td { background: var(--fondo); }
+
+/* --- Imágenes y diagramas: fondo blanco para que se vean bien también en modo oscuro --- */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.2rem auto;
+  padding: .5rem;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+}
+
+/* --- Código --- */
+code {
+  padding: .1rem .35rem;
+  border-radius: 6px;
+  background: var(--fondo);
+  font-size: .9em;
+}
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--fondo);
+}
+pre code { padding: 0; background: none; }
+
+sub, small { color: var(--gris); }
+
+
+/* ============================================================
+   5. PIE Y CELULAR
+   ============================================================ */
+
+.pie {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: .85rem;
+  color: var(--gris);
+}
+
+@media (max-width: 700px) {
+  .top { padding: .8rem 1rem; }
+
+  /* El menú pasa a una segunda fila a todo el ancho */
+  .menu { order: 3; width: 100%; margin-left: 0; position: relative; }
+  .acciones { margin-left: auto; }
+
+  /* Los desplegables se abren a todo el ancho del menú, para no salirse de la pantalla */
+  .drop { position: static; }
+  .drop-lista { left: 0; right: 0; min-width: 0; }
+
+  .contenido { margin: 1rem .6rem; padding: 1.2rem 1rem; }
+  .contenido h1 { font-size: 1.7rem; }
+}

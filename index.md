@@ -44,6 +44,3 @@ ChipeSoft es un sistema web de gestión comercial y control de stock que automat
 | Unidad 4 | Ingeniería de requerimientos | [Ver respuestas](ejercitarios/unidad-04/respuestas.md) |
 | Unidad 5 | Diseño y arquitectura de software | [Ver respuestas](ejercitarios/unidad-05/respuestas.md) |
 
----
-
-<sub>Sitio generado y mantenido por el grupo como entrega oficial del Trabajo Práctico Integrador. Última actualización del repositorio: {{ site.github.repository.updated_at | date: "%d/%m/%Y" }}.</sub>

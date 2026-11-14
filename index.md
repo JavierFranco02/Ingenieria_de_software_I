@@ -34,10 +34,16 @@ ChipeSoft es un sistema web de gestión comercial y control de stock que automat
 
 ---
 
-## Repositorio de código
+## Ejercitarios
 
-[Enlace al repositorio o carpeta /src, si el grupo avanzó con una implementación. Si no aplica, eliminar esta sección.]
+| Unidad | Contenido | Acceso |
+|---|---|---|
+| Unidad 1 | Fundamentos de ingeniería de software | [Ver respuestas](ejercitarios/unidad-01/respuestas.md) |
+| Unidad 2 | Sistemas y modelado | [Ver respuestas](ejercitarios/unidad-02/respuestas.md) |
+| Unidad 3 | Procesos de software | [Ver respuestas](ejercitarios/unidad-03/respuestas.md) |
+| Unidad 4 | Ingeniería de requerimientos | [Ver respuestas](ejercitarios/unidad-04/respuestas.md) |
+| Unidad 5 | Diseño y arquitectura de software | [Ver respuestas](ejercitarios/unidad-05/respuestas.md) |
 
 ---
 
-<sub>Sitio generado y mantenido por el grupo como entrega oficial del Trabajo Práctico Integrador. Última actualización: [fecha].</sub>
+<sub>Sitio generado y mantenido por el grupo como entrega oficial del Trabajo Práctico Integrador. Última actualización del repositorio: {{ site.github.repository.updated_at | date: "%d/%m/%Y" }}.</sub>

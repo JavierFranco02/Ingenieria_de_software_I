@@ -1,22 +1,28 @@
 
 # Respuestas — Ejercitario Unidad 05
 
-> Completen cada pregunta debajo de su enunciado. Pueden borrar este bloque de instrucciones una vez que empiecen.
-> Las imágenes (diagramas, capturas, wireframes) se suben a esta misma carpeta y se enlazan así: `![descripción](nombre-archivo.png)`
-
 ---
 
 ## Tema 1 · El diseño en la ingeniería de software
 
 **1. Explica con tus palabras la diferencia entre diseño conceptual y diseño técnico (detallado). Da un ejemplo de una decisión de cada tipo para un sistema de gestión de una biblioteca.**
 
-_Respuesta: El diseño conceptual define qué debe hacer el sistema y cómo se organiza la información, mientras que el diseño técnico define cómo se implementará en detalle usando tecnologías, estructuras y componentes específicos.
- Ejemplo de decisiones para un sistema de gestión de biblioteca
- Ejemplo de decisión de diseño conceptual
+_Respuesta:_
+
+El diseño conceptual define qué debe hacer el sistema y cómo se organiza la información, mientras que el diseño técnico define cómo se implementará en detalle usando tecnologías, estructuras y componentes específicos.
+
+Ejemplo de decisiones para un sistema de gestión de biblioteca
+
+Ejemplo de decisión de diseño conceptual
+
 Definir que un “Libro” es una entidad con título, autor, categoría y estado de disponibilidad, y que un “Usuario” puede realizar préstamos y devoluciones.
+
 Esta decisión describe la estructura del sistema y sus reglas, sin mencionar bases de datos ni tecnologías.
- Ejemplo de decisión de diseño técnico (detallado)
+
+Ejemplo de decisión de diseño técnico (detallado)
+
 Decidir que la tabla libros tendrá un índice en el campo titulo para acelerar las búsquedas, y que el sistema usará PostgreSQL como base de datos.
+
 Aquí ya se especifican detalles concretos de implementación.
 
 
@@ -24,10 +30,10 @@ Aquí ya se especifican detalles concretos de implementación.
 
 | Elemento del diseño | ¿Qué define? | Ejemplo en un sistema de inscripciones |
 |---|---|---|
-| Diseño de datos | Define la estructura lógica de la información, sus relaciones, reglas y restricciones. Incluye entidades, atributos, claves, integridad y cómo se almacenan y gestionan los datos. | Tablas como Estudiantes, Cursos, Inscripciones.Relaciones: un estudiante puede inscribirse en muchos cursos; un curso tiene muchos estudiantes.Restricciones: un curso no puede exceder su cupo máximo. |
-| Diseño arquitectónico | Define la estructura global del sistema, sus módulos principales, capas, componentes y cómo se comunican. Es la vista de alto nivel del sistema. | Arquitectura en capas:Capa de presentación (web o móvil).Capa de lógica de negocio (gestión de inscripciones, validaciones).Capa de datos (base de datos relacional).Servicios: módulo de autenticación, módulo de gestión de cursos, módulo de reportes. |
-| Diseño de interfaces | Define cómo interactúan los usuarios y los sistemas entre sí: pantallas, formularios, API, flujos de interacción, usabilidad y accesibilidad. | Pantalla de inicio de sesión.Formulario para inscribir un estudiante en un curso.Interfaz de consulta de cursos disponibles.API REST para que otra aplicación consulte inscripciones. |
-| Diseño de componentes | Define la implementación interna de cada módulo, sus funciones, clases, métodos y cómo se organizan para cumplir la lógica del sistema. | Clase GestorInscripciones con métodos:inscribir(estudiante, curso)cancelarInscripcion(id)verInscripciones(estudiante)Componente de validación de cupos.Componente de generación de comprobantes. |
+| Diseño de datos | Define la estructura lógica de la información, sus relaciones, reglas y restricciones. Incluye entidades, atributos, claves, integridad y cómo se almacenan y gestionan los datos. | Tablas como Estudiantes, Cursos, Inscripciones.<br>Relaciones: un estudiante puede inscribirse en muchos cursos; un curso tiene muchos estudiantes.<br>Restricciones: un curso no puede exceder su cupo máximo. |
+| Diseño arquitectónico | Define la estructura global del sistema, sus módulos principales, capas, componentes y cómo se comunican. Es la vista de alto nivel del sistema. | Arquitectura en capas:<br>Capa de presentación (web o móvil).<br>Capa de lógica de negocio (gestión de inscripciones, validaciones).<br>Capa de datos (base de datos relacional).<br>Servicios: módulo de autenticación, módulo de gestión de cursos, módulo de reportes. |
+| Diseño de interfaces | Define cómo interactúan los usuarios y los sistemas entre sí: pantallas, formularios, API, flujos de interacción, usabilidad y accesibilidad. | Pantalla de inicio de sesión.<br>Formulario para inscribir un estudiante en un curso.<br>Interfaz de consulta de cursos disponibles.<br>API REST para que otra aplicación consulte inscripciones. |
+| Diseño de componentes | Define la implementación interna de cada módulo, sus funciones, clases, métodos y cómo se organizan para cumplir la lógica del sistema. | Clase GestorInscripciones con métodos:<br>inscribir(estudiante, curso)<br>cancelarInscripcion(id)<br>verInscripciones(estudiante)<br>Componente de validación de cupos.<br>Componente de generación de comprobantes. |
 
 
 ---
@@ -54,49 +60,59 @@ Aquí ya se especifican detalles concretos de implementación.
 
 **4. Aplica refinamiento progresivo a la tarea "Registrar una venta en un comercio": escribí al menos tres niveles de detalle, refinando en el tercer nivel uno de los pasos del segundo.**
 
-_Respuesta:_ El refinamiento progresivo descompone la tarea en niveles cada vez más detallados, y aquí se presentan tres niveles donde el tercero profundiza uno de los pasos del segundo.
+_Respuesta:_
+
+El refinamiento progresivo descompone la tarea en niveles cada vez más detallados, y aquí se presentan tres niveles donde el tercero profundiza uno de los pasos del segundo.
 
 A continuación se muestra una descomposición completa en tres niveles, con un refinamiento específico en el tercer nivel.
 
 Nivel 1: Descripción general de la tarea
+
 Este nivel resume la tarea en términos amplios, sin entrar en detalles operativos.
+
 Registrar una venta en un comercio consiste en identificar los productos que el cliente desea comprar, calcular el total a pagar, recibir el pago y generar un comprobante de la transacción.
+
 Este nivel establece el propósito global: transformar la intención de compra del cliente en una transacción registrada.
 
 Nivel 2: Desglose en pasos principales
+
 Aquí se detallan los componentes esenciales del proceso, manteniendo un nivel operativo pero aún general.
-Identificar los productos o servicios adquiridos por el cliente.
-Incluye verificar cantidades, precios y disponibilidad.
-Calcular el monto total de la venta.
-Se suman los precios, se aplican descuentos y se calculan impuestos.
-Registrar la venta en el sistema del comercio.
-Se ingresa la información en el software o libro de ventas.
-Procesar el pago del cliente.
-Se acepta efectivo, tarjeta u otro medio de pago y se confirma la operación.
-Emitir el comprobante de la transacción.
-Puede ser un ticket, factura o boleta, según el tipo de comercio y normativa.
-Entregar los productos al cliente.
-Se verifica que todo esté correcto y se finaliza la atención.
+
+- Identificar los productos o servicios adquiridos por el cliente.
+  - Incluye verificar cantidades, precios y disponibilidad.
+- Calcular el monto total de la venta.
+  - Se suman los precios, se aplican descuentos y se calculan impuestos.
+- Registrar la venta en el sistema del comercio.
+  - Se ingresa la información en el software o libro de ventas.
+- Procesar el pago del cliente.
+  - Se acepta efectivo, tarjeta u otro medio de pago y se confirma la operación.
+- Emitir el comprobante de la transacción.
+  - Puede ser un ticket, factura o boleta, según el tipo de comercio y normativa.
+- Entregar los productos al cliente.
+  - Se verifica que todo esté correcto y se finaliza la atención.
 
 Nivel 3: Refinamiento de uno de los pasos del nivel 2
+
 Se elige el paso 3: Registrar la venta en el sistema del comercio para refinarlo con mayor detalle.
+
 Refinamiento del paso 3: Registrar la venta en el sistema
-Abrir la interfaz de registro de ventas.
-El empleado accede al módulo correspondiente en el sistema de punto de venta.
-Ingresar los productos seleccionados.
-Escanear códigos de barras,
-Buscar productos manualmente,
-Verificar que las cantidades coincidan con lo solicitado.
-Confirmar precios y aplicar descuentos.
-Revisar precios cargados automáticamente,
-Aplicar promociones vigentes,
-Validar descuentos especiales autorizados.
-Verificar impuestos y totales.
-El sistema calcula IVA u otros tributos; el empleado revisa que los montos sean correctos.
-Guardar la venta en el sistema.
-Se confirma la operación para que quede registrada en la base de datos del comercio.
-Preparar la información para la emisión del comprobante.
-El sistema genera los datos necesarios para imprimir o enviar el ticket o factura.
+
+- Abrir la interfaz de registro de ventas.
+  - El empleado accede al módulo correspondiente en el sistema de punto de venta.
+- Ingresar los productos seleccionados.
+  - Escanear códigos de barras,
+  - Buscar productos manualmente,
+  - Verificar que las cantidades coincidan con lo solicitado.
+- Confirmar precios y aplicar descuentos.
+  - Revisar precios cargados automáticamente,
+  - Aplicar promociones vigentes,
+  - Validar descuentos especiales autorizados.
+- Verificar impuestos y totales.
+  - El sistema calcula IVA u otros tributos; el empleado revisa que los montos sean correctos.
+- Guardar la venta en el sistema.
+  - Se confirma la operación para que quede registrada en la base de datos del comercio.
+- Preparar la información para la emisión del comprobante.
+  - El sistema genera los datos necesarios para imprimir o enviar el ticket o factura.
 
 
 ---
@@ -105,14 +121,19 @@ El sistema genera los datos necesarios para imprimir o enviar el ticket o factur
 
 **5. Explica por qué no conviene dividir un sistema ni en muy pocos ni en demasiados módulos. ¿Qué costos aumentan en cada extremo?**
 
-_Respuesta: Un sistema con muy pocos módulos aumenta los costos de mantenimiento y comprensión, mientras que uno con demasiados módulos incrementa los costos de coordinación, comunicación y gestión de dependencias.
+_Respuesta:_
+
+Un sistema con muy pocos módulos aumenta los costos de mantenimiento y comprensión, mientras que uno con demasiados módulos incrementa los costos de coordinación, comunicación y gestión de dependencias.
+
 Módulos demasiado grandes (muy pocos)
+
 Cuando el sistema se divide en muy pocos módulos, cada módulo termina abarcando demasiadas responsabilidades. Esto genera:
-Baja cohesión: los elementos del módulo no pertenecen realmente juntos, lo que dificulta entender su propósito 
-Alto acoplamiento interno: muchos elementos dependen entre sí, haciendo que un cambio afecte a múltiples partes del sistema 
-Mantenibilidad reducida: localizar errores o modificar funcionalidades se vuelve más difícil porque el módulo es grande y heterogéneo.
-Comprensión más compleja: el desarrollador debe cargar más información mental para entender cada módulo, aumentando el costo cognitivo 
-Menor reutilización: módulos grandes y poco específicos son difíciles de reutilizar en otros sistemas 
+
+- Baja cohesión: los elementos del módulo no pertenecen realmente juntos, lo que dificulta entender su propósito
+- Alto acoplamiento interno: muchos elementos dependen entre sí, haciendo que un cambio afecte a múltiples partes del sistema
+- Mantenibilidad reducida: localizar errores o modificar funcionalidades se vuelve más difícil porque el módulo es grande y heterogéneo.
+- Comprensión más compleja: el desarrollador debe cargar más información mental para entender cada módulo, aumentando el costo cognitivo
+- Menor reutilización: módulos grandes y poco específicos son difíciles de reutilizar en otros sistemas
 
 En resumen, aumentan los costos de mantenimiento, comprensión y evolución del sistema.
 
@@ -177,15 +198,18 @@ Ejemplo: Un módulo funcional dedicado exclusivamente a ValidarMatriculaMedico s
 5. Un sistema contable organizado en presentación, lógica de negocio y acceso a datos.
 
 **11. Dibujá o describí la arquitectura en capas de un sistema que conozcas (de tu trabajo, de la universidad o una app de uso diario), indicando la responsabilidad de cada capa. Si lo dibujan, agreguen la imagen al repositorio y enlácenla en la respuesta.**
+
+_Respuesta:_
+
 Sistema elegido: sistema de reservación de hoteles en la web (tipo Trivago).
 
-Presentación	Mostrar la información al usuario (búsqueda de hoteles, detalle de habitaciones, formulario de reserva) y recibir sus acciones. No contiene reglas de negocio ni accede directo a la base de datos.
+- Presentación: Mostrar la información al usuario (búsqueda de hoteles, detalle de habitaciones, formulario de reserva) y recibir sus acciones. No contiene reglas de negocio ni accede directo a la base de datos.
 
-Lógica de negocio	Aplicar las reglas del sistema: verificar que la habitación esté disponible en las fechas pedidas, calcular el precio total, impedir reservas superpuestas y confirmar la reserva.
+- Lógica de negocio: Aplicar las reglas del sistema: verificar que la habitación esté disponible en las fechas pedidas, calcular el precio total, impedir reservas superpuestas y confirmar la reserva.
 
-Acceso a datos	Ejecutar las consultas y transacciones necesarias (guardar una reserva, buscar habitaciones libres), ocultando a la capa de negocio los detalles de la base de datos.
+- Acceso a datos: Ejecutar las consultas y transacciones necesarias (guardar una reserva, buscar habitaciones libres), ocultando a la capa de negocio los detalles de la base de datos.
 
-Base de datos	Almacenar de forma persistente los hoteles, habitaciones, clientes y reservas.
+- Base de datos: Almacenar de forma persistente los hoteles, habitaciones, clientes y reservas.
 
 
 Reglas del estilo: cada capa solo usa la capa inmediatamente inferior. Si se cambia el motor de base de datos, solo se modifica el acceso a datos. Si se agrega una app móvil, se reutiliza la lógica de negocio existente.
@@ -199,11 +223,13 @@ Reglas del estilo: cada capa solo usa la capa inmediatamente inferior. Si se cam
 | Aspecto | Monolito modular | Microservicios |
 |---|---|---|
 | Despliegue | Una sola unidad: simple de publicar. | Cada servicio se despliega por separado: requiere automatización. |
-| Escalado |Se escala la aplicación completa.  |  Se escala solo el servicio que lo necesita.|
+| Escalado | Se escala la aplicación completa. | Se escala solo el servicio que lo necesita. |
 | Complejidad operativa | Baja. | Alta: red, monitoreo, trazas y fallos parciales. |
 | ¿Cuándo conviene? | Equipos chicos y dominio aún cambiante. | Equipos grandes y autónomos, o partes con cargas muy distintas. |
 
 **13. Una empresa nueva con tres desarrolladores quiere empezar su producto directamente con quince microservicios. ¿Qué le recomendarías y por qué?**
+
+_Respuesta:_
 
 1. Complejidad operativa desproporcionada. Quince servicios implican quince despliegues, monitoreo, trazas y manejo de fallos parciales de red. Tres desarrolladores gastarían más tiempo en infraestructura que en el producto.
    
@@ -230,6 +256,9 @@ Recomendación concreta: un monolito dividido en módulos con límites claros (a
 ## Tema 7 · Características de un buen diseño
 
 **15. Menciona las tres directrices de calidad de Pressman para un buen diseño y explica una de ellas con un ejemplo propio.**
+
+_Respuesta:_
+
 Según Pressman, un buen diseño debe cumplir como mínimo estas tres condiciones:
 
 1. Implementar los requerimientos. Debe satisfacer todos los requerimientos explícitos del modelo de requerimientos y también los implícitos que el cliente espera.
@@ -248,6 +277,8 @@ Ejemplo: en un sistema web de reservación de hoteles, el requerimiento explíci
 
 **16. Ejercicio de relación** (completen con el número que corresponda a cada letra):
 
+| Síntoma | Número |
+|---|---|
 | A. Rigidez | 3 |
 | B. Fragilidad | 4 |
 | C. Inmovilidad | 2 |
@@ -264,6 +295,9 @@ Ejemplo: en un sistema web de reservación de hoteles, el requerimiento explíci
 ## Tema 8 · Principios SOLID
 
 **17. Completa el cuadro con el nombre de cada principio y lo que propone, en una oración.**
+
+| Letra | Principio | ¿Qué propone? |
+|---|---|---|
 | S | Single Responsibility - Responsabilidad Única | Una clase debe tener una sola razón para cambiar, una sola responsabilidad. |
 | O | Open/Closed - Abierto/Cerrado | El software debe estar abierto a extensión pero cerrado a modificación. |
 | L | Liskov Substitution - Sustitución de Liskov | Las clases hijas deben poder sustituir a su clase padre sin romper el sistema. |
@@ -273,9 +307,11 @@ Ejemplo: en un sistema web de reservación de hoteles, el requerimiento explíci
 **18. Analiza la siguiente clase: "ReporteVentas obtiene las ventas desde SQL Server, calcula los totales, arma un PDF y lo envía por correo". ¿Qué principio SOLID viola principalmente? Propone una mejor distribución de responsabilidades (nombres de clases o interfaces y qué hace cada una).**
 
 _Respuesta:_
-Principio que viola:** S - Single Responsibility Principle (Responsabilidad Única).
+
+Principio que viola: S - Single Responsibility Principle (Responsabilidad Única).
 
 **Por qué:** La clase `ReporteVentas` tiene 4 responsabilidades distintas:
+
 1. Acceso a datos (obtiene ventas desde SQL Server)
 2. Lógica de negocio (calcula totales)
 3. Presentación (arma un PDF)
@@ -312,10 +348,12 @@ Porque corregir un error en un documento cuesta 1 hora, pero corregir ese mismo 
 1.  Re-trabajo de programación.
 2.  Horneadas, devoluciones y pedidos mal registrados que afectan stock y caja.
 3.  Discusiones con el cliente después.
+
 Es mucho más barato prevenir que corregir.
 
 
 **20. Completa la matriz de trazabilidad para un sistema de biblioteca, indicando qué elementos de diseño (módulos, clases, interfaces, pantallas) satisfacen cada requerimiento.**
+
 | Req. | Descripción | Elementos de diseño que lo satisfacen |
 |---|---|---|
 | RF-01 | Registrar el préstamo de un libro a un socio. | **Pantalla:** `PantallaRegistroPrestamo` <br> **Clases:** `Prestamo`, `Libro`, `Socio`, `PrestamoService` <br> **Módulo:** `ModuloPrestamos` |

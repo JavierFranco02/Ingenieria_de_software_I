@@ -6,11 +6,16 @@
 
 **1. Define en tus propias palabras qué es la ingeniería de requerimientos.**
 
-_Respuesta:_ La ingeniería de requerimientos es el proceso estructurado para definir, documentar y gestionar las necesidades y restricciones que un sistema o software debe cumplir para satisfacer los objetivos de un negocio y las expectativas de los usuarios. Actúa como un puente fundamental entre los clientes y los equipos técnicos.
+_Respuesta:_
+
+La ingeniería de requerimientos es el proceso estructurado para definir, documentar y gestionar las necesidades y restricciones que un sistema o software debe cumplir para satisfacer los objetivos de un negocio y las expectativas de los usuarios. Actúa como un puente fundamental entre los clientes y los equipos técnicos.
 
 **2. Explica la diferencia entre "requerimiento", "especificación de requisitos" e "ingeniería de requisitos", con un ejemplo de cada uno.**
 
-_Respuesta:_ La diferencia principal radica en que un requerimiento es una necesidad puntual expresada por el usuario, la especificación de requisitos es el documento formal y detallado de esas necesidades, y la ingeniería de requisitos es el proceso completo y metódico para obtener, analizar y gestionar dichos elementos.
+_Respuesta:_
+
+La diferencia principal radica en que un requerimiento es una necesidad puntual expresada por el usuario, la especificación de requisitos es el documento formal y detallado de esas necesidades, y la ingeniería de requisitos es el proceso completo y metódico para obtener, analizar y gestionar dichos elementos.
+
 1. Requerimiento (o Requisito)
     * Qué es: Es la condición, necesidad o deseo básico expresado por el cliente o usuario sobre lo que el sistema debe lograr (el "qué").
     * Ejemplo: "El usuario necesita una forma rápida de iniciar sesión en la aplicación móvil con su huella digital."
@@ -49,7 +54,9 @@ _Respuesta:_ La diferencia principal radica en que un requerimiento es una neces
 
 **5. Elegí un sistema que conozcas (una app, una plataforma, un sistema de tu universidad o trabajo) y da un ejemplo propio de un requerimiento funcional y uno no funcional para ese mismo sistema.**
 
-_Respuesta:_  Sistema elegido: Sistema de Control de Llegadas y Salidas (Marcación de empleados)
+_Respuesta:_
+
+Sistema elegido: Sistema de Control de Llegadas y Salidas (Marcación de empleados)
 
 - **Requerimiento Funcional** (qué debe hacer el sistema): El sistema debe permitir a los empleados registrar su marcado de entrada y salida ingresando su número de documento o mediante huella dactilar, guardando automáticamente la fecha y hora exacta.
 - **Requerimiento No Funcional** (cómo debe comportarse / restricción): El sistema debe procesar y confirmar el registro de marcación en menos de 2 segundos para evitar filas o aglomeraciones en la entrada durante las horas pico.
@@ -69,14 +76,17 @@ _Respuesta:_  Sistema elegido: Sistema de Control de Llegadas y Salidas (Marcaci
 
 **7. Tomá el requerimiento "El sistema debe ser rápido" y reescribilo de forma que cumpla con las características de un buen requerimiento vistas en clase.**
 
-_Respuesta:_ El requerimiento "El sistema debe ser rápido" es ambiguo y no se puede verificar, porque no dice cuánto es "rápido". segun lo dado en clase seria algo así: "El sistema debe mostrar los resultados de una búsqueda en máximo 3 segundos, con hasta 100 usuarios conectados a la vez." Ahora es claro, no ambiguo, completo (dice qué acción, cuánto tiempo y bajo qué condiciones) y verificable, porque se puede medir con una prueba.
+_Respuesta:_
+
+El requerimiento "El sistema debe ser rápido" es ambiguo y no se puede verificar, porque no dice cuánto es "rápido". segun lo dado en clase seria algo así: "El sistema debe mostrar los resultados de una búsqueda en máximo 3 segundos, con hasta 100 usuarios conectados a la vez." Ahora es claro, no ambiguo, completo (dice qué acción, cuánto tiempo y bajo qué condiciones) y verificable, porque se puede medir con una prueba.
 
 ---
 
 ## Tema 4 · Obtención y análisis de requerimientos
 
 **8. Enumera las cuatro etapas del ciclo de obtención y análisis de requerimientos vistas en clase.**
-_Respuesta:_ 
+_Respuesta:_
+
 1. Descubrimiento de requerimientos.
 2. Clasificación y organización.
 3. Priorización y negociación.
@@ -113,7 +123,10 @@ _Respuesta:_
 
 **11. ¿Qué es una especificación formal y en qué tipo de sistemas se justifica su uso? Da un ejemplo hipotético de un sistema donde la usarías.**
 
-_Respuesta:_ Una especificación formal es redactar los requerimientos del sistema usando notaciones y fórmulas matemáticas estrictas en lugar de español o lenguaje común. Su gran ventaja es que elimina cualquier tipo de ambigüedad (cada regla matemática tiene un único significado posible). Sin embargo, escribirla y entenderla requiere formación avanzada, por lo que es un proceso muy costoso y complejo. Por esa razón, solo se justifica en sistemas críticos de seguridad (como en aviación, medicina o medicina nuclear), donde si el software falla, las consecuencias pueden ser fatales o generar pérdidas millonarias.
+_Respuesta:_
+
+Una especificación formal es redactar los requerimientos del sistema usando notaciones y fórmulas matemáticas estrictas en lugar de español o lenguaje común. Su gran ventaja es que elimina cualquier tipo de ambigüedad (cada regla matemática tiene un único significado posible). Sin embargo, escribirla y entenderla requiere formación avanzada, por lo que es un proceso muy costoso y complejo. Por esa razón, solo se justifica en sistemas críticos de seguridad (como en aviación, medicina o medicina nuclear), donde si el software falla, las consecuencias pueden ser fatales o generar pérdidas millonarias.
+
 Ejemplo hipotético: El software encargado de controlar la dosificación automática de radioterapia en un equipo médico para pacientes con cáncer. En este caso, un error de interpretación en los requerimientos podría dosificar mal al paciente con consecuencias nefastas, así que se justifica al 100% usar matemáticas exactas para especificar cómo debe funcionar.
 
 ---
@@ -122,10 +135,16 @@ Ejemplo hipotético: El software encargado de controlar la dosificación automá
 
 **12. Explica la diferencia entre un prototipo desechable y un prototipo evolutivo, con un ejemplo de un proyecto donde usarías cada uno.**
 
-_Respuesta:_ La diferencia está en qué se hace con el prototipo una vez que el cliente da su visto bueno:
+_Respuesta:_
+
+La diferencia está en qué se hace con el prototipo una vez que el cliente da su visto bueno:
+
 El Prototipo Desechable se construye de forma súper rápida (muchas veces solo la parte visual o maquetas de pantallas) para que el cliente entienda qué se va a hacer y aclare dudas. Una vez que se aclaran los requerimientos, el prototipo se descarta y el sistema final se programa de cero con buena calidad.
+
 Ejemplo de uso: Para el rediseño de la interfaz móvil de un banco. Se crean maquetas clicables para probar con los usuarios si entienden la navegación, y una vez validado el diseño, se desecha la maqueta y se pasa a desarrollar la app real.
+
 Por otro lado, el Prototipo Evolutivo consiste en construir una primera versión funcional (aunque sea simple). A partir de ahí, se van agregando funciones y mejorándolo gradualmente hasta que se convierte en el producto final entregado al cliente.
+
 Ejemplo de uso: Un sistema web de gestión de inventario para un negocio local. Se construye una primera versión básica que solo registra entradas y salidas de stock, y con el paso de las semanas se van agregando el módulo de ventas, reportes y facturación hasta completar el sistema.
 
 ---
@@ -157,7 +176,10 @@ _Respuesta:_
 
 **15. Explica con tus palabras qué es la trazabilidad de requerimientos y por qué es importante en un proyecto real.**
 
-_Respuesta:_ Es poder seguirle el rastro a un requisito desde donde nació hasta donde termina. 
+_Respuesta:_
+
+Es poder seguirle el rastro a un requisito desde donde nació hasta donde termina.
+
 Desde la idea del cliente, hasta el diseño, el código y la prueba.
 
 ---
@@ -167,17 +189,20 @@ Desde la idea del cliente, hasta el diseño, el código y la prueba.
 **16. Menciona dos métricas que se pueden aplicar a los requerimientos de un proyecto y qué información le aporta cada una al equipo.**
 
 _Respuesta:_
-1. Estabilidad de requisitos: Mide cuánto cambian los requisitos. 
-Formula: (Requisitos que no cambiaron / Total de requisitos) x 100
-Si te da bajo, tu proyecto es muy inestable.
+
+1. Estabilidad de requisitos: Mide cuánto cambian los requisitos.
+   - Formula: (Requisitos que no cambiaron / Total de requisitos) x 100
+   - Si te da bajo, tu proyecto es muy inestable.
 
 2. Completitud: Mide si todos los requisitos fueron diseñados y probados.
-Formula: (Requisitos con prueba / Total de requisitos) x 100
-Lo ideal es que sea 100%, significa que todo lo pedido está cubierto.
+   - Formula: (Requisitos con prueba / Total de requisitos) x 100
+   - Lo ideal es que sea 100%, significa que todo lo pedido está cubierto.
 
 **17. Reflexión final:** pensá en un proyecto de software (hipotético o real). Describí qué técnica de obtención, qué técnica de especificación y qué técnica de validación usarías para sus requerimientos, y justificá tu elección considerando el tipo de proyecto y de usuarios.
 
-_Respuesta:_ MotoGestión
+_Respuesta:_
+
+MotoGestión
 
 Un sistema web y móvil diseñado para la administración de stock de repuestos, gestión de turnos y seguimiento de órdenes de trabajo en talleres mecánicos de motocicletas. Sus usuarios clave son los mecánicos (perfil operativo con poco tiempo) y los administradores del taller (enfoque en control financiero y de procesos).
 

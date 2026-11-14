@@ -12,23 +12,19 @@
 
 ## Estructura del Repositorio
 
-Para separar el código, la documentación web y las tareas teóricas, organizamos las carpetas de la siguiente manera:
+La estructura actual separa el sitio web, las resoluciones de los ejercitarios y los materiales del trabajo práctico:
 
 ```
 / (Raíz del repositorio)
 │
-├─ /ejercitarios          → Resoluciones de los ejercicios teóricos por unidad.
-│   ├─ /unidad-01         → Carpeta específica de la unidad (contiene respuesta.md).
-│   └─ /unidad-02
-│
-└─ /trabajo-practico      → Todo lo relacionado al proyecto principal del semestre.
-    ├─ /docs              → Documentación en Markdown (Sitio web oficial de entrega).
-    │   ├─ index.md       → Página de inicio del sitio.
-    │   ├─ conceptualizacion.md
-    │   ├─ analisis.md      
-    │   └─ diseno.md
-    ├─ /diagramas         → Archivos fuente e imágenes de modelos (UML, mockups, etc.).
-    └─ /src               → Código fuente (si se decide implementar el sistema).
+├─ index.md               → Página de inicio del sitio.
+├─ _config.yml            → Configuración de Jekyll y GitHub Pages.
+├─ /ejercitarios          → Guías y respuestas de las unidades 1 a 5.
+└─ /trabajo-practico      → Materiales del proyecto ChipeSoft.
+    ├─ /docs              → Documentación de conceptualización, análisis y diseño.
+    ├─ /diagramas         → Diagramas y mockups.
+    ├─ /prototipo-interfaz-interactiva → Prototipo navegable.
+    └─ /src               → Carpeta reservada para el código fuente del sistema.
 ```
 
 ---
@@ -37,9 +33,9 @@ Para separar el código, la documentación web y las tareas teóricas, organizam
 
 Esta sección contiene el análisis, modelado y diseño del sistema **ChipeSoft**. 
 
-El sitio publicado mediante GitHub Pages a partir de la carpeta `/trabajo-practico/docs` constituye nuestra entrega oficial. **No se enviarán archivos impresos ni copias por otros medios.**
+El sitio publicado mediante GitHub Pages desde la raíz del repositorio constituye nuestra entrega oficial. **No se enviarán archivos impresos ni copias por otros medios.**
 
-🔗 **Sitio web oficial del proyecto:** `https://javierfranco02.github.io/Ingenieria_de_software_I/`
+🔗 **Sitio web oficial del proyecto:** https://javierfranco02.github.io/Ingenieria_de_software_I/
 
 ### Equipo de Trabajo
 
@@ -72,9 +68,9 @@ Esta elección se justifica por las siguientes razones:
 
 | Fase | Estado | Enlace al Documento |
 |---|:---:|---|
-| 1. Conceptualización | 🔲 Pendiente / ✅ Entregado | [Ver documento](trabajo-practico/docs/conceptualizacion.md) |
-| 2. Análisis | 🔲 Pendiente / ✅ Entregado | [Ver documento](trabajo-practico/docs/analisis.md) |
-| 3. Diseño | 🔲 Pendiente / ✅ Entregado | [Ver documento](trabajo-practico/docs/diseno.md) |
+| 1. Conceptualización | ✅ Entregado | [Ver documento](trabajo-practico/docs/conceptualizacion.md) |
+| 2. Análisis | ✅ Entregado | [Ver documento](trabajo-practico/docs/analisis.md) |
+| 3. Diseño | 🔲 Pendiente | [Ver documento](trabajo-practico/docs/diseno.md) |
 
 ---
 
@@ -87,12 +83,13 @@ Aquí alojamos las respuestas grupales a los ejercitarios teóricos y prácticos
 | Unidad | Documento Original de la Cátedra | Resolución del Grupo |
 |:---:|---|---|
 | **1** | [Guía del ejercitario 01](ejercitarios/unidad-01/unidad-01-vision-previa.pdf) | [Ver respuestas.md](ejercitarios/unidad-01/respuestas.md) |
-| **2** | [Guía del ejercitario 02](ejercitarios/unidad-02//unidad-02-ingenieria-de-sistemas.pdf) | [Ver respuestas.md](ejercitarios/unidad-02/respuestas.md) |
-| **3** | [Guía del ejercitario 03](ejercitarios//unidad-03/unidad-03-procesos-del-software.pdf) | [Ver respuestas.md](ejercitarios/unidad-03/respuestas.md) |
+| **2** | [Guía del ejercitario 02](ejercitarios/unidad-02/unidad-02-ingenieria-de-sistemas.pdf) | [Ver respuestas.md](ejercitarios/unidad-02/respuestas.md) |
+| **3** | [Guía del ejercitario 03](ejercitarios/unidad-03/unidad-03-procesos-del-software.pdf) | [Ver respuestas.md](ejercitarios/unidad-03/respuestas.md) |
 | **4** | [Guía del ejercitario 04](ejercitarios/unidad-04/unidad-04-requerimientos.pdf) | [Ver respuestas.md](ejercitarios/unidad-04/respuestas.md) |
+| **5** | [Guía del ejercitario 05](ejercitarios/unidad-05/unidad-05-diseno-de-software-conceptual.pdf) | [Ver respuestas.md](ejercitarios/unidad-05/respuestas.md) |
 
 ### Dinámica de Entrega para el Grupo
-1. Ingresar al archivo `respuesta.md` de la unidad correspondiente.
+1. Ingresar al archivo `respuestas.md` de la unidad correspondiente.
 2. Editar el archivo y completar las preguntas antes de la fecha límite establecida por la cátedra.
 3. Guardar los cambios (*commit*). **El historial de commits en la rama `main` servirá como comprobante de entrega en tiempo y forma.** Ver [CONTRIBUTING.md](CONTRIBUTING.md) para ver cómo aportar al proyecto.
 
